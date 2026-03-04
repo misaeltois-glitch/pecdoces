@@ -224,6 +224,240 @@ function enviarOrcamento() {
   window.open('https://wa.me/5511961739148?text=' + encodeURIComponent(msg), '_blank');
 }
 
+// ===== CARDÁPIO 2026 =====
+function atualizarCardapio2026() {
+  // Título
+  document.querySelectorAll('.section-title strong').forEach(function(el) {
+    if (el.textContent.includes('2025')) el.textContent = 'Completo 2026';
+  });
+
+  // helpers
+  function bi(name, desc) {
+    return '<div class="bolo-item"><div class="bolo-name">' + name + '</div><div class="bolo-desc">' + desc + '</div></div>';
+  }
+  function ps(price, label, badgeStyle, itens) {
+    return '<div class="preco-section"><div class="preco-label"><div class="preco-badge"' +
+      (badgeStyle ? ' style="' + badgeStyle + '"' : '') + '>R$ ' + price + ' / kg</div>' +
+      '<div class="preco-line"></div>' +
+      '<span style="font-size:11px;color:rgba(247,237,216,0.4);letter-spacing:1px;">' + label + '</span>' +
+      '</div><div class="bolos-grid">' + itens.join('') + '</div></div>';
+  }
+
+  // ── BOLOS ──
+  var tabBolos = document.getElementById('tab-bolos');
+  if (tabBolos) {
+    var classica = ps('123,50', 'LINHA CLÁSSICA', '', [
+      bi('Brigadeiro','Massa de chocolate, recheado com brigadeiro, coberto com brigadeiro ou marshmellow, decorado com granulado ou raspas pretas.'),
+      bi('Brigadeiro Crocante','Massa de chocolate, recheado com brigadeiro e crocante, coberto com brigadeiro e decorado com crocante.'),
+      bi('Crocante','Massa branca, recheado com creme de baunilha e crocante, coberto com chantily ou marshmellow e crocantes.'),
+      bi('Morango','Massa branca, recheado com creme de baunilha e morangos, coberto por marshmellow ou chantilly e decorado com morangos.'),
+      bi('Abacaxi','Massa branca, recheado com creme de baunilha e pedaços de abacaxi, coberto por marshmellow ou chantilly e decorado com raspas brancas e abacaxi.'),
+      bi('Prestígio','Massa de chocolate, recheado com creme de coco, coberto com brigadeiro e decorado com granulado e coco fresco.'),
+      bi('Doce de Leite','Massa branca ou preta, recheado com doce de leite, coberto com chantily ou marshmellow.'),
+      bi('Mesclado','Massa branca, recheado com mousse de chocolate, coberto por marshmellow mesclado de chocolate.'),
+      bi('Mousse de Chocolate','Massa de chocolate, recheado com mousse de chocolate, coberto com mousse e decorado com raspas pretas.'),
+      bi('Mousse de Chocolate Branco','Massa branca, recheado com mousse de chocolate branco, coberto com mousse e decorado com raspas brancas.'),
+      bi('Mousse de Limão','Massa branca, recheado com mousse de limão, coberto com chantilly ou marshmellow e decorado com raspas de limão.'),
+      bi('Mousse de Maracujá','Massa branca, recheado com mousse de maracujá, coberto com marshmallow ou chantilly e decorado com calda de maracujá.'),
+      bi('Floresta Negra','Massa chocolate, recheado com chantilly e cerejas, coberto com chantilly e decorado com raspas de chocolate e cerejas.'),
+      bi('Floresta Branca','Massa branca, recheado com chantilly e cerejas, coberto com chantilly e decorado com raspas brancas e cerejas.'),
+      bi('Merengue de Morango','Massa branca, recheado com chantilly, suspiro e geleia de morango, coberto por chantilly e decorado com morango e suspiros.'),
+      bi('Ameixa','Massa branca, recheado com geleia de ameixa e creme de leite condensado, coberto com chantilly ou marshmellow e decorado com calda de ameixa.'),
+      bi('Merengue de Maracujá','Massa branca, recheado com chantilly, suspiro e geleia de maracujá, coberto por chantilly e decorado com geleia de maracujá e suspiros.'),
+      bi('Frutas','Massa branca, recheado com creme de baunilha e frutas (abacaxi, pêssego, morangos), coberto por marshmellow ou chantilly e decorado com frutas.'),
+      bi('Abacaxi com Coco','Massa branca, recheado com creme branco, coco e pedaços de abacaxi, coberto c/ marshmellow ou chantilly e abacaxi.'),
+      bi('Nega Maluca','Massa de chocolate, recheado com doce de leite e crocante, coberto com marshmellow mesclado de doce de leite e decorado com crocante.'),
+      bi('Carioca','Massa de chocolate, recheado com brigadeiro e doce de leite, coberto com chocolate e doce de leite.'),
+      bi('Cenoura','Massa de cenoura, recheado e coberto com brigadeiro.'),
+      bi('Laranja','Massa de laranja, molhada ao suco de laranja.')
+    ]);
+    var especial = ps('139,70', 'LINHA ESPECIAL', 'background:var(--choco-mid);color:var(--gold-light)', [
+      bi('Leite Ninho com Nutella','Massa branca, recheado de leite ninho com nutella, coberto com chantilly ou marshmallow, decorado com granulado de ninho, nutella e leite ninho polvilhado.'),
+      bi('Casadinho','Massa de chocolate e massa branca, recheado com brigadeiro branco e preto, coberto com mousse de chocolate e decorado com granulado.'),
+      bi('Napolitano','Massa de chocolate, recheado com brigadeiro branco, brigadeiro preto e bicho do pé, coberto com marshmellow, raspas mistas e morangos.'),
+      bi('Neve','Massa branca, recheado com creme de leite condensado e creme de coco, coberto com marshmellow e coco.'),
+      bi('Alpino','Massa de chocolate, recheado com mousse de chocolate alpino, coberto com chantilly e raspas de chocolate.'),
+      bi('Sonho de Valsa','Massa de chocolate, recheado com creme de baunilha e pedaços do bombom, coberto com mousse e decorado com raspas de chocolate e sonho de valsa.'),
+      bi('Damasco','Massa branca, recheado com geleia de damasco e creme de leite condensado, coberto por marshmellow ou chantilly e decorado com calda de damasco.'),
+      bi('Merengue de Damasco','Massa branca, recheado com chantilly, suspiro e geleia de damasco, coberto por chantilly e decorado com geleia de damasco e suspiros.'),
+      bi('Chocomorango','Massa de chocolate, recheado com brigadeiro e pedaços de morangos, coberto com brigadeiro e decorado com raspas de chocolate e morangos.'),
+      bi('Dois Amores','Massa branca, recheado com coco e doce de leite, coberto por marshmellow e decorado com raspas brancas e riscos de chocolate.'),
+      bi('Guibela','Massa branca, recheado com creme de leite condensado e frutas vermelhas, coberto com marshmellow.'),
+      bi('Oreo','Massa de chocolate, recheado de creme com bolacha Oreo, coberto por marshmellow e Oreo.')
+    ]);
+    var premium = ps('174,00', 'LINHA PREMIUM', 'background:rgba(201,153,58,0.2);color:var(--gold-light);border:1px solid var(--gold)', [
+      bi('Saint Honoré','Massa folhada, recheado com carolinas (creme ou chocolate), coberto com chantilly e decorado com carolinas recheadas, calda de chocolate e fios de caramelo.'),
+      bi('Mil Folhas','Massa folhada, recheada com 1 opção: doce de leite, creme branco, brigadeiro ou trufado.'),
+      bi('Toalha Felpuda','Massa branca c/ leite de coco, recheio de doce de leite e baba de moça, cobertura marshmellow e coco ralado.'),
+      bi('Trufado','Massa de chocolate, recheado com trufa preta, coberto com chocolate e decorado com chocolate em pó.'),
+      bi('Trufa c/ Maracujá','Massa de chocolate, recheado com ganache meio amargo e mousse de maracujá, cobertura de ganache decorada c/ calda de maracujá.'),
+      bi('Sensação','Massa de chocolate, recheado com trufa preta e geleia de morango, coberto com trufa e decorado com morangos.'),
+      bi('Mousse de Chocolate com Damasco','Massa de chocolate, recheado com mousse de chocolate e doce de damasco, coberto com mousse e decorado com raspas e calda de damasco.'),
+      bi('Nozes','Massa de nozes, recheado com creme de nozes ou baba de moça, coberto com chantilly ou marshmellow e decorado com nozes.'),
+      bi('Choconozes','Massa chocolate, recheado com brigadeiro e creme de nozes, coberto com chocolate e nozes.')
+    ]);
+    var luxo = ps('202,40', 'LINHA LUXO', 'background:linear-gradient(135deg,var(--gold),#7A5030);color:var(--cream-light)', [
+      bi('Bolo Espatulado','Massa e recheios a gosto, coberto com chantilly artisticamente espatulado. Decoração a definir.'),
+      bi('Naked Cake','Massa branca, preta ou red velvet. Recheios de mousses, coco c/ abacaxi, creme brûlée, cream cheese, doce de leite, brigadeiro, trufado. Decoração a definir.'),
+      bi('Bolo Kit Kat','Massa branca ou preta, recheio a gosto, coberto de brigadeiro, decorado com Kit Kat e laço cor a escolher, na superfície confete ou raspas.'),
+      bi('Quindão','Massa de ovos. Decoração a definir.')
+    ]);
+    tabBolos.innerHTML =
+      '<div class="bolos-intro"><span>Todos os bolos são vendidos por <strong>kg</strong>. Recomendamos <strong>100g de bolo por pessoa</strong> para eventos.</span></div>' +
+      classica + especial + premium + luxo;
+  }
+
+  // ── DOCES ──
+  var tabDoces = document.getElementById('tab-doces');
+  if (tabDoces) {
+    function dc(price, cat, items, headerStyle) {
+      var hStyle = headerStyle ? ' style="' + headerStyle + '"' : '';
+      return '<div class="doce-col"><div class="doce-col-header"' + hStyle + '>' +
+        '<div class="price">R$ ' + price + '</div><div class="cat">' + cat + '</div></div>' +
+        '<ul class="doce-list">' + items + '</ul></div>';
+    }
+    function li(t, s) { return '<li' + (s ? ' class="special"' : '') + '>' + t + '</li>'; }
+    function sep(t) { return '<li class="special" style="font-size:10px;letter-spacing:1px;padding-top:8px;">— ' + t + ' —</li>'; }
+
+    var col1 = dc('2,90', 'Doces Gourmet',
+      li('Brigadeiro') + li('Brigadeiro Crocante') + li('Brigadeiro Dragê') + li('Brigadeiro Paçoca') +
+      li('MiniChocoball') + li('Chumbinho') + li('Flocado') + li('Malvi') + li('Casadinho') +
+      li('Brigadeiro Branco') + li('Brigadeiro C/ Uva') + li('Surpresa Uva Branco') + li('Uva no Beijinho') +
+      li('Prestígio') + li('Beijinho') + li('Olho de Sogra') + li('Olho de Sogro') + li('Coco Queimado') +
+      li('Doce de Leite') + li('Doce de Leite c/ Ameixa') + li('Doce de Abacaxi') + li('Leite Ninho') +
+      li('Leite Ninho c/ Nutella') + li('Bicho do Pé') + li('Napolitano') + li('Moranguinho') +
+      li('Brigadeiro de Maracujá') + li('Doce de Churros') + li('Casadinho Tutti-frutti') +
+      li('Cajuzinho') + li('Limãozinho') + li('Merengue de Limão') + li('Brigadeiro Confetes'));
+
+    var col2 = dc('3,20', 'Tortas',
+      li('Limão') + li('Morango') + li('Maracujá') + li('Chocolate') + li('Maçã'));
+
+    var col3 = dc('4,30', 'Doces Especiais',
+      li('Brulé') + li('Granulle') + li('Brigadeiro Trufado') + li('Bubaloo') +
+      li('Perolado de Coco Fresco') + li('Bombom de Damasco') + li('Bombom de Chocolate') +
+      li('Bombom Choc. Branco') + li('Delícia de Abacaxi') + li('Bombom de Cereja') +
+      li('Cerejinha de Coco') + li('Fondant de Uva') + li('Bombom de Uva ao Leite') +
+      li('Bombom de Uva Branca') + li('Dantop') + li('Trufa Preta') + li('Trufa Branca') +
+      li('Trufa de Limão') + li('Trufa de Maracujá'));
+
+    var col4 = dc('5,50', 'Doces Especiais',
+      li('Bombom de Café') + li('Bombom Ninho') + li('Bombom Trufado') +
+      li('Caixinha de Limão') + li('Caixinha de Maracujá') + li('Vasinho de Cereja') +
+      li('Box de Chocolate') + li('Bombom Oreo') + li('Doces de Amêndoas') + li('Doce de Nozes') +
+      li('Camafeu') + li('Camafeu de Chocolate') + li('Quindim') + li('Banoffee Pie') +
+      sep('Caramelados') +
+      li('Bala de Ovo') + li('Bala de Chocolate') + li('Bala de Beijinho') + li('Bala de Nozes') +
+      li('Nozes (massa real) ★') + li('Damasco (massa real) ★') + li('Caramelado Cast. Pará (M. R.) ★') +
+      li('Ameixa (massa real) ★') + li('Cereja (massa real) ★') + li('Chocolate') +
+      li('Olho de Sogra') + li('Côco') + li('Doce de Nozes') + li('Espinhado de Amêndoas ★'));
+
+    var col5 = dc('6,50', 'Premium &amp; Gourmet', 'background:linear-gradient(135deg,var(--gold),#7A5030)',
+      li('Morango no Chocolate') + li('Damasco Trufado') + li('Damasco Recheado') +
+      li('Hóstia com Pistache') + li('Doce de Pistache') + li('Cestinha de Nozes') +
+      li('Crocante de Nutella') + li('Bombom Crocante') + li('Physalis (Copo ou Bombom)') +
+      li('Bombom de Limão Siciliano') + li('Cheese Cake Frutas Vermelhas') + li('Amarula') +
+      li('Trouxinha de Coco ★') + li('Queijadinha ★') + li('Ninho de Ovos ★') + li('Cacau') +
+      li('Romeu e Julieta') + li('Ovomaltine Crocante') +
+      sep('Belga Callebaut') +
+      li('Belga - Ao Leite') + li('Belga - Dark') + li('Raspas Belga - Ao Leite'),
+      'background:linear-gradient(135deg,var(--gold),#7A5030)');
+
+    tabDoces.innerHTML =
+      '<p style="font-size:13px;color:rgba(247,237,216,0.5);margin-bottom:2rem;line-height:1.7;">' +
+      'Mínimo de <strong style="color:var(--gold)">10 unidades</strong> por sabor. ' +
+      'Doces marcados com ★ têm pedido mínimo de <strong style="color:var(--gold)">25 unidades</strong>.</p>' +
+      '<div class="doces-grid">' + col1 + col2 + col3 + col4 + col5 + '</div>';
+  }
+
+  // ── KITS ──
+  var tabKits = document.getElementById('tab-kits');
+  if (tabKits) {
+    function kc(tag, name, people, price, priceStyle, items, badge, cardStyle) {
+      return '<div class="kit-card"' + (cardStyle ? ' style="' + cardStyle + '"' : '') + '>' +
+        (badge ? '<div class="kit-badge"' + (badge.style ? ' style="' + badge.style + '"' : '') + '>' + badge.text + '</div>' : '') +
+        '<div class="kit-card-header"><span class="kit-tag">' + tag + '</span>' +
+        '<div class="kit-name">' + name + '</div>' +
+        '<div class="kit-people">' + people + '</div></div>' +
+        '<div class="kit-price"' + (priceStyle ? ' style="' + priceStyle + '"' : '') + '>R$ ' + price + '</div>' +
+        '<ul class="kit-includes">' + items.map(function(i){ return '<li>' + i + '</li>'; }).join('') + '</ul></div>';
+    }
+    tabKits.innerHTML =
+      '<div class="kits-grid">' +
+      kc('Kit Festa Tradicional','Tradicional P','Sugestão para até 10 pessoas','296,09','',
+        ['1 Bolo tradicional (1,5kg)','24 Doces Gourmet','4 Cupcakes']) +
+      kc('Kit Festa Tradicional','Tradicional G','Sugestão para 15–20 pessoas','431,07','',
+        ['1 Bolo tradicional (2kg)','42 Doces tradicionais','6 Cupcakes']) +
+      kc('Kit Festa Luxo','Luxo P','Sugestão para até 10 pessoas','453,38','color:var(--gold-light)',
+        ['1 Bolo sabor à sua escolha (1,5kg)','24 Doces Especiais','4 Cupcakes'],
+        {text:'Popular'}) +
+      kc('Kit Festa Luxo','Luxo G','Sugestão para 15–20 pessoas','675,70','color:var(--gold-light)',
+        ['1 Bolo sabor à sua escolha (2kg)','42 Doces Especiais','6 Cupcakes']) +
+      kc('Kit Festa','Decorado','Tema e personalização inclusos','788,76','background:rgba(201,153,58,0.08)',
+        ['1 Bolo decorado (1,5kg)','4 Cupcakes decorados','3 Pirulitos de chocolate decorados',
+         '3 Pães de mel decorados','20 Doces gourmet','10 Apliques personalizados com idade e inicial do nome'],
+        {text:'Premium', style:'background:var(--choco-mid);color:var(--gold-light)'},
+        'border-color:rgba(201,153,58,0.4)') +
+      '<div class="kit-card" style="background:rgba(201,153,58,0.04);border-color:rgba(201,153,58,0.25);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:300px;">' +
+      '<i class="fa-solid fa-wand-sparkles" style="font-size:2.2rem;color:var(--gold);margin-bottom:16px;"></i>' +
+      '<div style="font-family:\'Cormorant Garamond\',serif;font-size:1.3rem;color:var(--cream);margin-bottom:8px;">Kit personalizado?</div>' +
+      '<p style="font-size:12px;color:rgba(247,237,216,0.4);margin-bottom:20px;line-height:1.7;padding:0 24px;">Monte seu kit ideal com a nossa equipe. Escolha sabores, quantidades e personalização.</p>' +
+      '<a href="https://wa.me/5511961739148?text=Ol%C3%A1!%20Quero%20montar%20um%20kit%20personalizado." class="btn-primary" target="_blank">Falar no WhatsApp</a>' +
+      '</div></div>';
+  }
+
+  // ── PERSONALIZADOS ──
+  var tabPers = document.getElementById('tab-personalizados');
+  if (tabPers) {
+    function pi(name, price) {
+      return '<div class="pers-item"><span class="pers-name">' + name + '</span><span class="pers-price">R$ ' + price + '</span></div>';
+    }
+    tabPers.innerHTML =
+      '<div style="margin-bottom:2rem;">' +
+      '<div class="preco-label">' +
+      '<div class="preco-badge">Bolo Personalizado c/ Pasta</div>' +
+      '<div class="preco-line"></div>' +
+      '<span style="font-size:18px;font-family:\'Cormorant Garamond\',serif;color:var(--gold);">R$ 275,60 / kg</span>' +
+      '</div>' +
+      '<div style="margin-top:1rem;font-size:12px;color:rgba(247,237,216,0.5);line-height:2;">' +
+      '<strong style="color:var(--gold-light);letter-spacing:1px;font-size:11px;">SABORES:</strong> ' +
+      'Brigadeiro de Nozes · Ganache Chocolate Meio Amargo · Doce de Leite · Prestígio · Nozes · Damasco · Leite Ninho · Brigadeiro' +
+      '</div></div>' +
+      '<p style="font-size:12.5px;color:rgba(247,237,216,0.4);margin-bottom:2rem;line-height:1.7;max-width:600px;">' +
+      'Cupcakes: massas de baunilha ou chocolate. Recheios: brigadeiro, doce de leite, coco, limão, maracujá ou morango.</p>' +
+      '<div class="pers-grid">' +
+      pi('Mini Cupcake Tradicional','6,70') +
+      pi('Mini Cupcake Decorado Básico','21,00') +
+      pi('Cupcake Tradicional','12,60') +
+      pi('Cupcake Decorado Básico','30,25') +
+      pi('Cupcake Personalizado Especial','41,00') +
+      pi('Cupcake Personalizado 3D','56,00') +
+      pi('Bolo Embrulhado Tradicional 6x6x3 100g','21,70') +
+      pi('Doce Personalizado Básico','7,20') +
+      pi('Bombom Personalizado Chapado','12,70') +
+      pi('Bombom Personalizado 3D','25,30') +
+      pi('Pop Cake Personalizado','23,00') +
+      pi('Popsicle Personalizado','30,50') +
+      pi('Pão de Mel Tradicional','12,50') +
+      pi('Pão de Mel Decorado Básico','22,50') +
+      pi('Pão de Mel Personalizado Especial','32,50') +
+      pi('Pão de Mel Personalizado 3D','56,00') +
+      pi('Porta Retrato Personalizado','16,30') +
+      pi('Maçã Personalizada','21,70') +
+      pi('Pirulito Decorado Básico','13,75') +
+      pi('Pirulito Personalizado Especial','18,30') +
+      pi('Brigalito Tradicional','15,90') +
+      pi('Brigalito Decorado Básico','20,80') +
+      pi('Brigalito Personalizado Especial','29,70') +
+      pi('Biscoito Personalizado','24,75') +
+      pi('Biscoito Personalizado no Palito','31,50') +
+      pi('Donuts Tradicional','6,90') +
+      pi('Donuts Decorado','13,80') +
+      '</div>';
+  }
+}
+document.addEventListener('DOMContentLoaded', atualizarCardapio2026);
+if (document.readyState !== 'loading') atualizarCardapio2026();
+
 // ===== FADE IN NO SCROLL =====
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
