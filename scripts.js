@@ -102,20 +102,34 @@
 
 // ===== AJUSTES DOM =====
 function applyAjustes() {
-  // 1. Tirar "Venha nos visitar"
+  // 1. Seção localização → região de atendimento
   document.querySelectorAll(".section-title").forEach(function(el) {
-    if (el.textContent.includes("visitar")) el.innerHTML = "Como nos <strong>encontrar</strong>";
+    if (el.textContent.includes("visitar") || el.textContent.includes("encontrar"))
+      el.innerHTML = "Nossa <strong>região de atendimento</strong>";
+  });
+  document.querySelectorAll(".section-label").forEach(function(el) {
+    if (el.textContent.trim() === "Onde estamos") el.textContent = "Atendimento";
   });
   // 2. Endereço → só bairro
   document.querySelectorAll(".loc-details li").forEach(function(li) {
     var s = li.querySelector("strong");
     if (s && s.textContent.trim() === "Endereço") {
-      s.parentNode.innerHTML = "<strong>Localização</strong> Rio Pequeno · Butantã – São Paulo/SP";
+      s.parentNode.innerHTML = "<strong>Região</strong> Rio Pequeno · Butantã – São Paulo/SP";
     }
   });
-  // 3. Texto do mapa
+  // 3. Prazo banner: remover endereço completo
+  document.querySelectorAll(".prazo-text").forEach(function(el) {
+    var span = el.querySelector("span");
+    if (span && span.textContent.includes("Maestro")) span.textContent = "Butantã – São Paulo/SP";
+  });
+  // 4. Mapa card: só bairro, sem rua
   var mapSpans = document.querySelectorAll(".loc-map span:not(.map-icon)");
-  if (mapSpans.length >= 2) { mapSpans[0].textContent = "Rio Pequeno · Butantã"; mapSpans[1].textContent = "São Paulo/SP"; }
+  if (mapSpans.length >= 2) { mapSpans[0].textContent = "Rio Pequeno · Butantã"; mapSpans[1].textContent = "São Paulo – SP"; }
+  // 5. Footer: remover rua, manter só bairro/cidade
+  document.querySelectorAll(".footer-links li").forEach(function(li) {
+    if (li.textContent.includes("Maestro")) li.remove();
+    if (li.textContent.includes("Rio Pequeno")) li.textContent = "Rio Pequeno · Butantã – SP";
+  });
   // 4. Degustação → a definir
   document.querySelectorAll(".valor-title").forEach(function(el) {
     if (el.textContent.trim() === "Degustação Gratuita") {
