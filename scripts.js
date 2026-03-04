@@ -455,8 +455,61 @@ function atualizarCardapio2026() {
       '</div>';
   }
 }
-document.addEventListener('DOMContentLoaded', atualizarCardapio2026);
-if (document.readyState !== 'loading') atualizarCardapio2026();
+function aplicarCliquesCardapio() {
+  var WA = 'https://wa.me/5511961739148?text=';
+
+  // Bolos — clique no item
+  document.querySelectorAll('#tab-bolos .bolo-item').forEach(function(el) {
+    var nome = el.querySelector('.bolo-name');
+    if (!nome) return;
+    el.style.cursor = 'pointer';
+    el.title = 'Clique para pedir orçamento';
+    el.addEventListener('click', function() {
+      var msg = 'Olá! Tenho interesse no *Bolo ' + nome.textContent.trim() + '*. Gostaria de um orçamento.';
+      window.open(WA + encodeURIComponent(msg), '_blank');
+    });
+  });
+
+  // Doces — clique em cada item da lista
+  document.querySelectorAll('#tab-doces .doce-list li:not(.special)').forEach(function(el) {
+    el.style.cursor = 'pointer';
+    el.title = 'Clique para pedir orçamento';
+    el.addEventListener('click', function() {
+      var msg = 'Olá! Tenho interesse no doce *' + el.textContent.trim() + '*. Gostaria de um orçamento.';
+      window.open(WA + encodeURIComponent(msg), '_blank');
+    });
+  });
+
+  // Kits — clique no card inteiro (exceto o card de personalizado)
+  document.querySelectorAll('#tab-kits .kit-card').forEach(function(el) {
+    var nome = el.querySelector('.kit-name');
+    var preco = el.querySelector('.kit-price');
+    if (!nome || !preco) return;
+    el.style.cursor = 'pointer';
+    el.title = 'Clique para pedir orçamento';
+    el.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A') return; // não interfere no botão de WhatsApp
+      var msg = 'Olá! Tenho interesse no *Kit ' + nome.textContent.trim() + '* (' + preco.textContent.trim() + '). Gostaria de mais informações.';
+      window.open(WA + encodeURIComponent(msg), '_blank');
+    });
+  });
+
+  // Personalizados — clique no item
+  document.querySelectorAll('#tab-personalizados .pers-item').forEach(function(el) {
+    var nome = el.querySelector('.pers-name');
+    var preco = el.querySelector('.pers-price');
+    if (!nome) return;
+    el.style.cursor = 'pointer';
+    el.title = 'Clique para pedir orçamento';
+    el.addEventListener('click', function() {
+      var msg = 'Olá! Tenho interesse em *' + nome.textContent.trim() + '*' +
+        (preco ? ' (' + preco.textContent.trim() + ')' : '') + '. Gostaria de um orçamento.';
+      window.open(WA + encodeURIComponent(msg), '_blank');
+    });
+  });
+}
+document.addEventListener('DOMContentLoaded', aplicarCliquesCardapio);
+if (document.readyState !== 'loading') aplicarCliquesCardapio();
 
 // ===== FADE IN NO SCROLL =====
 const observer = new IntersectionObserver((entries) => {
