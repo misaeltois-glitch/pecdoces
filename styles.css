@@ -146,7 +146,7 @@ nav {
 
 .hero {
     min-height: 100vh;
-    background: var(--choco-deep);
+    background: linear-gradient(150deg, var(--choco-mid) 0%, var(--choco-deep) 100%);
     display: flex;
     align-items: center;
     position: relative;
@@ -560,7 +560,7 @@ section {
 }
 
 .valores-section {
-    background: var(--cream);
+    background: var(--cream-light);
     padding: 60px 4rem;
     margin-top: 2px;
 }
@@ -608,7 +608,7 @@ section {
 /* ===== CARDÁPIO ===== */
 
 #cardapio {
-    background: var(--choco-deep);
+    background: linear-gradient(180deg, var(--choco-deep) 0%, var(--choco-mid) 100%);
     padding: 100px 4rem;
 }
 
@@ -954,7 +954,7 @@ section {
 /* ===== MOMENTOS / EVENTOS ===== */
 
 #momentos {
-    background: var(--cream);
+    background: linear-gradient(135deg, var(--choco-deep) 0%, var(--choco-mid) 100%);
     padding: 100px 0;
     overflow: hidden;
 }
@@ -1128,7 +1128,7 @@ section {
 /* ===== ORÇAMENTO ===== */
 
 #orcamento {
-    background: var(--choco-deep);
+    background: linear-gradient(135deg, var(--choco-mid) 0%, var(--choco-deep) 100%);
     padding: 100px 4rem;
 }
 
@@ -1259,7 +1259,7 @@ section {
 /* ===== LOCALIZAÇÃO ===== */
 
 .localizacao {
-    background: var(--cream);
+    background: var(--cream-light);
     padding: 80px 4rem;
 }
 
@@ -1361,7 +1361,7 @@ section {
 /* ===== FOOTER ===== */
 
 footer {
-    background: #160804;
+    background: linear-gradient(135deg, var(--choco-deep) 0%, var(--choco-mid) 100%);
     padding: 60px 4rem 30px;
     border-top: 1px solid rgba(153, 110, 95, 0.15);
 }
