@@ -78,15 +78,15 @@
       var c = document.createElement("canvas");
       c.width = 64; c.height = 64;
       var ctx = c.getContext("2d");
-      ctx.fillStyle = "#1A2538";
+      ctx.fillStyle = "#3E4460";
       ctx.beginPath(); ctx.arc(32,32,32,0,Math.PI*2); ctx.fill();
-      ctx.strokeStyle = "#D4A882"; ctx.lineWidth = 2;
+      ctx.strokeStyle = "#DAB88B"; ctx.lineWidth = 2;
       ctx.beginPath(); ctx.arc(32,32,26,0,Math.PI*2); ctx.stroke();
-      ctx.fillStyle = "#D4A882";
+      ctx.fillStyle = "#DAB88B";
       ctx.font = "bold 30px serif";
       ctx.textAlign = "center"; ctx.textBaseline = "middle";
       ctx.fillText("P", 27, 35);
-      ctx.fillStyle = "#B8845A";
+      ctx.fillStyle = "#996E5F";
       ctx.font = "12px serif";
       ctx.fillText("&", 44, 25);
       var link = document.querySelector("link[rel~='icon']") || document.createElement("link");
@@ -296,7 +296,7 @@ function atualizarCardapio2026() {
       bi('Nozes','Massa de nozes, recheado com creme de nozes ou baba de moça, coberto com chantilly ou marshmellow e decorado com nozes.'),
       bi('Choconozes','Massa chocolate, recheado com brigadeiro e creme de nozes, coberto com chocolate e nozes.')
     ]);
-    var luxo = ps('202,40', 'LINHA LUXO', 'background:linear-gradient(135deg,var(--gold),#7A5030);color:var(--cream-light)', [
+    var luxo = ps('202,40', 'LINHA LUXO', 'background:linear-gradient(135deg,var(--gold),#7A4E45);color:var(--cream-light)', [
       bi('Bolo Espatulado','Massa e recheios a gosto, coberto com chantilly artisticamente espatulado. Decoração a definir.'),
       bi('Naked Cake','Massa branca, preta ou red velvet. Recheios de mousses, coco c/ abacaxi, creme brûlée, cream cheese, doce de leite, brigadeiro, trufado. Decoração a definir.'),
       bi('Bolo Kit Kat','Massa branca ou preta, recheio a gosto, coberto de brigadeiro, decorado com Kit Kat e laço cor a escolher, na superfície confete ou raspas.'),
@@ -351,7 +351,7 @@ function atualizarCardapio2026() {
       li('Ameixa (massa real) ★') + li('Cereja (massa real) ★') + li('Chocolate') +
       li('Olho de Sogra') + li('Côco') + li('Doce de Nozes') + li('Espinhado de Amêndoas ★'));
 
-    var col5 = dc('6,50', 'Premium &amp; Gourmet', 'background:linear-gradient(135deg,var(--gold),#7A5030)',
+    var col5 = dc('6,50', 'Premium &amp; Gourmet', 'background:linear-gradient(135deg,var(--gold),#7A4E45)',
       li('Morango no Chocolate') + li('Damasco Trufado') + li('Damasco Recheado') +
       li('Hóstia com Pistache') + li('Doce de Pistache') + li('Cestinha de Nozes') +
       li('Crocante de Nutella') + li('Bombom Crocante') + li('Physalis (Copo ou Bombom)') +
@@ -360,7 +360,7 @@ function atualizarCardapio2026() {
       li('Romeu e Julieta') + li('Ovomaltine Crocante') +
       sep('Belga Callebaut') +
       li('Belga - Ao Leite') + li('Belga - Dark') + li('Raspas Belga - Ao Leite'),
-      'background:linear-gradient(135deg,var(--gold),#7A5030)');
+      'background:linear-gradient(135deg,var(--gold),#7A4E45)');
 
     tabDoces.innerHTML =
       '<p style="font-size:13px;color:rgba(247,237,216,0.5);margin-bottom:2rem;line-height:1.7;">' +
