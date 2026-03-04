@@ -1,11 +1,11 @@
 ﻿:root {
-    --choco-deep: #3E4460;
-    --choco-mid: #2D3350;
-    --choco-warm: #4E5878;
+    --choco-deep: #F5EDE2;
+    --choco-mid: #EBE1D5;
+    --choco-warm: #DDD4C5;
     --gold: #996E5F;
     --gold-light: #DAB88B;
-    --cream: #FBECDC;
-    --cream-light: #FEF8F3;
+    --cream: #3E4460;
+    --cream-light: #FEFAF6;
     --text-dark: #2A2E42;
     --text-mid: #3E4460;
     --white: #FFFFFF;
@@ -57,7 +57,7 @@ nav {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(62, 68, 96, 0.96);
+    background: rgba(254, 250, 246, 0.97);
     backdrop-filter: blur(12px);
     display: flex;
     align-items: center;
@@ -109,7 +109,7 @@ nav {
     padding: 0 22px;
     height: 70px;
     line-height: 70px;
-    color: rgba(251, 236, 220, 0.75);
+    color: rgba(62, 68, 96, 0.75);
     text-decoration: none;
     font-size: 11px;
     letter-spacing: 2.5px;
@@ -237,7 +237,7 @@ nav {
 
 .hero-desc {
     font-size: var(--text-body);
-    color: rgba(251, 236, 220, 0.7);
+    color: rgba(62, 68, 96, 0.7);
     line-height: var(--leading-body);
     font-weight: 400;
     margin-bottom: 2.5rem;
@@ -280,7 +280,7 @@ nav {
     letter-spacing: 2px;
     text-transform: uppercase;
     text-decoration: none;
-    border: 1px solid rgba(251, 236, 220, 0.3);
+    border: 1px solid rgba(62, 68, 96, 0.3);
     transition: all 0.3s;
     display: inline-block;
 }
@@ -299,7 +299,7 @@ nav {
 .stat-card {
     border: 1px solid rgba(153, 110, 95, 0.2);
     padding: 28px 24px;
-    background: rgba(251, 236, 220, 0.03);
+    background: rgba(62, 68, 96, 0.03);
     transition: all 0.4s;
     position: relative;
     overflow: hidden;
@@ -337,7 +337,7 @@ nav {
     font-size: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: rgba(251, 236, 220, 0.5);
+    color: rgba(62, 68, 96, 0.5);
     font-weight: 400;
 }
 
@@ -350,7 +350,7 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    color: rgba(251, 236, 220, 0.4);
+    color: rgba(62, 68, 96, 0.4);
     font-size: var(--text-label);
     letter-spacing: var(--tracking-label);
     text-transform: uppercase;
@@ -463,7 +463,7 @@ section {
 .prazo-text span {
     font-size: 11px;
     letter-spacing: 1.5px;
-    color: rgba(251, 236, 220, 0.55);
+    color: rgba(62, 68, 96, 0.55);
     text-transform: uppercase;
 }
 
@@ -555,7 +555,7 @@ section {
 .mvv-card-text {
     font-size: var(--text-md);
     line-height: var(--leading-body);
-    color: rgba(251, 236, 220, 0.75);
+    color: rgba(62, 68, 96, 0.75);
     font-weight: 400;
 }
 
@@ -636,7 +636,7 @@ section {
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: rgba(251, 236, 220, 0.45);
+    color: rgba(62, 68, 96, 0.45);
     cursor: pointer;
     border-bottom: 2px solid transparent;
     transition: all 0.3s;
@@ -648,7 +648,7 @@ section {
 }
 
 .tab:hover {
-    color: rgba(251, 236, 220, 0.8);
+    color: rgba(62, 68, 96, 0.8);
 }
 
 .tab.active {
@@ -691,7 +691,7 @@ section {
 
 .bolos-intro span {
     font-size: var(--text-md);
-    color: rgba(251, 236, 220, 0.72);
+    color: rgba(62, 68, 96, 0.72);
 }
 
 .bolos-intro strong {
@@ -732,7 +732,7 @@ section {
 }
 
 .bolo-item {
-    background: rgba(251, 236, 220, 0.04);
+    background: rgba(62, 68, 96, 0.04);
     border: 1px solid rgba(153, 110, 95, 0.12);
     padding: 18px 20px;
     transition: all 0.3s;
@@ -741,7 +741,7 @@ section {
 
 .bolo-item:hover {
     border-color: rgba(153, 110, 95, 0.4);
-    background: rgba(251, 236, 220, 0.07);
+    background: rgba(62, 68, 96, 0.07);
 }
 
 .bolo-name {
@@ -754,7 +754,7 @@ section {
 
 .bolo-desc {
     font-size: var(--text-base);
-    color: rgba(251, 236, 220, 0.5);
+    color: rgba(62, 68, 96, 0.5);
     line-height: 1.65;
 }
 
@@ -768,7 +768,7 @@ section {
 }
 
 .doce-col {
-    background: rgba(251, 236, 220, 0.03);
+    background: rgba(62, 68, 96, 0.03);
     border: 1px solid rgba(153, 110, 95, 0.12);
     overflow: hidden;
 }
@@ -802,7 +802,7 @@ section {
 
 .doce-list li {
     font-size: var(--text-sm);
-    color: rgba(251, 236, 220, 0.68);
+    color: rgba(62, 68, 96, 0.68);
     padding: 5px 0;
     border-bottom: 1px solid rgba(153, 110, 95, 0.06);
     line-height: 1.5;
@@ -841,7 +841,7 @@ section {
 
 .kit-card-header {
     padding: 28px 24px 20px;
-    background: rgba(251, 236, 220, 0.04);
+    background: rgba(62, 68, 96, 0.04);
 }
 
 .kit-tag {
@@ -864,7 +864,7 @@ section {
 
 .kit-people {
     font-size: 11px;
-    color: rgba(251, 236, 220, 0.4);
+    color: rgba(62, 68, 96, 0.4);
     letter-spacing: 1px;
 }
 
@@ -885,7 +885,7 @@ section {
 
 .kit-includes li {
     font-size: var(--text-base);
-    color: rgba(251, 236, 220, 0.65);
+    color: rgba(62, 68, 96, 0.65);
     padding: 5px 0;
     display: flex;
     align-items: center;
@@ -936,7 +936,7 @@ section {
 
 .pers-name {
     font-size: var(--text-base);
-    color: rgba(251, 236, 220, 0.72);
+    color: rgba(62, 68, 96, 0.72);
     line-height: 1.4;
     flex: 1;
 }
@@ -1037,7 +1037,7 @@ section {
 
 .evento-desc {
     font-size: var(--text-base);
-    color: rgba(251, 236, 220, 0.55);
+    color: rgba(62, 68, 96, 0.55);
     line-height: var(--leading-body);
 }
 
@@ -1155,7 +1155,7 @@ section {
     align-items: center;
     gap: 12px;
     font-size: var(--text-md);
-    color: rgba(251, 236, 220, 0.65);
+    color: rgba(62, 68, 96, 0.65);
     padding: 10px 0;
     border-bottom: 1px solid rgba(153, 110, 95, 0.1);
 }
@@ -1169,7 +1169,7 @@ section {
 }
 
 .form-card {
-    background: rgba(251, 236, 220, 0.04);
+    background: rgba(62, 68, 96, 0.04);
     border: 1px solid rgba(153, 110, 95, 0.2);
     padding: 40px;
 }
@@ -1202,7 +1202,7 @@ section {
 .form-select,
 .form-textarea {
     width: 100%;
-    background: rgba(251, 236, 220, 0.05);
+    background: rgba(62, 68, 96, 0.05);
     border: 1px solid rgba(153, 110, 95, 0.2);
     color: var(--cream);
     padding: 12px 16px;
@@ -1213,14 +1213,14 @@ section {
 }
 
 .form-input::placeholder {
-    color: rgba(251, 236, 220, 0.25);
+    color: rgba(62, 68, 96, 0.25);
 }
 
 .form-input:focus,
 .form-select:focus,
 .form-textarea:focus {
     border-color: var(--gold);
-    background: rgba(251, 236, 220, 0.08);
+    background: rgba(62, 68, 96, 0.08);
 }
 
 .form-select option {
@@ -1331,7 +1331,7 @@ section {
 }
 
 .loc-map span {
-    color: rgba(251, 236, 220, 0.5);
+    color: rgba(62, 68, 96, 0.5);
     font-size: 11px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -1384,7 +1384,7 @@ footer {
 
 .footer-desc {
     font-size: 13px;
-    color: rgba(251, 236, 220, 0.4);
+    color: rgba(62, 68, 96, 0.4);
     line-height: 1.8;
     margin-bottom: 20px;
 }
@@ -1428,7 +1428,7 @@ footer {
 .footer-links li {
     padding: 6px 0;
     font-size: 13px;
-    color: rgba(251, 236, 220, 0.4);
+    color: rgba(62, 68, 96, 0.4);
     border-bottom: 1px solid rgba(153, 110, 95, 0.05);
     transition: color 0.2s;
     cursor: pointer;
@@ -1445,7 +1445,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     font-size: 11px;
-    color: rgba(251, 236, 220, 0.2);
+    color: rgba(62, 68, 96, 0.2);
 }
 
 
@@ -1607,3 +1607,33 @@ footer {
 
 
 
+
+/* ===== OVERRIDES TEMA CLARO 2026 ===== */
+/* Forçar texto escuro onde --choco-deep agora é creme */
+.nav-cta,
+.preco-badge,
+.doce-col-header .price,
+.kit-badge,
+.loc-map .map-btn,
+.footer-social a:hover { color: var(--text-dark) !important; }
+
+.section-title,
+.valor-title,
+.loc-info .section-title,
+.loc-details strong { color: var(--text-dark); }
+
+/* Subtítulos que usam --choco-mid/warm (agora creme) */
+.momentos-quote { color: var(--text-mid); }
+.depo-author    { color: var(--text-mid); }
+
+/* Nav: ajustar links e borda */
+.nav-links a { color: rgba(62, 68, 96, 0.75); }
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
+
+/* btn-outline: borda visível em fundo claro */
+.btn-outline { border-color: rgba(62, 68, 96, 0.3); color: var(--text-dark); }
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Hero scroll indicator */
+.hero-scroll-text { color: rgba(62, 68, 96, 0.4); }

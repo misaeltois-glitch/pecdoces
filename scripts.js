@@ -70,7 +70,7 @@
         "background-size:contain",
         "background-repeat:no-repeat",
         "background-position:left center",
-        "filter:brightness(0) invert(1)"
+        "filter:none"
       ].join(";");
     }
     // Favicon via Canvas
