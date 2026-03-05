@@ -130,6 +130,12 @@ function applyAjustes() {
     if (li.textContent.includes("Maestro")) li.remove();
     if (li.textContent.includes("Rio Pequeno")) li.textContent = "Rio Pequeno · Butantã – SP";
   });
+  // 3b. Garantir título correto do 3º card MVV (Valores, não Propósito)
+  var mvvCards = document.querySelectorAll('.mvv-card');
+  if (mvvCards.length >= 3) {
+    var mvvTitle3 = mvvCards[2].querySelector('.mvv-card-title');
+    if (mvvTitle3) mvvTitle3.textContent = 'Valores';
+  }
   // 4. Degustação → a definir
   document.querySelectorAll(".valor-title").forEach(function(el) {
     if (el.textContent.trim() === "Degustação Gratuita") {
