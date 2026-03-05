@@ -219,6 +219,8 @@ function enviarOrcamento() {
   const data       = (document.getElementById('data')       ||{}).value||'';
   const convidados = (document.getElementById('convidados') ||{}).value||'';
   const produto    = (document.getElementById('produto')    ||{}).value||'';
+  var lgpdCheck = document.getElementById('lgpd-check');
+  if (lgpdCheck && !lgpdCheck.checked) { alert('Por favor, aceite a Política de Privacidade para continuar.'); return; }
   if (!nome.trim()) { alert('Por favor, preencha seu nome.'); return; }
   let msg = 'Olá! Gostaria de solicitar um orçamento.\n\n';
   msg += '*Nome:* ' + nome.trim() + '\n';
@@ -533,3 +535,92 @@ document.querySelectorAll('.mvv-card, .kit-card, .depo-card, .evento-card, .stat
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   observer.observe(el);
 });
+
+// ===== LGPD =====
+
+function abrirPrivacidade() {
+  var m = document.getElementById('lgpd-modal');
+  if (m) { m.style.display = 'flex'; return; }
+  var modal = document.createElement('div');
+  modal.id = 'lgpd-modal';
+  modal.style.cssText = 'position:fixed;inset:0;z-index:20000;background:rgba(15,24,32,0.75);display:flex;align-items:center;justify-content:center;padding:20px;';
+  modal.innerHTML =
+    '<div style="background:#FDF9F5;max-width:640px;width:100%;max-height:85vh;overflow-y:auto;border-radius:8px;padding:40px;font-family:Jost,sans-serif;position:relative;">' +
+      '<button onclick="fecharPrivacidade()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#3E4460;line-height:1;">✕</button>' +
+      '<h2 style="font-family:\'Cormorant Garamond\',serif;font-size:1.8rem;color:#3E4460;margin:0 0 6px;">Política de Privacidade</h2>' +
+      '<p style="color:#996E5F;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin:0 0 28px;">P&amp;C Doces e Bolos — LGPD</p>' +
+      '<h3 style="color:#3E4460;font-size:1rem;margin:0 0 8px;">1. Dados coletados</h3>' +
+      '<p style="color:#5A4A3A;line-height:1.8;margin:0 0 18px;">Coletamos apenas os dados informados voluntariamente no formulário de orçamento: <strong>nome, WhatsApp, tipo de evento, data, número de convidados e produto desejado</strong>.</p>' +
+      '<h3 style="color:#3E4460;font-size:1rem;margin:0 0 8px;">2. Finalidade</h3>' +
+      '<p style="color:#5A4A3A;line-height:1.8;margin:0 0 18px;">Os dados são usados <strong>exclusivamente</strong> para elaborar e enviar orçamentos personalizados e para contato comercial via WhatsApp.</p>' +
+      '<h3 style="color:#3E4460;font-size:1rem;margin:0 0 8px;">3. Armazenamento</h3>' +
+      '<p style="color:#5A4A3A;line-height:1.8;margin:0 0 18px;">Este site <strong>não possui banco de dados</strong>. Os dados são enviados diretamente ao WhatsApp da empresa e tratados como conversa comercial. Não há compartilhamento com terceiros.</p>' +
+      '<h3 style="color:#3E4460;font-size:1rem;margin:0 0 8px;">4. Cookies</h3>' +
+      '<p style="color:#5A4A3A;line-height:1.8;margin:0 0 18px;">Utilizamos apenas cookies essenciais de funcionamento, sem rastreamento ou publicidade.</p>' +
+      '<h3 style="color:#3E4460;font-size:1rem;margin:0 0 8px;">5. Seus direitos — Lei 13.709/2018</h3>' +
+      '<p style="color:#5A4A3A;line-height:1.8;margin:0 0 18px;">Você pode solicitar a qualquer momento: acesso, correção, exclusão ou revogação do consentimento sobre seus dados.</p>' +
+      '<h3 style="color:#3E4460;font-size:1rem;margin:0 0 8px;">6. Responsável (DPO)</h3>' +
+      '<p style="color:#5A4A3A;line-height:1.8;margin:0 0 28px;"><strong>P&amp;C Doces e Bolos</strong><br>Responsável: Ana Paula<br>' +
+      'E-mail: <a href="mailto:anapaula@pecdoces.com.br" style="color:#996E5F;">anapaula@pecdoces.com.br</a><br>' +
+      'WhatsApp: <a href="https://wa.me/5511961739148" style="color:#996E5F;">(11) 96173-9148</a></p>' +
+      '<button onclick="fecharPrivacidade()" style="background:#3E4460;color:#FBECDC;border:none;padding:13px 32px;border-radius:4px;cursor:pointer;font-family:Jost,sans-serif;font-weight:600;width:100%;font-size:14px;">Entendi</button>' +
+    '</div>';
+  document.body.appendChild(modal);
+  modal.addEventListener('click', function(e) { if (e.target === modal) fecharPrivacidade(); });
+}
+
+function fecharPrivacidade() {
+  var m = document.getElementById('lgpd-modal');
+  if (m) m.style.display = 'none';
+}
+
+function aceitarLGPD() {
+  localStorage.setItem('lgpd-ok', '1');
+  var b = document.getElementById('lgpd-banner');
+  if (b) { b.style.transition = 'opacity 0.4s'; b.style.opacity = '0'; setTimeout(function(){ b.remove(); }, 400); }
+}
+
+function initLGPD() {
+  // 1. Banner de cookies
+  if (!localStorage.getItem('lgpd-ok')) {
+    var banner = document.createElement('div');
+    banner.id = 'lgpd-banner';
+    banner.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:10000;background:#3E4460;color:#FBECDC;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:Jost,sans-serif;font-size:13px;box-shadow:0 -4px 20px rgba(0,0,0,0.25);';
+    banner.innerHTML =
+      '<span style="flex:1;min-width:220px;line-height:1.6;">Este site coleta dados do formulário para elaborar orçamentos, conforme a ' +
+      '<a href="#" onclick="abrirPrivacidade();return false;" style="color:#DAB88B;font-weight:600;">Política de Privacidade</a> e a LGPD.</span>' +
+      '<button onclick="aceitarLGPD()" style="background:#996E5F;color:#fff;border:none;padding:10px 24px;border-radius:4px;cursor:pointer;font-family:Jost,sans-serif;font-weight:600;font-size:13px;white-space:nowrap;">Aceitar e continuar</button>';
+    document.body.appendChild(banner);
+  }
+
+  // 2. Checkbox LGPD no formulário
+  var form = document.querySelector('#orcamento form');
+  if (form && !form.querySelector('#lgpd-check')) {
+    var submitBtn = form.querySelector('.form-submit');
+    if (submitBtn) {
+      var wrapper = document.createElement('div');
+      wrapper.style.cssText = 'margin-bottom:16px;display:flex;align-items:flex-start;gap:10px;';
+      wrapper.innerHTML =
+        '<input type="checkbox" id="lgpd-check" style="margin-top:3px;accent-color:#996E5F;width:16px;height:16px;flex-shrink:0;cursor:pointer;">' +
+        '<label for="lgpd-check" style="font-size:13px;color:rgba(62,68,96,0.7);line-height:1.6;cursor:pointer;">' +
+        'Li e concordo com a <a href="#" onclick="abrirPrivacidade();return false;" style="color:#996E5F;font-weight:600;">Política de Privacidade</a> ' +
+        'e autorizo o uso dos meus dados para elaboração do orçamento, conforme a LGPD.</label>';
+      form.insertBefore(wrapper, submitBtn);
+    }
+  }
+
+  // 3. Link no footer
+  var footerBottom = document.querySelector('.footer-bottom');
+  if (footerBottom && !footerBottom.querySelector('.lgpd-link')) {
+    var link = document.createElement('a');
+    link.href = '#';
+    link.className = 'lgpd-link';
+    link.textContent = 'Política de Privacidade (LGPD)';
+    link.onclick = function() { abrirPrivacidade(); return false; };
+    link.style.cssText = 'display:inline-block;margin-top:10px;font-size:12px;color:rgba(251,236,220,0.4);text-decoration:underline;cursor:pointer;';
+    footerBottom.appendChild(link);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', initLGPD);
+if (document.readyState !== 'loading') initLGPD();
