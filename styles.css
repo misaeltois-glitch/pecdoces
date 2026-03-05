@@ -1692,3 +1692,12 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
 
 /* Hero scroll indicator */
 .hero-scroll-text { color: rgba(62, 68, 96, 0.4); }
+
+/* MVV cards: restaurar fundo escuro para contraste correto */
+.mvv-card:nth-child(1) { background: #3E4460; }
+.mvv-card:nth-child(2) { background: #2D3350; }
+.mvv-card:nth-child(3) { background: #4E5878; }
+.mvv-card-title { color: #DAB88B !important; }
+.mvv-card-text { color: rgba(251, 236, 220, 0.8) !important; }
+.mvv-card-subtitle { color: rgba(218, 184, 139, 0.6) !important; }
+.mvv-card-icon { color: #DAB88B; }
