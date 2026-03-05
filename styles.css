@@ -1584,24 +1584,79 @@ footer {
     .form-row {
         grid-template-columns: 1fr;
     }
+    /* Botões hero: empilhar e ocupar largura total */
+    .hero-btns {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .btn-primary,
+    .btn-outline {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* Prazos: empilhar itens verticalmente, sem corte de texto */
     .prazos-banner {
-        gap: 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
         padding: 30px 1.5rem;
+    }
+    .prazo-item {
+        width: 100%;
+        gap: 16px;
+    }
+    .prazo-text span {
+        white-space: normal;
+        word-break: break-word;
     }
     .prazo-divider {
         display: none;
     }
+
+    /* Cardápio: tabs em duas colunas no mobile */
     #cardapio {
-        padding: 70px 1.5rem;
+        padding: 60px 1rem;
     }
+    .tabs {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .tab {
+        flex: 1 1 calc(50% - 8px);
+        min-width: 0;
+        font-size: 10px;
+        padding: 10px 8px;
+    }
+    .bolos-grid {
+        grid-template-columns: 1fr;
+    }
+    .doces-grid {
+        grid-template-columns: 1fr;
+    }
+    .pers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Momentos/Localização */
     .momentos-header {
         grid-template-columns: 1fr;
     }
     .localizacao {
         padding: 60px 1.5rem;
     }
+    .loc-map {
+        height: 220px;
+    }
+
     footer {
         padding: 40px 1.5rem 24px;
+    }
+
+    /* Seção de título */
+    .section-title {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
     }
 }
 
