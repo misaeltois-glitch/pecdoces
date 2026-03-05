@@ -1658,6 +1658,17 @@ footer {
     .section-title {
         font-size: clamp(1.8rem, 7vw, 2.5rem);
     }
+
+    /* MVV: corrigir padding excessivo do inline style */
+    .mvv-grid {
+        padding: 0 1.5rem !important;
+    }
+    #missao > div {
+        padding: 60px 1.5rem 40px !important;
+    }
+    .mvv-card {
+        padding: 40px 28px;
+    }
 }
 
 
