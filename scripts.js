@@ -624,3 +624,63 @@ function initLGPD() {
 
 document.addEventListener('DOMContentLoaded', initLGPD);
 if (document.readyState !== 'loading') initLGPD();
+
+// ===== PROTEÇÃO DE CONTEÚDO =====
+
+function mostrarToastCopyright() {
+  var old = document.getElementById('cp-toast');
+  if (old) old.remove();
+  var t = document.createElement('div');
+  t.id = 'cp-toast';
+  t.style.cssText = 'position:fixed;bottom:84px;left:50%;transform:translateX(-50%);background:#3E4460;color:#FBECDC;padding:11px 22px;border-radius:6px;font-family:Jost,sans-serif;font-size:13px;z-index:99999;box-shadow:0 4px 16px rgba(0,0,0,0.3);white-space:nowrap;pointer-events:none;';
+  t.textContent = '© 2026 P&C Doces e Bolos — Conteúdo protegido';
+  document.body.appendChild(t);
+  setTimeout(function() {
+    t.style.transition = 'opacity 0.5s';
+    t.style.opacity = '0';
+    setTimeout(function() { t.remove(); }, 500);
+  }, 2500);
+}
+
+function initProtecaoConteudo() {
+  // 1. Meta tags de copyright no <head>
+  var metas = [
+    { name: 'copyright',    content: '© 2026 P&C Doces e Bolos. Todos os direitos reservados.' },
+    { name: 'author',       content: 'P&C Doces e Bolos' },
+    { name: 'robots',       content: 'index, follow, max-image-preview:large' },
+    { name: 'og:site_name', content: 'P&C Doces e Bolos' },
+    { name: 'og:type',      content: 'website' }
+  ];
+  metas.forEach(function(m) {
+    if (document.querySelector('meta[name="' + m.name + '"]')) return;
+    var tag = document.createElement('meta');
+    tag.name = m.name; tag.content = m.content;
+    document.head.appendChild(tag);
+  });
+
+  // 2. Impedir arrastar imagens (caso sejam adicionadas via <img>)
+  document.addEventListener('dragstart', function(e) {
+    if (e.target.tagName === 'IMG') e.preventDefault();
+  });
+
+  // 3. Right-click: aviso de copyright nas áreas visuais
+  document.addEventListener('contextmenu', function(e) {
+    var bloqueados = ['.hero', '.mvv-card', '.evento-card', '.depo-card', '.momentos', 'nav'];
+    var dentroDeBloco = bloqueados.some(function(sel) { return e.target.closest && e.target.closest(sel); });
+    if (dentroDeBloco) {
+      e.preventDefault();
+      mostrarToastCopyright();
+    }
+  });
+
+  // 4. Ctrl+S interceptado com aviso
+  document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && e.key === 's') {
+      e.preventDefault();
+      mostrarToastCopyright();
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initProtecaoConteudo);
+if (document.readyState !== 'loading') initProtecaoConteudo();

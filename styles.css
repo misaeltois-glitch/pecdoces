@@ -1713,3 +1713,30 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
 .mvv-card-subtitle { color: rgba(153, 110, 95, 0.75) !important; }
 .mvv-card-icon { color: #996E5F; }
 .mvv-card-number { color: rgba(62, 68, 96, 0.1); }
+
+/* ===== PROTEÇÃO DE CONTEÚDO ===== */
+
+/* Preços e nomes de produtos: não selecionáveis */
+.preco-badge, .bolo-name, .kit-badge, .pers-name,
+.doce-col-header, .doce-price {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Impressão: ocultar interface e exibir marca d'água */
+@media print {
+    nav, .prazos-banner, .hero-btns, .whatsapp-float,
+    .insta-float, #lgpd-banner, .tabs, footer { display: none !important; }
+
+    body::after {
+        content: '© 2026 P&C Doces e Bolos — pecdoces.com.br — Todos os direitos reservados.';
+        display: block;
+        text-align: center;
+        padding: 24px;
+        font-family: serif;
+        color: #aaa;
+        font-size: 11px;
+        border-top: 1px solid #ddd;
+        margin-top: 40px;
+    }
+}
