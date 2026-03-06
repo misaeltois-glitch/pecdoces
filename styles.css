@@ -1744,19 +1744,22 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
 .badge-shimmer-branco {
   position: relative;
   overflow: hidden;
+  display: inline-block;
 }
 .badge-shimmer-branco::after {
   content: '';
   position: absolute;
-  top: 0; left: -100%;
-  width: 60%; height: 100%;
-  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.35) 50%, transparent 100%);
-  animation: shimmer-sweep 4s ease-in-out infinite;
+  top: 0; left: 0;
+  width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.45) 50%, transparent 100%);
+  transform: translateX(-150%);
+  animation: shimmer-sweep 4s linear infinite;
   pointer-events: none;
 }
 @keyframes shimmer-sweep {
-  0%   { left: -60%; }
-  100% { left: 160%; }
+  0%   { transform: translateX(-150%); }
+  20%  { transform: translateX(350%); }
+  100% { transform: translateX(350%); }
 }
 
 /* ===== PROTEÇÃO DE CONTEÚDO ===== */
