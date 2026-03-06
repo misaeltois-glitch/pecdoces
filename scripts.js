@@ -247,7 +247,7 @@ function atualizarCardapio2026() {
     return '<div class="preco-section"' + (secStyle ? ' style="' + secStyle + '"' : '') + '><div class="preco-label"><div class="preco-badge"' +
       (badgeStyle ? ' style="' + badgeStyle + '"' : '') + '>R$ ' + price + ' / kg</div>' +
       '<div class="preco-line"></div>' +
-      '<span style="font-size:11px;color:rgba(62,68,96,0.6);letter-spacing:1px;">' + label + '</span>' +
+      '<span style="font-size:11px;color:rgba(62,68,96,0.6);letter-spacing:1px;font-weight:700;">' + label + '</span>' +
       '</div><div class="bolos-grid">' + itens.join('') + '</div></div>';
   }
 
@@ -295,7 +295,7 @@ function atualizarCardapio2026() {
       bi('Guibela','Massa branca, recheado com creme de leite condensado e frutas vermelhas, coberto com marshmellow.'),
       bi('Oreo','Massa de chocolate, recheado de creme com bolacha Oreo, coberto por marshmellow e Oreo.')
     ], 'border-left:3px solid #DAB88B;padding-left:1.2rem;margin-bottom:1rem');
-    var premium = ps('174,00', 'LINHA PREMIUM', 'background:linear-gradient(135deg,#996E5F,#7A4E45);color:#FDF6EE;border:none;box-shadow:0 3px 12px rgba(153,110,95,0.4)', [
+    var _premItens = [
       bi('Saint Honoré','Massa folhada, recheado com carolinas (creme ou chocolate), coberto com chantilly e decorado com carolinas recheadas, calda de chocolate e fios de caramelo.'),
       bi('Mil Folhas','Massa folhada, recheada com 1 opção: doce de leite, creme branco, brigadeiro ou trufado.'),
       bi('Toalha Felpuda','Massa branca c/ leite de coco, recheio de doce de leite e baba de moça, cobertura marshmellow e coco ralado.'),
@@ -305,13 +305,54 @@ function atualizarCardapio2026() {
       bi('Mousse de Chocolate com Damasco','Massa de chocolate, recheado com mousse de chocolate e doce de damasco, coberto com mousse e decorado com raspas e calda de damasco.'),
       bi('Nozes','Massa de nozes, recheado com creme de nozes ou baba de moça, coberto com chantilly ou marshmellow e decorado com nozes.'),
       bi('Choconozes','Massa chocolate, recheado com brigadeiro e creme de nozes, coberto com chocolate e nozes.')
-    ], 'border-left:3px solid #996E5F;padding-left:1.2rem;margin-bottom:1rem;background:linear-gradient(180deg,rgba(153,110,95,0.05),transparent)');
-    var luxo = ps('202,40', 'LINHA LUXO', 'background:linear-gradient(90deg,#1A2030 0%,#3E4460 35%,#6A7898 50%,#3E4460 65%,#1A2030 100%);background-size:200% auto;animation:shimmer-gold 4s linear infinite;color:#DAB88B;border:1px solid rgba(218,184,139,0.5);box-shadow:0 4px 20px rgba(218,184,139,0.25),inset 0 1px 0 rgba(218,184,139,0.15);letter-spacing:2px', [
+    ];
+    var _pTagline = '<div style="background:linear-gradient(135deg,#FAEEE8,#F0D9CE);border-left:4px solid #996E5F;border-radius:0 8px 8px 0;padding:16px 20px;margin-bottom:1.2rem;">'+
+      '<div style="font-size:12px;color:#7A4E45;font-weight:700;letter-spacing:1.5px;margin-bottom:6px;">✦ POR QUE ESCOLHER A LINHA PREMIUM?</div>'+
+      '<div style="font-size:13px;color:rgba(62,68,96,0.85);line-height:1.7;">Chocolate Callebaut belga, técnicas artesanais refinadas e acabamento profissional. Para quem quer impressionar.</div>'+
+      '</div>';
+    var _pCTA = '<div style="text-align:center;margin-top:1.2rem;">'+
+      '<a href="https://wa.me/5511961739148?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Linha%20Premium%20de%20bolos." target="_blank" '+
+      'style="display:inline-block;background:linear-gradient(135deg,#996E5F,#7A4E45);color:#FDF6EE;text-decoration:none;padding:12px 28px;border-radius:4px;font-family:Jost,sans-serif;font-weight:600;font-size:13px;letter-spacing:0.5px;box-shadow:0 3px 12px rgba(153,110,95,0.35);">'+
+      'Solicitar da Linha Premium →</a></div>';
+    var premium = '<div class="preco-section" style="border-left:3px solid #996E5F;padding-left:1.2rem;margin-bottom:1rem;background:linear-gradient(180deg,rgba(153,110,95,0.05),transparent)">'+
+      '<div class="preco-label">'+
+      '<div class="preco-badge" style="background:linear-gradient(135deg,#996E5F,#7A4E45);color:#FDF6EE;border:none;box-shadow:0 3px 12px rgba(153,110,95,0.4)">R$ 174,00 / kg</div>'+
+      '<div class="preco-line"></div>'+
+      '<span style="font-size:11px;color:rgba(62,68,96,0.6);letter-spacing:1px;font-weight:700;">LINHA PREMIUM</span>'+
+      '</div>'+
+      _pTagline+
+      '<div class="bolos-grid">'+ _premItens.join('') +'</div>'+
+      _pCTA+
+      '</div>';
+    var _luxItens = [
       bi('Bolo Espatulado','Massa e recheios a gosto, coberto com chantilly artisticamente espatulado. Decoração a definir.'),
       bi('Naked Cake','Massa branca, preta ou red velvet. Recheios de mousses, coco c/ abacaxi, creme brûlée, cream cheese, doce de leite, brigadeiro, trufado. Decoração a definir.'),
       bi('Bolo Kit Kat','Massa branca ou preta, recheio a gosto, coberto de brigadeiro, decorado com Kit Kat e laço cor a escolher, na superfície confete ou raspas.'),
       bi('Quindão','Massa de ovos. Decoração a definir.')
-    ], 'border-left:3px solid #DAB88B;padding-left:1.2rem;background:linear-gradient(180deg,rgba(62,68,96,0.07),rgba(62,68,96,0.02));box-shadow:inset 3px 0 0 rgba(218,184,139,0.15)');
+    ];
+    var luxo = '<div class="preco-section" style="border-left:3px solid rgba(218,184,139,0.4);padding-left:1.2rem;margin-bottom:1rem;">'+
+      '<div class="preco-label">'+
+      '<div class="preco-badge" style="background:linear-gradient(90deg,#1A2030 0%,#3E4460 35%,#6A7898 50%,#3E4460 65%,#1A2030 100%);background-size:200% auto;animation:shimmer-gold 4s linear infinite;color:#DAB88B;border:1px solid rgba(218,184,139,0.5);box-shadow:0 4px 20px rgba(218,184,139,0.25),inset 0 1px 0 rgba(218,184,139,0.15);letter-spacing:2px">R$ 202,40 / kg</div>'+
+      '<div class="preco-line"></div>'+
+      '<span style="font-size:11px;color:rgba(62,68,96,0.6);letter-spacing:1px;font-weight:700;">LINHA LUXO</span>'+
+      '</div>'+
+      '<div style="text-align:center;padding:12px 0 8px;">'+
+      '<div style="font-family:Cormorant Garamond,serif;font-size:22px;color:#1A2538;font-weight:700;letter-spacing:1px;">A linha mais exclusiva da P&C</div>'+
+      '<div style="font-size:11px;color:rgba(62,68,96,0.55);letter-spacing:2.5px;margin-top:5px;">CRIAчÕES ÚNICAS · ARTE ARTESANAL · CADA BOLO É UMA OBRA</div>'+
+      '</div>'+
+      '<div class="bolos-grid" style="gap:0.8rem;">'+
+      _luxItens.map(function(it){ return it.replace('class="bolo-item"','class="bolo-item" style="border-left:3px solid rgba(218,184,139,0.5);background:linear-gradient(135deg,rgba(26,32,48,0.05),transparent);padding-left:0.8rem;"'); }).join('')+
+      '</div>'+
+      '<div style="background:linear-gradient(135deg,#1A2030,#2D3350);border-radius:8px;padding:20px 24px;margin-top:1.4rem;display:flex;flex-wrap:wrap;align-items:center;gap:16px;justify-content:space-between;">'+
+      '<div>'+
+      '<div style="font-size:12px;color:#DAB88B;letter-spacing:2px;font-weight:700;margin-bottom:4px;">✦ CRIAчÃO SOB ENCOMENDA</div>'+
+      '<div style="font-size:13px;color:rgba(253,246,238,0.8);line-height:1.6;">Cada peça é única. Consulte disponibilidade e agende sua criação exclusiva.</div>'+
+      '</div>'+
+      '<a href="https://wa.me/5511961739148?text=Ol%C3%A1!%20Tenho%20interesse%20em%20um%20bolo%20da%20Linha%20Luxo%20exclusiva." target="_blank" '+
+      'style="display:inline-block;background:linear-gradient(135deg,#DAB88B,#B8845A);color:#1A2030;text-decoration:none;padding:12px 24px;border-radius:4px;font-family:Jost,sans-serif;font-weight:700;font-size:13px;white-space:nowrap;box-shadow:0 4px 16px rgba(218,184,139,0.4);">'+
+      '✦ Consultar criação exclusiva</a>'+
+      '</div>'+
+      '</div>';
     tabBolos.innerHTML =
       '<div class="bolos-intro"><span>Todos os bolos são vendidos por <strong>kg</strong>. Recomendamos <strong>100g de bolo por pessoa</strong> para eventos.</span></div>' +
       classica + especial + premium + luxo;
