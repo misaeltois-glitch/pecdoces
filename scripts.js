@@ -243,8 +243,8 @@ function atualizarCardapio2026() {
   function bi(name, desc) {
     return '<div class="bolo-item"><div class="bolo-name">' + name + '</div><div class="bolo-desc">' + desc + '</div></div>';
   }
-  function ps(price, label, badgeStyle, itens) {
-    return '<div class="preco-section"><div class="preco-label"><div class="preco-badge"' +
+  function ps(price, label, badgeStyle, itens, secStyle) {
+    return '<div class="preco-section"' + (secStyle ? ' style="' + secStyle + '"' : '') + '><div class="preco-label"><div class="preco-badge"' +
       (badgeStyle ? ' style="' + badgeStyle + '"' : '') + '>R$ ' + price + ' / kg</div>' +
       '<div class="preco-line"></div>' +
       '<span style="font-size:11px;color:rgba(62,68,96,0.6);letter-spacing:1px;">' + label + '</span>' +
@@ -254,7 +254,9 @@ function atualizarCardapio2026() {
   // ── BOLOS ──
   var tabBolos = document.getElementById('tab-bolos');
   if (tabBolos) {
-    var classica = ps('123,50', 'LINHA CLÁSSICA', '', [
+    var bClassica = 'background:linear-gradient(135deg,#FBECDC,#F0D9BE);color:#7A4E45;border:1px solid rgba(153,110,95,0.25);font-weight:600';
+    var sClassica = 'border-left:3px solid rgba(219,184,139,0.35);padding-left:1.2rem;margin-bottom:1rem';
+    var classica = ps('123,50', 'LINHA CLÁSSICA', bClassica, [
       bi('Brigadeiro','Massa de chocolate, recheado com brigadeiro, coberto com brigadeiro ou marshmellow, decorado com granulado ou raspas pretas.'),
       bi('Brigadeiro Crocante','Massa de chocolate, recheado com brigadeiro e crocante, coberto com brigadeiro e decorado com crocante.'),
       bi('Crocante','Massa branca, recheado com creme de baunilha e crocante, coberto com chantily ou marshmellow e crocantes.'),
@@ -278,8 +280,8 @@ function atualizarCardapio2026() {
       bi('Carioca','Massa de chocolate, recheado com brigadeiro e doce de leite, coberto com chocolate e doce de leite.'),
       bi('Cenoura','Massa de cenoura, recheado e coberto com brigadeiro.'),
       bi('Laranja','Massa de laranja, molhada ao suco de laranja.')
-    ]);
-    var especial = ps('139,70', 'LINHA ESPECIAL', 'background:#E8D5BC;color:#3E4460;border:1px solid rgba(62,68,96,0.2)', [
+    ], sClassica);
+    var especial = ps('139,70', 'LINHA ESPECIAL', 'background:linear-gradient(135deg,#DAB88B,#C49A6C);color:#FDF6EE;border:none;box-shadow:0 2px 8px rgba(196,154,108,0.3)', [
       bi('Leite Ninho com Nutella','Massa branca, recheado de leite ninho com nutella, coberto com chantilly ou marshmallow, decorado com granulado de ninho, nutella e leite ninho polvilhado.'),
       bi('Casadinho','Massa de chocolate e massa branca, recheado com brigadeiro branco e preto, coberto com mousse de chocolate e decorado com granulado.'),
       bi('Napolitano','Massa de chocolate, recheado com brigadeiro branco, brigadeiro preto e bicho do pé, coberto com marshmellow, raspas mistas e morangos.'),
@@ -292,8 +294,8 @@ function atualizarCardapio2026() {
       bi('Dois Amores','Massa branca, recheado com coco e doce de leite, coberto por marshmellow e decorado com raspas brancas e riscos de chocolate.'),
       bi('Guibela','Massa branca, recheado com creme de leite condensado e frutas vermelhas, coberto com marshmellow.'),
       bi('Oreo','Massa de chocolate, recheado de creme com bolacha Oreo, coberto por marshmellow e Oreo.')
-    ]);
-    var premium = ps('174,00', 'LINHA PREMIUM', 'background:linear-gradient(135deg,#C8956A,#A8754A);color:#FDF6EE;border:none', [
+    ], 'border-left:3px solid #DAB88B;padding-left:1.2rem;margin-bottom:1rem');
+    var premium = ps('174,00', 'LINHA PREMIUM', 'background:linear-gradient(135deg,#996E5F,#7A4E45);color:#FDF6EE;border:none;box-shadow:0 3px 12px rgba(153,110,95,0.4)', [
       bi('Saint Honoré','Massa folhada, recheado com carolinas (creme ou chocolate), coberto com chantilly e decorado com carolinas recheadas, calda de chocolate e fios de caramelo.'),
       bi('Mil Folhas','Massa folhada, recheada com 1 opção: doce de leite, creme branco, brigadeiro ou trufado.'),
       bi('Toalha Felpuda','Massa branca c/ leite de coco, recheio de doce de leite e baba de moça, cobertura marshmellow e coco ralado.'),
@@ -303,13 +305,13 @@ function atualizarCardapio2026() {
       bi('Mousse de Chocolate com Damasco','Massa de chocolate, recheado com mousse de chocolate e doce de damasco, coberto com mousse e decorado com raspas e calda de damasco.'),
       bi('Nozes','Massa de nozes, recheado com creme de nozes ou baba de moça, coberto com chantilly ou marshmellow e decorado com nozes.'),
       bi('Choconozes','Massa chocolate, recheado com brigadeiro e creme de nozes, coberto com chocolate e nozes.')
-    ]);
-    var luxo = ps('202,40', 'LINHA LUXO', 'background:linear-gradient(135deg,var(--gold),#7A4E45);color:var(--cream-light)', [
+    ], 'border-left:3px solid #996E5F;padding-left:1.2rem;margin-bottom:1rem;background:linear-gradient(180deg,rgba(153,110,95,0.05),transparent)');
+    var luxo = ps('202,40', 'LINHA LUXO', 'background:linear-gradient(90deg,#1A2030 0%,#3E4460 35%,#6A7898 50%,#3E4460 65%,#1A2030 100%);background-size:200% auto;animation:shimmer-gold 4s linear infinite;color:#DAB88B;border:1px solid rgba(218,184,139,0.5);box-shadow:0 4px 20px rgba(218,184,139,0.25),inset 0 1px 0 rgba(218,184,139,0.15);letter-spacing:2px', [
       bi('Bolo Espatulado','Massa e recheios a gosto, coberto com chantilly artisticamente espatulado. Decoração a definir.'),
       bi('Naked Cake','Massa branca, preta ou red velvet. Recheios de mousses, coco c/ abacaxi, creme brûlée, cream cheese, doce de leite, brigadeiro, trufado. Decoração a definir.'),
       bi('Bolo Kit Kat','Massa branca ou preta, recheio a gosto, coberto de brigadeiro, decorado com Kit Kat e laço cor a escolher, na superfície confete ou raspas.'),
       bi('Quindão','Massa de ovos. Decoração a definir.')
-    ]);
+    ], 'border-left:3px solid #DAB88B;padding-left:1.2rem;background:linear-gradient(180deg,rgba(62,68,96,0.07),rgba(62,68,96,0.02));box-shadow:inset 3px 0 0 rgba(218,184,139,0.15)');
     tabBolos.innerHTML =
       '<div class="bolos-intro"><span>Todos os bolos são vendidos por <strong>kg</strong>. Recomendamos <strong>100g de bolo por pessoa</strong> para eventos.</span></div>' +
       classica + especial + premium + luxo;
