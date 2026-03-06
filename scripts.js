@@ -338,14 +338,14 @@ function atualizarCardapio2026() {
       '</div>'+
       '<div style="text-align:center;padding:12px 0 8px;">'+
       '<div style="font-family:Cormorant Garamond,serif;font-size:22px;color:#1A2538;font-weight:700;letter-spacing:1px;">A linha mais exclusiva da P&C</div>'+
-      '<div style="font-size:11px;color:rgba(62,68,96,0.55);letter-spacing:2.5px;margin-top:5px;">CRIAчÕES ÚNICAS · ARTE ARTESANAL · CADA BOLO É UMA OBRA</div>'+
+      '<div style="font-size:11px;color:rgba(62,68,96,0.55);letter-spacing:2.5px;margin-top:5px;">CRIAÇÕES ÚNICAS · ARTE ARTESANAL · CADA BOLO É UMA OBRA</div>'+
       '</div>'+
       '<div class="bolos-grid" style="gap:0.8rem;">'+
       _luxItens.map(function(it){ return it.replace('class="bolo-item"','class="bolo-item" style="border-left:3px solid rgba(218,184,139,0.5);background:linear-gradient(135deg,rgba(26,32,48,0.05),transparent);padding-left:0.8rem;"'); }).join('')+
       '</div>'+
       '<div style="background:linear-gradient(135deg,#1A2030,#2D3350);border-radius:8px;padding:20px 24px;margin-top:1.4rem;display:flex;flex-wrap:wrap;align-items:center;gap:16px;justify-content:space-between;">'+
       '<div>'+
-      '<div style="font-size:12px;color:#DAB88B;letter-spacing:2px;font-weight:700;margin-bottom:4px;">✦ CRIAчÃO SOB ENCOMENDA</div>'+
+      '<div style="font-size:12px;color:#DAB88B;letter-spacing:2px;font-weight:700;margin-bottom:4px;">✦ CRIAÇÃO SOB ENCOMENDA</div>'+
       '<div style="font-size:13px;color:rgba(253,246,238,0.8);line-height:1.6;">Cada peça é única. Consulte disponibilidade e agende sua criação exclusiva.</div>'+
       '</div>'+
       '<a href="https://wa.me/5511961739148?text=Ol%C3%A1!%20Tenho%20interesse%20em%20um%20bolo%20da%20Linha%20Luxo%20exclusiva." target="_blank" '+
