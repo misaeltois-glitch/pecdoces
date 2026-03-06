@@ -316,7 +316,7 @@ function atualizarCardapio2026() {
       'Solicitar da Linha Premium →</a></div>';
     var premium = '<div class="preco-section" style="border-left:3px solid #996E5F;padding-left:1.2rem;margin-bottom:1rem;background:linear-gradient(180deg,rgba(153,110,95,0.05),transparent)">'+
       '<div class="preco-label">'+
-      '<div class="preco-badge" style="background:linear-gradient(135deg,#996E5F,#7A4E45);color:#FDF6EE;border:none;box-shadow:0 3px 12px rgba(153,110,95,0.4)">R$ 174,00 / kg</div>'+
+      '<div class="preco-badge" style="background:linear-gradient(90deg,#1A2030 0%,#3E4460 35%,#6A7898 50%,#3E4460 65%,#1A2030 100%);background-size:200% auto;animation:shimmer-gold 4s linear infinite;color:#DAB88B;border:1px solid rgba(218,184,139,0.5);box-shadow:0 4px 20px rgba(218,184,139,0.25),inset 0 1px 0 rgba(218,184,139,0.15);letter-spacing:2px">R$ 174,00 / kg</div>'+
       '<div class="preco-line"></div>'+
       '<span style="font-size:11px;color:rgba(62,68,96,0.6);letter-spacing:1px;font-weight:700;">LINHA PREMIUM</span>'+
       '</div>'+
