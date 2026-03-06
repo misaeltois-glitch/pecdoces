@@ -1729,6 +1729,11 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
 .mvv-card-icon { color: #996E5F; }
 .mvv-card-number { color: rgba(62, 68, 96, 0.1); }
 
+@keyframes shimmer-branco {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
 @keyframes shimmer-gold {
   0%   { background-position: 200% center; }
   100% { background-position: -200% center; }
