@@ -1688,6 +1688,10 @@ footer {
 .loc-info .section-title,
 .loc-details strong { color: var(--text-dark); }
 
+
+/* Headers marrom/terracota: texto claro */
+.doce-col-header .price { color: #FDF6EE !important; }
+.doce-col-header .cat   { color: rgba(253,246,238,0.75) !important; }
 /* Subtítulos que usam --choco-mid/warm (agora creme) */
 .momentos-quote { color: var(--text-mid); }
 .depo-author    { color: var(--text-mid); }

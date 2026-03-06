@@ -247,7 +247,7 @@ function atualizarCardapio2026() {
     return '<div class="preco-section"><div class="preco-label"><div class="preco-badge"' +
       (badgeStyle ? ' style="' + badgeStyle + '"' : '') + '>R$ ' + price + ' / kg</div>' +
       '<div class="preco-line"></div>' +
-      '<span style="font-size:11px;color:rgba(247,237,216,0.4);letter-spacing:1px;">' + label + '</span>' +
+      '<span style="font-size:11px;color:rgba(62,68,96,0.6);letter-spacing:1px;">' + label + '</span>' +
       '</div><div class="bolos-grid">' + itens.join('') + '</div></div>';
   }
 
@@ -371,9 +371,9 @@ function atualizarCardapio2026() {
       'background:linear-gradient(135deg,var(--gold),#7A4E45)');
 
     tabDoces.innerHTML =
-      '<p style="font-size:13px;color:rgba(247,237,216,0.5);margin-bottom:2rem;line-height:1.7;">' +
-      'Mínimo de <strong style="color:var(--gold)">10 unidades</strong> por sabor. ' +
-      'Doces marcados com ★ têm pedido mínimo de <strong style="color:var(--gold)">25 unidades</strong>.</p>' +
+      '<p style="font-size:13px;color:rgba(62,68,96,0.65);margin-bottom:2rem;line-height:1.7;">' +
+      'Mínimo de <strong style="color:#7A4E45">10 unidades</strong> por sabor. ' +
+      'Doces marcados com ★ têm pedido mínimo de <strong style="color:#7A4E45">25 unidades</strong>.</p>' +
       '<div class="doces-grid">' + col1 + col2 + col3 + col4 + col5 + '</div>';
   }
 
@@ -407,8 +407,8 @@ function atualizarCardapio2026() {
         'border-color:rgba(201,153,58,0.4)') +
       '<div class="kit-card" style="background:rgba(201,153,58,0.04);border-color:rgba(201,153,58,0.25);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:300px;">' +
       '<i class="fa-solid fa-wand-sparkles" style="font-size:2.2rem;color:var(--gold);margin-bottom:16px;"></i>' +
-      '<div style="font-family:\'Cormorant Garamond\',serif;font-size:1.3rem;color:var(--cream);margin-bottom:8px;">Kit personalizado?</div>' +
-      '<p style="font-size:12px;color:rgba(247,237,216,0.4);margin-bottom:20px;line-height:1.7;padding:0 24px;">Monte seu kit ideal com a nossa equipe. Escolha sabores, quantidades e personalização.</p>' +
+      '<div style="font-family:\'Cormorant Garamond\',serif;font-size:1.3rem;color:var(--text-dark);margin-bottom:8px;">Kit personalizado?</div>' +
+      '<p style="font-size:12px;color:rgba(62,68,96,0.6);margin-bottom:20px;line-height:1.7;padding:0 24px;">Monte seu kit ideal com a nossa equipe. Escolha sabores, quantidades e personalização.</p>' +
       '<a href="https://wa.me/5511961739148?text=Ol%C3%A1!%20Quero%20montar%20um%20kit%20personalizado." class="btn-primary" target="_blank">Falar no WhatsApp</a>' +
       '</div></div>';
   }
@@ -426,11 +426,11 @@ function atualizarCardapio2026() {
       '<div class="preco-line"></div>' +
       '<span style="font-size:18px;font-family:\'Cormorant Garamond\',serif;color:var(--gold);">R$ 275,60 / kg</span>' +
       '</div>' +
-      '<div style="margin-top:1rem;font-size:12px;color:rgba(247,237,216,0.5);line-height:2;">' +
-      '<strong style="color:var(--gold-light);letter-spacing:1px;font-size:11px;">SABORES:</strong> ' +
+      '<div style="margin-top:1rem;font-size:12px;color:rgba(62,68,96,0.65);line-height:2;">' +
+      '<strong style="color:#7A4E45;letter-spacing:1px;font-size:11px;">SABORES:</strong> ' +
       'Brigadeiro de Nozes · Ganache Chocolate Meio Amargo · Doce de Leite · Prestígio · Nozes · Damasco · Leite Ninho · Brigadeiro' +
       '</div></div>' +
-      '<p style="font-size:12.5px;color:rgba(247,237,216,0.4);margin-bottom:2rem;line-height:1.7;max-width:600px;">' +
+      '<p style="font-size:12.5px;color:rgba(62,68,96,0.6);margin-bottom:2rem;line-height:1.7;max-width:600px;">' +
       'Cupcakes: massas de baunilha ou chocolate. Recheios: brigadeiro, doce de leite, coco, limão, maracujá ou morango.</p>' +
       '<div class="pers-grid">' +
       pi('Mini Cupcake Tradicional','6,70') +
