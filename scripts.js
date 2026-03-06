@@ -397,13 +397,13 @@ function atualizarCardapio2026() {
         ['1 Bolo tradicional (2kg)','42 Doces tradicionais','6 Cupcakes']) +
       kc('Kit Festa Luxo','Luxo P','Sugestão para até 10 pessoas','453,38','color:var(--gold-light)',
         ['1 Bolo sabor à sua escolha (1,5kg)','24 Doces Especiais','4 Cupcakes'],
-        {text:'Popular'}) +
+        {text:'Popular', style:'background:#996E5F;color:#FDF6EE;border:none'}) +
       kc('Kit Festa Luxo','Luxo G','Sugestão para 15–20 pessoas','675,70','color:var(--gold-light)',
         ['1 Bolo sabor à sua escolha (2kg)','42 Doces Especiais','6 Cupcakes']) +
       kc('Kit Festa','Decorado','Tema e personalização inclusos','788,76','background:rgba(201,153,58,0.08)',
         ['1 Bolo decorado (1,5kg)','4 Cupcakes decorados','3 Pirulitos de chocolate decorados',
          '3 Pães de mel decorados','20 Doces gourmet','10 Apliques personalizados com idade e inicial do nome'],
-        {text:'Premium', style:'background:var(--choco-mid);color:var(--gold-light)'},
+        {text:'Premium ✦', style:'background:linear-gradient(135deg,#3E4460,#2D3350);color:#DAB88B;letter-spacing:2px;border:none'},
         'border-color:rgba(201,153,58,0.4)') +
       '<div class="kit-card" style="background:rgba(201,153,58,0.04);border-color:rgba(201,153,58,0.25);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:300px;">' +
       '<i class="fa-solid fa-wand-sparkles" style="font-size:2.2rem;color:var(--gold);margin-bottom:16px;"></i>' +

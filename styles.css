@@ -1696,6 +1696,10 @@ footer {
 .momentos-quote { color: var(--text-mid); }
 .depo-author    { color: var(--text-mid); }
 
+
+/* Nav CTA e kit-badge: texto claro no fundo terracota */
+.nav-cta { color: #FDF6EE !important; }
+.nav-cta:hover { color: #FDF6EE !important; }
 /* Nav: ajustar links e borda */
 .nav-links a { color: rgba(62, 68, 96, 0.75); }
 .nav-links a:hover, .nav-links a.active { color: var(--gold); }
