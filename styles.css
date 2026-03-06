@@ -1700,6 +1700,13 @@ footer {
 /* Nav CTA e kit-badge: texto claro no fundo terracota */
 .nav-cta { color: #FDF6EE !important; }
 .nav-cta:hover { color: #FDF6EE !important; }
+
+/* Badges e botões com fundo terracota/escuro: texto claro */
+.preco-badge { color: #FDF6EE !important; }
+.kit-badge   { color: #FDF6EE !important; }
+.loc-map .map-btn { color: #FDF6EE !important; }
+.footer-social a:hover { color: #FDF6EE !important; }
+.form-submit { color: #FDF6EE !important; }
 /* Nav: ajustar links e borda */
 .nav-links a { color: rgba(62, 68, 96, 0.75); }
 .nav-links a:hover, .nav-links a.active { color: var(--gold); }

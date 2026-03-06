@@ -279,7 +279,7 @@ function atualizarCardapio2026() {
       bi('Cenoura','Massa de cenoura, recheado e coberto com brigadeiro.'),
       bi('Laranja','Massa de laranja, molhada ao suco de laranja.')
     ]);
-    var especial = ps('139,70', 'LINHA ESPECIAL', 'background:var(--choco-mid);color:var(--gold-light)', [
+    var especial = ps('139,70', 'LINHA ESPECIAL', 'background:#E8D5BC;color:#3E4460;border:1px solid rgba(62,68,96,0.2)', [
       bi('Leite Ninho com Nutella','Massa branca, recheado de leite ninho com nutella, coberto com chantilly ou marshmallow, decorado com granulado de ninho, nutella e leite ninho polvilhado.'),
       bi('Casadinho','Massa de chocolate e massa branca, recheado com brigadeiro branco e preto, coberto com mousse de chocolate e decorado com granulado.'),
       bi('Napolitano','Massa de chocolate, recheado com brigadeiro branco, brigadeiro preto e bicho do pé, coberto com marshmellow, raspas mistas e morangos.'),
@@ -293,7 +293,7 @@ function atualizarCardapio2026() {
       bi('Guibela','Massa branca, recheado com creme de leite condensado e frutas vermelhas, coberto com marshmellow.'),
       bi('Oreo','Massa de chocolate, recheado de creme com bolacha Oreo, coberto por marshmellow e Oreo.')
     ]);
-    var premium = ps('174,00', 'LINHA PREMIUM', 'background:rgba(201,153,58,0.2);color:var(--gold-light);border:1px solid var(--gold)', [
+    var premium = ps('174,00', 'LINHA PREMIUM', 'background:linear-gradient(135deg,#C8956A,#A8754A);color:#FDF6EE;border:none', [
       bi('Saint Honoré','Massa folhada, recheado com carolinas (creme ou chocolate), coberto com chantilly e decorado com carolinas recheadas, calda de chocolate e fios de caramelo.'),
       bi('Mil Folhas','Massa folhada, recheada com 1 opção: doce de leite, creme branco, brigadeiro ou trufado.'),
       bi('Toalha Felpuda','Massa branca c/ leite de coco, recheio de doce de leite e baba de moça, cobertura marshmellow e coco ralado.'),
