@@ -79,6 +79,16 @@ nav {
     display: block;
 }
 
+
+.nav-logo-icon {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--choco-deep);
+    border: 1px solid;
+    padding: 3px 7px;
+}
 .nav-logo-text {
     font-family: 'Cormorant Garamond', serif;
     font-size: 18px;
@@ -92,7 +102,7 @@ nav {
 .nav-logo-text span {
     display: block;
     font-size: 10px;
-    font-weight: 300;
+    font-weight: 700;
     letter-spacing: 3px;
     color: var(--gold-light);
     font-family: 'Jost', sans-serif;
