@@ -516,8 +516,8 @@ function aplicarCliquesCardapio() {
     });
   });
 }
-document.addEventListener('DOMContentLoaded', aplicarCliquesCardapio);
-if (document.readyState !== 'loading') aplicarCliquesCardapio();
+document.addEventListener('DOMContentLoaded', function(){ atualizarCardapio2026(); aplicarCliquesCardapio(); });
+if (document.readyState !== 'loading') { atualizarCardapio2026(); aplicarCliquesCardapio(); }
 
 // ===== FADE IN NO SCROLL =====
 const observer = new IntersectionObserver((entries) => {
