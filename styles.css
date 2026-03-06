@@ -1739,6 +1739,26 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
   100% { background-position: -200% center; }
 }
 
+
+/* ===== SHIMMER BRANCO — badge PREMIUM ===== */
+.badge-shimmer-branco {
+  position: relative;
+  overflow: hidden;
+}
+.badge-shimmer-branco::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%; height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.35) 50%, transparent 100%);
+  animation: shimmer-sweep 4s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes shimmer-sweep {
+  0%   { left: -60%; }
+  100% { left: 160%; }
+}
+
 /* ===== PROTEÇÃO DE CONTEÚDO ===== */
 
 /* Preços e nomes de produtos: não selecionáveis */
