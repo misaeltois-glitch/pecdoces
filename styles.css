@@ -1703,6 +1703,7 @@ footer {
 
 /* Badges e botões com fundo terracota/escuro: texto claro */
 .preco-badge { color: #FDF6EE !important; }
+.badge-classica  { color: #7A4E45 !important; }
 .kit-badge   { color: #FDF6EE !important; }
 .loc-map .map-btn { color: #FDF6EE !important; }
 .footer-social a:hover { color: #FDF6EE !important; }

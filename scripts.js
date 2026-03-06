@@ -243,8 +243,8 @@ function atualizarCardapio2026() {
   function bi(name, desc) {
     return '<div class="bolo-item"><div class="bolo-name">' + name + '</div><div class="bolo-desc">' + desc + '</div></div>';
   }
-  function ps(price, label, badgeStyle, itens, secStyle) {
-    return '<div class="preco-section"' + (secStyle ? ' style="' + secStyle + '"' : '') + '><div class="preco-label"><div class="preco-badge"' +
+  function ps(price, label, badgeStyle, itens, secStyle, badgeClass) {
+    return '<div class="preco-section"' + (secStyle ? ' style="' + secStyle + '"' : '') + '><div class="preco-label"><div class="preco-badge' + (badgeClass ? ' ' + badgeClass : '') + '"' +
       (badgeStyle ? ' style="' + badgeStyle + '"' : '') + '>R$ ' + price + ' / kg</div>' +
       '<div class="preco-line"></div>' +
       '<span style="font-size:11px;color:rgba(62,68,96,0.6);letter-spacing:1px;font-weight:700;">' + label + '</span>' +
@@ -280,7 +280,7 @@ function atualizarCardapio2026() {
       bi('Carioca','Massa de chocolate, recheado com brigadeiro e doce de leite, coberto com chocolate e doce de leite.'),
       bi('Cenoura','Massa de cenoura, recheado e coberto com brigadeiro.'),
       bi('Laranja','Massa de laranja, molhada ao suco de laranja.')
-    ], sClassica);
+    ], sClassica, 'badge-classica');
     var especial = ps('139,70', 'LINHA ESPECIAL', 'background:linear-gradient(135deg,#DAB88B,#C49A6C);color:#FDF6EE;border:none;box-shadow:0 2px 8px rgba(196,154,108,0.3)', [
       bi('Leite Ninho com Nutella','Massa branca, recheado de leite ninho com nutella, coberto com chantilly ou marshmallow, decorado com granulado de ninho, nutella e leite ninho polvilhado.'),
       bi('Casadinho','Massa de chocolate e massa branca, recheado com brigadeiro branco e preto, coberto com mousse de chocolate e decorado com granulado.'),
