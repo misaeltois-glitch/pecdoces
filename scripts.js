@@ -579,6 +579,36 @@ document.querySelectorAll('.mvv-card, .kit-card, .depo-card, .evento-card, .stat
   observer.observe(el);
 });
 
+
+// ===== FOTOS EVENTOS =====
+function injetarFotosEventos() {
+  var dados = [
+    { img: 'imagens/casamentos.jpg',  alt: 'Casamentos' },
+    { img: 'imagens/aniversarios.jpg',alt: 'Aniversários' },
+    { img: 'imagens/formaturas.jpg',  alt: 'Formaturas' },
+    { img: 'imagens/cha-bebe.jpg',    alt: 'Chá de Bebê' },
+    { img: 'imagens/corporativo.jpg', alt: 'Eventos Corporativos' },
+    { img: 'imagens/festas.jpg',      alt: 'Festas Temáticas' }
+  ];
+  var cards = document.querySelectorAll('.evento-card');
+  cards.forEach(function(card, i) {
+    if (!card.querySelector('.evento-img') && dados[i]) {
+      var img = document.createElement('img');
+      img.className = 'evento-img';
+      img.src = dados[i].img;
+      img.alt = dados[i].alt + ' P&C Doces';
+      img.loading = 'lazy';
+      var body = document.createElement('div');
+      body.className = 'evento-card-body';
+      while (card.firstChild) body.appendChild(card.firstChild);
+      card.insertBefore(img, card.firstChild);
+      card.appendChild(body);
+    }
+  });
+}
+document.addEventListener('DOMContentLoaded', injetarFotosEventos);
+if (document.readyState !== 'loading') injetarFotosEventos();
+
 // ===== LGPD =====
 
 function abrirPrivacidade() {
