@@ -609,6 +609,89 @@ function injetarFotosEventos() {
 document.addEventListener('DOMContentLoaded', injetarFotosEventos);
 if (document.readyState !== 'loading') injetarFotosEventos();
 
+
+// ===== LIGHTBOX GALERIA EVENTOS =====
+var _galeriaEventos = {
+  casamentos:   ['imagens/casamentos.jpg'],
+  aniversarios: ['imagens/aniversarios.jpg','imagens/aniversario-2.jpg'],
+  formaturas:   ['imagens/formaturas.jpg'],
+  chabebe:      ['imagens/cha-bebe.jpg'],
+  corporativo:  ['imagens/corporativo.jpg','imagens/corporativo-2.jpg'],
+  festas:       ['imagens/festas.jpg','imagens/festas-2.jpg','imagens/festas-3.jpg']
+};
+
+function initLightboxEventos() {
+  // Criar modal
+  var modal = document.createElement('div');
+  modal.id = 'lb-modal';
+  modal.innerHTML =
+    '<div id="lb-overlay"></div>'+
+    '<div id="lb-box">'+
+      '<button id="lb-close" aria-label="Fechar">&#10005;</button>'+
+      '<button id="lb-prev" aria-label="Anterior">&#8249;</button>'+
+      '<img id="lb-img" src="" alt="">'+
+      '<button id="lb-next" aria-label="Próxima">&#8250;</button>'+
+      '<div id="lb-counter"></div>'+
+    '</div>';
+  document.body.appendChild(modal);
+
+  var imgs=[], cur=0;
+
+  function abrir(lista, idx) {
+    imgs=lista; cur=idx;
+    mostrar();
+    modal.classList.add('ativo');
+    document.body.style.overflow='hidden';
+  }
+  function fechar() {
+    modal.classList.remove('ativo');
+    document.body.style.overflow='';
+  }
+  function mostrar() {
+    document.getElementById('lb-img').src=imgs[cur];
+    document.getElementById('lb-counter').textContent=(cur+1)+' / '+imgs.length;
+    document.getElementById('lb-prev').style.display=imgs.length>1?'flex':'none';
+    document.getElementById('lb-next').style.display=imgs.length>1?'flex':'none';
+  }
+  function prev() { cur=(cur-1+imgs.length)%imgs.length; mostrar(); }
+  function next() { cur=(cur+1)%imgs.length; mostrar(); }
+
+  document.getElementById('lb-close').onclick=fechar;
+  document.getElementById('lb-overlay').onclick=fechar;
+  document.getElementById('lb-prev').onclick=prev;
+  document.getElementById('lb-next').onclick=next;
+
+  document.addEventListener('keydown',function(e){
+    if(!modal.classList.contains('ativo')) return;
+    if(e.key==='Escape') fechar();
+    if(e.key==='ArrowLeft') prev();
+    if(e.key==='ArrowRight') next();
+  });
+
+  // Swipe mobile
+  var tx=0;
+  document.getElementById('lb-box').addEventListener('touchstart',function(e){ tx=e.touches[0].clientX; });
+  document.getElementById('lb-box').addEventListener('touchend',function(e){
+    var dx=e.changedTouches[0].clientX-tx;
+    if(Math.abs(dx)>50){ dx<0?next():prev(); }
+  });
+
+  // Ligar cards aos eventos
+  var chaves=['casamentos','aniversarios','formaturas','chabebe','corporativo','festas'];
+  document.querySelectorAll('.evento-card').forEach(function(card,i){
+    var img=card.querySelector('.evento-img');
+    if(img && _galeriaEventos[chaves[i]]) {
+      img.style.cursor='zoom-in';
+      img.addEventListener('click',function(e){
+        e.stopPropagation();
+        abrir(_galeriaEventos[chaves[i]], 0);
+      });
+    }
+  });
+}
+document.addEventListener('DOMContentLoaded', initLightboxEventos);
+if(document.readyState!=='loading') initLightboxEventos();
+
 // ===== LGPD =====
 
 function abrirPrivacidade() {
