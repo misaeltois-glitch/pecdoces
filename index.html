@@ -693,6 +693,80 @@
         </div>
     </section>
 
+    <!-- ORÇAMENTO -->
+    <section id="orcamento">
+        <div class="orcamento-wrapper">
+            <div class="orcamento-info">
+                <div class="section-label">Solicite agora</div>
+                <h2 class="section-title" style="color: var(--cream);">Orçamento<br><strong>Gratuito</strong></h2>
+                <div class="section-divider"></div>
+                <p style="color: rgba(62,68,96,0.65); font-size: 14px; line-height: 1.8; margin-bottom: 1rem;">
+                    Preencha o formulário e nossa equipe entra em contato pelo WhatsApp para ajudá-lo a criar a festa perfeita.
+                </p>
+                <ul class="orcamento-features">
+                    <li>Orçamento 100% gratuito e sem compromisso</li>
+                    <li>Resposta em até 2 horas úteis</li>
+                    <li>Atendimento personalizado via WhatsApp</li>
+                    <li>Possibilidade de degustação gratuita</li>
+                    <li>Entrega em São Paulo e Grande SP</li>
+                    <li>Mais de 100 sabores e opções disponíveis</li>
+                </ul>
+            </div>
+            <div>
+                <div class="form-card">
+                    <div class="form-title">Solicite seu orçamento</div>
+                    <form onsubmit="enviarOrcamento(); return false;" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nome" class="form-label">Nome completo *</label>
+                                <input type="text" id="nome" name="nome" class="form-input" placeholder="Seu nome">
+                            </div>
+                            <div class="form-group">
+                                <label for="whatsapp" class="form-label">WhatsApp *</label>
+                                <input type="tel" id="whatsapp" name="whatsapp" class="form-input" placeholder="(11) 99999-9999">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="evento" class="form-label">Tipo de evento *</label>
+                            <select id="evento" name="evento" class="form-select form-input">
+            <option value="">Selecione o evento</option>
+            <option>Casamento</option>
+            <option>Aniversário</option>
+            <option>Formatura</option>
+            <option>Chá de Bebê / Chá Revelação</option>
+            <option>Evento Corporativo</option>
+            <option>Outro</option>
+          </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="data" class="form-label">Data do evento</label>
+                                <input type="date" id="data" name="data" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="convidados" class="form-label">Nº de convidados</label>
+                                <input type="text" id="convidados" name="convidados" class="form-input" placeholder="Ex: 50 pessoas">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="produto" class="form-label">O que você precisa?</label>
+                            <select id="produto" name="produto" class="form-select form-input">
+            <option value="">Selecione o produto</option>
+            <option>Bolo + Doces (Kit Festa)</option>
+            <option>Apenas Bolos</option>
+            <option>Apenas Doces</option>
+            <option>Itens Personalizados</option>
+            <option>Mesa Completa (Bolo + Doces + Personalizados)</option>
+            <option>Quero conhecer todas as opções</option>
+          </select>
+                        </div>
+                        <button type="submit" class="form-submit"><i class="fa-brands fa-whatsapp"></i> SOLICITAR ORÇAMENTO GRATUITO</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- MOMENTOS / NOSSOS EVENTOS -->
     <section id="momentos">
         <div class="momentos-inner">
@@ -763,80 +837,6 @@
                         <div class="depo-stars">★★★★★</div>
                         <div class="depo-author">Guilherme A.<span>Casamento · Out/2020</span></div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ORÇAMENTO -->
-    <section id="orcamento">
-        <div class="orcamento-wrapper">
-            <div class="orcamento-info">
-                <div class="section-label">Solicite agora</div>
-                <h2 class="section-title" style="color: var(--cream);">Orçamento<br><strong>Gratuito</strong></h2>
-                <div class="section-divider"></div>
-                <p style="color: rgba(62,68,96,0.65); font-size: 14px; line-height: 1.8; margin-bottom: 1rem;">
-                    Preencha o formulário e nossa equipe entra em contato pelo WhatsApp para ajudá-lo a criar a festa perfeita.
-                </p>
-                <ul class="orcamento-features">
-                    <li>Orçamento 100% gratuito e sem compromisso</li>
-                    <li>Resposta em até 2 horas úteis</li>
-                    <li>Atendimento personalizado via WhatsApp</li>
-                    <li>Possibilidade de degustação gratuita</li>
-                    <li>Entrega em São Paulo e Grande SP</li>
-                    <li>Mais de 100 sabores e opções disponíveis</li>
-                </ul>
-            </div>
-            <div>
-                <div class="form-card">
-                    <div class="form-title">Solicite seu orçamento</div>
-                    <form onsubmit="enviarOrcamento(); return false;" novalidate>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="nome" class="form-label">Nome completo *</label>
-                                <input type="text" id="nome" name="nome" class="form-input" placeholder="Seu nome">
-                            </div>
-                            <div class="form-group">
-                                <label for="whatsapp" class="form-label">WhatsApp *</label>
-                                <input type="tel" id="whatsapp" name="whatsapp" class="form-input" placeholder="(11) 99999-9999">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="evento" class="form-label">Tipo de evento *</label>
-                            <select id="evento" name="evento" class="form-select form-input">
-            <option value="">Selecione o evento</option>
-            <option>Casamento</option>
-            <option>Aniversário</option>
-            <option>Formatura</option>
-            <option>Chá de Bebê / Chá Revelação</option>
-            <option>Evento Corporativo</option>
-            <option>Outro</option>
-          </select>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="data" class="form-label">Data do evento</label>
-                                <input type="date" id="data" name="data" class="form-input">
-                            </div>
-                            <div class="form-group">
-                                <label for="convidados" class="form-label">Nº de convidados</label>
-                                <input type="text" id="convidados" name="convidados" class="form-input" placeholder="Ex: 50 pessoas">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="produto" class="form-label">O que você precisa?</label>
-                            <select id="produto" name="produto" class="form-select form-input">
-            <option value="">Selecione o produto</option>
-            <option>Bolo + Doces (Kit Festa)</option>
-            <option>Apenas Bolos</option>
-            <option>Apenas Doces</option>
-            <option>Itens Personalizados</option>
-            <option>Mesa Completa (Bolo + Doces + Personalizados)</option>
-            <option>Quero conhecer todas as opções</option>
-          </select>
-                        </div>
-                        <button type="submit" class="form-submit"><i class="fa-brands fa-whatsapp"></i> SOLICITAR ORÇAMENTO GRATUITO</button>
-                    </form>
                 </div>
             </div>
         </div>
