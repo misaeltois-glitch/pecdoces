@@ -402,7 +402,7 @@ function atualizarCardapio2026() {
       li('Ameixa (massa real) ★') + li('Cereja (massa real) ★') + li('Chocolate') +
       li('Olho de Sogra') + li('Côco') + li('Doce de Nozes') + li('Espinhado de Amêndoas ★'));
 
-    var col5 = dc('6,50', 'Premium &amp; Gourmet', 'background:linear-gradient(135deg,var(--gold),#7A4E45)',
+        var col5 = dc('6,50', 'Premium &amp; Gourmet',
       li('Morango no Chocolate') + li('Damasco Trufado') + li('Damasco Recheado') +
       li('Hóstia com Pistache') + li('Doce de Pistache') + li('Cestinha de Nozes') +
       li('Crocante de Nutella') + li('Bombom Crocante') + li('Physalis (Copo ou Bombom)') +
