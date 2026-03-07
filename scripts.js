@@ -612,12 +612,12 @@ if (document.readyState !== 'loading') injetarFotosEventos();
 
 // ===== LIGHTBOX GALERIA EVENTOS =====
 var _galeriaEventos = {
-  casamentos:   ['imagens/casamentos.jpg'],
-  aniversarios: ['imagens/aniversarios.jpg','imagens/aniversario-2.jpg'],
-  formaturas:   ['imagens/formaturas.jpg'],
-  chabebe:      ['imagens/cha-bebe.jpg'],
-  corporativo:  ['imagens/corporativo.jpg','imagens/corporativo-2.jpg'],
-  festas:       ['imagens/festas.jpg','imagens/festas-2.jpg','imagens/festas-3.jpg']
+  casamentos:   ['imagens/casamentos.jpg','imagens/casamentos-2.jpg','imagens/casamentos-3.jpg','imagens/casamentos-4.jpg'],
+  aniversarios: ['imagens/aniversarios.jpg','imagens/aniversario-2.jpg','imagens/aniversarios-3.jpg','imagens/aniversarios-4.jpg','imagens/aniversarios-5.jpg','imagens/aniversarios-6.jpg'],
+  formaturas:   ['imagens/formaturas.jpg','imagens/formaturas-2.jpg','imagens/formaturas-3.jpg'],
+  chabebe:      ['imagens/cha-bebe.jpg','imagens/cha-bebe-2.jpg','imagens/cha-bebe-3.jpg','imagens/cha-bebe-4.jpg','imagens/cha-bebe-5.jpg'],
+  corporativo:  ['imagens/corporativo.jpg','imagens/corporativo-2.jpg','imagens/corporativo-3.jpg','imagens/corporativo-4.jpg'],
+  festas:       ['imagens/festas.jpg','imagens/festas-2.jpg','imagens/festas-3.jpg','imagens/festas-4.jpg','imagens/festas-5.jpg','imagens/festas-6.jpg','imagens/festas-7.jpg','imagens/festas-8.jpg']
 };
 
 function initLightboxEventos() {
