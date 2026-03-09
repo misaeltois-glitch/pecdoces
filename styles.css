@@ -619,7 +619,7 @@ section {
 
 #cardapio {
     background: linear-gradient(180deg, var(--choco-deep) 0%, var(--choco-mid) 100%);
-    padding: 100px 4rem;
+    padding: 100px 4rem 45px;
 }
 
 .cardapio-wrapper {
@@ -1151,7 +1151,7 @@ section {
 
 #orcamento {
     background: linear-gradient(135deg, var(--choco-mid) 0%, var(--choco-deep) 100%);
-    padding: 100px 4rem;
+    padding: 45px 4rem 100px;
 }
 
 .orcamento-wrapper {

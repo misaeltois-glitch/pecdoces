@@ -105,7 +105,7 @@ function applyAjustes() {
   // 1. Seção localização → região de atendimento
   document.querySelectorAll(".section-title").forEach(function(el) {
     if (el.textContent.includes("visitar") || el.textContent.includes("encontrar"))
-      el.innerHTML = "Nossa <strong>região de atendimento</strong>";
+      el.innerHTML = "Onde <strong>estamos</strong>";
   });
   document.querySelectorAll(".section-label").forEach(function(el) {
     if (el.textContent.trim() === "Onde estamos") el.textContent = "Atendimento";
