@@ -620,6 +620,7 @@ section {
 #cardapio {
     background: linear-gradient(180deg, var(--choco-deep) 0%, var(--choco-mid) 100%);
     padding: 100px 4rem 45px;
+    color: #ffffff;
 }
 
 .cardapio-wrapper {
