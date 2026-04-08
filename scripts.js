@@ -194,6 +194,9 @@ function showTab(id, btn) {
       if (t.textContent.toLowerCase().includes(id)) t.classList.add('active');
     });
   }
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'click_tab_cardapio', {event_category: 'cardapio', event_label: id});
+  }
 }
 
 // ===== NAV ATIVO NO SCROLL =====
@@ -229,6 +232,9 @@ function enviarOrcamento() {
   if (data)              msg += '*Data:* ' + data + '\n';
   if (convidados.trim()) msg += '*Convidados:* ' + convidados.trim() + '\n';
   if (produto)           msg += '*Produto:* ' + produto + '\n';
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'lead', {event_category: 'orcamento', event_label: evento || 'sem_evento'});
+  }
   window.open('https://wa.me/5511961739148?text=' + encodeURIComponent(msg), '_blank');
 }
 
@@ -583,12 +589,12 @@ document.querySelectorAll('.mvv-card, .kit-card, .depo-card, .evento-card, .stat
 // ===== FOTOS EVENTOS =====
 function injetarFotosEventos() {
   var dados = [
-    { img: 'imagens/casamentos.jpg',  alt: 'Casamentos' },
-    { img: 'imagens/aniversarios.jpg',alt: 'Aniversários' },
-    { img: 'imagens/formaturas.jpg',  alt: 'Formaturas' },
-    { img: 'imagens/cha-bebe.jpg',    alt: 'Chá de Bebê' },
-    { img: 'imagens/corporativo.jpg', alt: 'Eventos Corporativos' },
-    { img: 'imagens/festas.jpg',      alt: 'Festas Temáticas' }
+    { img: 'imagens/2.jpg',           alt: 'Casamentos' },
+    { img: 'imagens/17.jpg',          alt: 'Aniversários' },
+    { img: 'imagens/10.jpg',          alt: 'Formaturas' },
+    { img: 'imagens/11.jpg',          alt: 'Chá de Bebê' },
+    { img: 'imagens/12.jpg',          alt: 'Eventos Corporativos' },
+    { img: 'imagens/18.jpg',          alt: 'Festas Temáticas' }
   ];
   var cards = document.querySelectorAll('.evento-card');
   cards.forEach(function(card, i) {
@@ -612,12 +618,12 @@ if (document.readyState !== 'loading') injetarFotosEventos();
 
 // ===== LIGHTBOX GALERIA EVENTOS =====
 var _galeriaEventos = {
-  casamentos:   ['imagens/casamentos.jpg','imagens/casamentos-2.jpg','imagens/casamentos-3.jpg','imagens/casamentos-4.jpg'],
-  aniversarios: ['imagens/aniversarios.jpg','imagens/aniversario-2.jpg','imagens/aniversarios-3.jpg','imagens/aniversarios-4.jpg','imagens/aniversarios-5.jpg','imagens/aniversarios-6.jpg'],
-  formaturas:   ['imagens/formaturas.jpg','imagens/formaturas-2.jpg','imagens/formaturas-3.jpg'],
-  chabebe:      ['imagens/cha-bebe.jpg','imagens/cha-bebe-2.jpg','imagens/cha-bebe-3.jpg','imagens/cha-bebe-4.jpg','imagens/cha-bebe-5.jpg'],
-  corporativo:  ['imagens/corporativo.jpg','imagens/corporativo-2.jpg','imagens/corporativo-3.jpg','imagens/corporativo-4.jpg'],
-  festas:       ['imagens/festas.jpg','imagens/festas-2.jpg','imagens/festas-3.jpg','imagens/festas-4.jpg','imagens/festas-5.jpg','imagens/festas-6.jpg','imagens/festas-7.jpg','imagens/festas-8.jpg']
+  casamentos:   ['imagens/2.jpg','imagens/13.jpg','imagens/14.jpg','imagens/casamentos.jpg','imagens/casamentos-2.jpg','imagens/casamentos-3.jpg','imagens/casamentos-4.jpg'],
+  aniversarios: ['imagens/17.jpg','imagens/aniversarios.jpg','imagens/aniversario-2.jpg','imagens/aniversarios-3.jpg','imagens/aniversarios-4.jpg','imagens/aniversarios-5.jpg','imagens/aniversarios-6.jpg'],
+  formaturas:   ['imagens/10.jpg','imagens/formaturas.jpg','imagens/formaturas-2.jpg','imagens/formaturas-3.jpg'],
+  chabebe:      ['imagens/11.jpg','imagens/cha-bebe.jpg','imagens/cha-bebe-2.jpg','imagens/cha-bebe-3.jpg','imagens/cha-bebe-4.jpg','imagens/cha-bebe-5.jpg'],
+  corporativo:  ['imagens/12.jpg','imagens/8.jpg','imagens/9.jpg','imagens/7.jpg','imagens/1.jpg','imagens/3.jpg','imagens/4.jpg','imagens/5.jpg','imagens/6.jpg','imagens/corporativo.jpg','imagens/corporativo-2.jpg','imagens/corporativo-3.jpg','imagens/corporativo-4.jpg'],
+  festas:       ['imagens/18.jpg','imagens/15.jpg','imagens/16.jpg','imagens/festas.jpg','imagens/festas-2.jpg','imagens/festas-3.jpg','imagens/festas-4.jpg','imagens/festas-5.jpg','imagens/festas-6.jpg','imagens/festas-7.jpg','imagens/festas-8.jpg']
 };
 
 function initLightboxEventos() {

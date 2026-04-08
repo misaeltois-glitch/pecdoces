@@ -8,6 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&amp;family=Jost:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RXPELSV986"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RXPELSV986');
+    </script>
 </head>
 
 <body>
@@ -61,8 +69,8 @@
                     Há mais de 25 anos criamos momentos inesquecíveis para casamentos, aniversários, formaturas e eventos corporativos com a melhor confeitaria artesanal de São Paulo.
                 </p>
                 <div class="hero-btns">
-                    <a href="#orcamento" class="btn-primary">Fazer Orçamento</a>
-                    <a href="#cardapio" class="btn-outline">Ver Cardápio</a>
+                    <a href="#orcamento" class="btn-primary" onclick="gtag('event','click_cta',{event_category:'hero',event_label:'fazer_orcamento'})">Fazer Orçamento</a>
+                    <a href="#cardapio" class="btn-outline" onclick="gtag('event','click_cta',{event_category:'hero',event_label:'ver_cardapio'})">Ver Cardápio</a>
                 </div>
             </div>
 
@@ -172,6 +180,19 @@
                 </div>
             </div>
 
+            <!-- PARA NOIVAS -->
+            <div class="noivas-banner">
+                <div class="noivas-banner-inner">
+                    <div class="noivas-banner-icon"><i class="fa-solid fa-ring"></i></div>
+                    <div class="noivas-banner-content">
+                        <div class="noivas-banner-label">Especial para noivas</div>
+                        <h3 class="noivas-banner-title">Degustação a partir de <strong>R$ 79,90</strong></h3>
+                        <p class="noivas-banner-desc">Encontros e valores disponíveis — venha experimentar antes de decidir e garanta a mesa dos seus sonhos.</p>
+                    </div>
+                    <a href="https://wa.me/5511961739148?text=Ol%C3%A1!%20Quero%20agendar%20uma%20degusta%C3%A7%C3%A3o%20para%20o%20meu%20casamento." class="btn-primary noivas-banner-cta" target="_blank" onclick="gtag('event','click_cta',{event_category:'noivas',event_label:'degustacao'})">Vamos experimentar</a>
+                </div>
+            </div>
+
             <!-- DEPOIMENTOS -->
             <div class="depoimentos-section">
                 <div class="depo-label">O que nossos clientes dizem</div>
@@ -198,6 +219,17 @@
             </div>
         </div>
     </section>
+
+    <!-- FRASE DESTAQUE -->
+    <div class="frase-destaque-banner">
+        <div class="frase-destaque-inner">
+            <div class="frase-destaque-deco">&ldquo;</div>
+            <p class="frase-destaque-text">Há mais de 25 anos transformando doces em experiências únicas e memoráveis</p>
+            <div class="frase-destaque-deco frase-destaque-deco--close">&rdquo;</div>
+            <div class="frase-destaque-linha"></div>
+            <span class="frase-destaque-sub">P&amp;C Doces e Bolos · desde 1999 · São Paulo</span>
+        </div>
+    </div>
 
     <!-- CARDÁPIO -->
     <section id="cardapio">
@@ -688,9 +720,9 @@
                 </p>
                 <ul class="orcamento-features">
                     <li>Orçamento 100% gratuito e sem compromisso</li>
-                    <li>Resposta em até 2 horas úteis</li>
+                    <li>Resposta em até 40 minutos</li>
                     <li>Atendimento personalizado via WhatsApp</li>
-                    <li>Possibilidade de degustação gratuita</li>
+                    <li>Degustação a partir de R$ 79,90 — agende pelo WhatsApp</li>
                     <li>Entrega em São Paulo e Grande SP</li>
                     <li>Mais de 100 sabores e opções disponíveis</li>
                 </ul>
@@ -779,8 +811,7 @@
                 <div class="mvv-card-subtitle">Para onde vamos</div>
                 <div class="mvv-card-title">Visão</div>
                 <p class="mvv-card-text">
-                    Ser a confeitaria artesanal mais reconhecida e admirada de São Paulo, referência em qualidade e criatividade para eventos sociais e corporativos, com uma produção que honra 25 anos de tradição enquanto abraça a inovação e as tendências da confeitaria
-                    contemporânea.
+                    Ser referência em mesa de doces e bolos decorados para casamentos, eventos sociais e corporativos — levando arte, sabor e sofisticação a cada celebração, com a credibilidade de mais de 25 anos de tradição artesanal em São Paulo.
                 </p>
             </div>
             <div class="mvv-card">
@@ -792,6 +823,12 @@
                     Acreditamos que um doce perfeito vai além do sabor — ele carrega amor, cuidado e dedicação. Cada peça que sai da nossa cozinha é assinada com o orgulho de quem faz da confeitaria artesanal uma forma de arte e de conexão humana.
                 </p>
             </div>
+        </div>
+
+        <!-- FOTO DA EQUIPE -->
+        <div class="equipe-foto-wrap">
+            <img src="imagens/19.jpg" alt="Equipe P&C Doces e Bolos" class="equipe-foto" loading="lazy">
+            <div class="equipe-foto-caption">Nossa equipe — feita com amor desde 1999</div>
         </div>
 
         <div class="valores-section">
@@ -834,8 +871,8 @@
                 <div class="valor-item">
                     <div class="valor-dot"></div>
                     <div>
-                        <div class="valor-title">Degustação Gratuita</div>
-                        <div class="valor-desc">Você prova antes de decidir, porque a confiança se conquista com sabor.</div>
+                        <div class="valor-title">Degustação a partir de R$ 79,90</div>
+                        <div class="valor-desc">Encontros disponíveis para você provar antes de decidir — a confiança se conquista com sabor.</div>
                     </div>
                 </div>
             </div>
@@ -877,7 +914,7 @@
                     <li>
                         <span class="icon"><i class="fa-solid fa-cake-slice"></i></span>
                         <div>
-                            <strong>Degustação Gratuita</strong> Agende pelo WhatsApp e venha provar antes de encomendar!
+                            <strong>Degustação</strong> A partir de R$ 79,90 — agende pelo WhatsApp e venha provar antes de encomendar!
                         </div>
                     </li>
                 </ul>
@@ -905,15 +942,15 @@
                 <p class="footer-desc">Há mais de 25 anos transformando doces em experiências únicas e memoráveis para casamentos, aniversários e eventos especiais em São Paulo.</p>
                 <div class="footer-social">
                     <a href="https://www.instagram.com/pecdoces" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://wa.me/5511961739148" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://wa.me/5511961739148" target="_blank" onclick="gtag('event','click_whatsapp',{event_category:'lead',event_label:'footer'})"><i class="fa-brands fa-whatsapp"></i></a>
                     <a href="https://linktr.ee/Pecdoces" target="_blank"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
             <div>
                 <div class="footer-col-title">Cardápio</div>
                 <ul class="footer-links">
-                    <li onclick="showTab('bolos', null); document.getElementById('cardapio').scrollIntoView()">Bolos (R$ 112–184/kg)</li>
-                    <li onclick="showTab('doces', null); document.getElementById('cardapio').scrollIntoView()">Doces (R$ 2,74–5,90)</li>
+                    <li onclick="showTab('bolos', null); document.getElementById('cardapio').scrollIntoView()">Bolos (a partir de R$ 123,90/kg)</li>
+                    <li onclick="showTab('doces', null); document.getElementById('cardapio').scrollIntoView()">Doces (a partir de R$ 2,90)</li>
                     <li onclick="showTab('kits', null); document.getElementById('cardapio').scrollIntoView()">Kits Festa</li>
                     <li onclick="showTab('personalizados', null); document.getElementById('cardapio').scrollIntoView()">Personalizados</li>
                 </ul>
@@ -936,7 +973,7 @@
     </footer>
 
     <!-- WHATSAPP FLUTUANTE -->
-    <a href="https://wa.me/5511961739148?text=Ol%C3%A1!%20Vi%20o%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20doces%20e%20bolos." target="_blank" class="wa-float" title="Falar no WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="https://wa.me/5511961739148?text=Ol%C3%A1!%20Vi%20o%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20doces%20e%20bolos." target="_blank" class="wa-float" title="Falar no WhatsApp" onclick="gtag('event','click_whatsapp',{event_category:'lead',event_label:'botao_flutuante'})"><i class="fa-brands fa-whatsapp"></i></a>
 
     <script src="scripts.js"></script>
 </body>
