@@ -626,6 +626,7 @@ var _galeriaEventos = {
 };
 
 function initLightboxEventos() {
+  if (document.getElementById('lb-modal')) return; // evita double init
   // Criar modal
   var modal = document.createElement('div');
   modal.id = 'lb-modal';
