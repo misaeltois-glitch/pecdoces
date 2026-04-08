@@ -114,7 +114,7 @@ function applyAjustes() {
   document.querySelectorAll(".loc-details li").forEach(function(li) {
     var s = li.querySelector("strong");
     if (s && s.textContent.trim() === "Endereço") {
-      s.parentNode.innerHTML = "<strong>Região</strong> Rio Pequeno · Butantã – São Paulo/SP";
+      s.parentNode.innerHTML = "<strong>Localização</strong> São Paulo/SP";
     }
   });
   // 3. Prazo banner: remover endereço completo
@@ -124,11 +124,10 @@ function applyAjustes() {
   });
   // 4. Mapa card: só bairro, sem rua
   var mapSpans = document.querySelectorAll(".loc-map span:not(.map-icon)");
-  if (mapSpans.length >= 2) { mapSpans[0].textContent = "Rio Pequeno · Butantã"; mapSpans[1].textContent = "São Paulo – SP"; }
+  if (mapSpans.length >= 2) { mapSpans[0].textContent = "São Paulo"; mapSpans[1].textContent = "SP"; }
   // 5. Footer: remover rua, manter só bairro/cidade
   document.querySelectorAll(".footer-links li").forEach(function(li) {
     if (li.textContent.includes("Maestro")) li.remove();
-    if (li.textContent.includes("Rio Pequeno")) li.textContent = "Rio Pequeno · Butantã – SP";
   });
   // 3b. Garantir título correto do 3º card MVV (Valores, não Propósito)
   var mvvCards = document.querySelectorAll('.mvv-card');
