@@ -50,7 +50,21 @@
             <li><a href="#momentos">Nossos Eventos</a></li>
             <li><a href="#orcamento" class="nav-cta">Solicitar Orçamento</a></li>
         </ul>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
+
+    <!-- MOBILE NAV DRAWER -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+        <ul class="mobile-nav-links">
+            <li><a href="#missao" onclick="fecharMenu()">Missão &amp; Valores</a></li>
+            <li><a href="#cardapio" onclick="fecharMenu()">Cardápio</a></li>
+            <li><a href="#momentos" onclick="fecharMenu()">Nossos Eventos</a></li>
+            <li><a href="#orcamento" onclick="fecharMenu()" class="mobile-nav-cta">Solicitar Orçamento</a></li>
+        </ul>
+    </div>
 
     <!-- HERO -->
     <section class="hero">

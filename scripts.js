@@ -698,6 +698,38 @@ function initLightboxEventos() {
 document.addEventListener('DOMContentLoaded', initLightboxEventos);
 if(document.readyState!=='loading') initLightboxEventos();
 
+// ===== MENU MOBILE =====
+
+function fecharMenu() {
+  var btn = document.getElementById('nav-hamburger');
+  var drawer = document.getElementById('mobile-nav-drawer');
+  var overlay = document.getElementById('mobile-nav-overlay');
+  if (btn) { btn.classList.remove('ativo'); btn.setAttribute('aria-expanded','false'); }
+  if (drawer) drawer.classList.remove('ativo');
+  if (overlay) overlay.classList.remove('ativo');
+  document.body.style.overflow = '';
+}
+
+(function() {
+  var btn = document.getElementById('nav-hamburger');
+  var drawer = document.getElementById('mobile-nav-drawer');
+  var overlay = document.getElementById('mobile-nav-overlay');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    var aberto = drawer.classList.contains('ativo');
+    if (aberto) {
+      fecharMenu();
+    } else {
+      btn.classList.add('ativo');
+      btn.setAttribute('aria-expanded','true');
+      drawer.classList.add('ativo');
+      overlay.classList.add('ativo');
+      document.body.style.overflow = 'hidden';
+    }
+  });
+  if (overlay) overlay.addEventListener('click', fecharMenu);
+})();
+
 // ===== LGPD =====
 
 function abrirPrivacidade() {
