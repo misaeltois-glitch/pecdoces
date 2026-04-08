@@ -2046,8 +2046,8 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
 /* ===== BANNER PARA NOIVAS ===== */
 
 .noivas-banner {
-    background: linear-gradient(135deg, #1a1018 0%, #2a1a20 50%, #1a1018 100%);
-    border: 1px solid rgba(201, 153, 58, 0.3);
+    background: linear-gradient(135deg, #f5e8d8 0%, #efe0c8 50%, #f5e8d8 100%);
+    border: 1.5px solid rgba(153, 110, 95, 0.35);
     border-radius: 4px;
     margin: 3rem 0;
     padding: 36px 40px;
@@ -2077,7 +2077,6 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--gold);
-    opacity: 0.75;
     margin-bottom: 6px;
 }
 
@@ -2085,19 +2084,19 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.9rem;
     font-weight: 400;
-    color: var(--cream);
+    color: var(--text-dark);
     margin: 0 0 8px;
     line-height: 1.2;
 }
 
 .noivas-banner-title strong {
-    color: var(--gold-light);
-    font-weight: 600;
+    color: var(--gold);
+    font-weight: 700;
 }
 
 .noivas-banner-desc {
     font-size: 13px;
-    color: rgba(245, 230, 208, 0.65);
+    color: rgba(62, 68, 96, 0.7);
     margin: 0;
     line-height: 1.7;
 }
