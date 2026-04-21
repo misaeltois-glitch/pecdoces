@@ -2176,3 +2176,113 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
         margin-top: 40px;
     }
 }
+
+/* ===== NOSSOS PRODUTOS — GALERIA ===== */
+.produtos-subtitulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.3px;
+}
+.produtos-info {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(62,68,96,0.6);
+    margin-bottom: 2rem;
+    letter-spacing: 0.5px;
+}
+.produtos-info i { margin-right: 6px; color: var(--gold); }
+
+.produtos-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+    margin-bottom: 2.5rem;
+}
+
+.produto-card {
+    background: rgba(255,255,255,0.6);
+    border: 1px solid rgba(153,110,95,0.15);
+    border-radius: 6px;
+    padding: 1rem;
+    transition: box-shadow 0.25s, transform 0.25s;
+}
+.produto-card:hover {
+    box-shadow: 0 6px 24px rgba(153,110,95,0.15);
+    transform: translateY(-2px);
+}
+
+.produto-fotos {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 0.75rem;
+}
+.produto-foto-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.produto-foto {
+    aspect-ratio: 1 / 1;
+    border-radius: 4px;
+    overflow: hidden;
+    background: rgba(153,110,95,0.08);
+    border: 1px dashed rgba(153,110,95,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: rgba(153,110,95,0.5);
+    font-size: 11px;
+    text-align: center;
+    padding: 8px;
+}
+.produto-foto i { font-size: 1.4rem; }
+.produto-foto span { font-size: 9px; line-height: 1.3; word-break: break-all; }
+.produto-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.foto-tag {
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: rgba(62,68,96,0.5);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.produto-nome {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+.produtos-cta {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+    border-top: 1px solid rgba(153,110,95,0.12);
+    margin-top: 0.5rem;
+}
+.produtos-cta p {
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+}
+
+@media (min-width: 640px) {
+    .produtos-gallery { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1024px) {
+    .produtos-gallery { grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+    .produto-card { padding: 0.85rem; }
+}
