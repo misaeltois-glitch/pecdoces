@@ -2286,3 +2286,52 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     .produtos-gallery { grid-template-columns: repeat(5, 1fr); gap: 1rem; }
     .produto-card { padding: 0.85rem; }
 }
+
+/* ===== PREÇO OCULTO — blur + revelar ===== */
+.preco-oculto {
+    filter: blur(7px);
+    user-select: none;
+    pointer-events: none;
+    transition: filter 0.45s ease;
+    display: inline-block;
+}
+.preco-oculto.revelado {
+    filter: none;
+    pointer-events: auto;
+}
+
+.btn-ver-preco {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    background: transparent;
+    padding: 4px 11px;
+    border-radius: 2px;
+    cursor: pointer;
+    white-space: nowrap;
+    vertical-align: middle;
+    transition: background 0.2s, color 0.2s;
+    flex-shrink: 0;
+}
+.btn-ver-preco:hover {
+    background: var(--gold);
+    color: #fff;
+}
+
+.preco-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Kit price row alinha blur + botão lado a lado */
+.kit-price {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}

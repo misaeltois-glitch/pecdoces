@@ -248,7 +248,10 @@ function atualizarCardapio2026() {
         '<div class="kit-card-header"><span class="kit-tag">' + tag + '</span>' +
         '<div class="kit-name">' + name + '</div>' +
         '<div class="kit-people">' + people + '</div></div>' +
-        '<div class="kit-price"' + (priceStyle ? ' style="' + priceStyle + '"' : '') + '>R$ ' + price + '</div>' +
+        '<div class="kit-price"' + (priceStyle ? ' style="' + priceStyle + '"' : '') + '>' +
+          '<span class="preco-oculto">R$ ' + price + '</span>' +
+          '<button class="btn-ver-preco" onclick="revelarPreco(this,event)">Ver Preço</button>' +
+        '</div>' +
         '<ul class="kit-includes">' + items.map(function(i){ return '<li>' + i + '</li>'; }).join('') + '</ul></div>';
     }
     tabKits.innerHTML =
@@ -279,14 +282,23 @@ function atualizarCardapio2026() {
   var tabPers = document.getElementById('tab-personalizados');
   if (tabPers) {
     function pi(name, price) {
-      return '<div class="pers-item"><span class="pers-name">' + name + '</span><span class="pers-price">R$ ' + price + '</span></div>';
+      return '<div class="pers-item">' +
+        '<span class="pers-name">' + name + '</span>' +
+        '<span class="preco-wrapper">' +
+          '<span class="pers-price preco-oculto">R$ ' + price + '</span>' +
+          '<button class="btn-ver-preco" onclick="revelarPreco(this,event)">Ver Preço</button>' +
+        '</span>' +
+        '</div>';
     }
     tabPers.innerHTML =
       '<div style="margin-bottom:2rem;">' +
       '<div class="preco-label">' +
       '<div class="preco-badge">Bolo Personalizado c/ Pasta</div>' +
       '<div class="preco-line"></div>' +
-      '<span style="font-size:18px;font-family:\'Cormorant Garamond\',serif;color:var(--gold);">R$ 275,60 / kg</span>' +
+      '<span style="font-size:18px;font-family:\'Cormorant Garamond\',serif;color:var(--gold);display:inline-flex;align-items:center;gap:10px;">' +
+        '<span class="preco-oculto">R$ 275,60 / kg</span>' +
+        '<button class="btn-ver-preco" onclick="revelarPreco(this,event)">Ver Preço</button>' +
+      '</span>' +
       '</div>' +
       '<div style="margin-top:1rem;font-size:12px;color:rgba(62,68,96,0.65);line-height:2;">' +
       '<strong style="color:#7A4E45;letter-spacing:1px;font-size:11px;">SABORES:</strong> ' +
@@ -328,34 +340,39 @@ function atualizarCardapio2026() {
 function aplicarCliquesCardapio() {
   var WA = 'https://wa.me/5511961739148?text=';
 
-  // Kits — clique no card inteiro (exceto o card de personalizado)
+  // Kits — clique no card inteiro (exceto o card de personalizado e botões)
   document.querySelectorAll('#tab-kits .kit-card').forEach(function(el) {
     var nome = el.querySelector('.kit-name');
-    var preco = el.querySelector('.kit-price');
-    if (!nome || !preco) return;
+    if (!nome) return;
     el.style.cursor = 'pointer';
     el.title = 'Clique para pedir orçamento';
     el.addEventListener('click', function(e) {
-      if (e.target.tagName === 'A') return; // não interfere no botão de WhatsApp
-      var msg = 'Olá! Tenho interesse no *Kit ' + nome.textContent.trim() + '* (' + preco.textContent.trim() + '). Gostaria de mais informações.';
+      if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') return;
+      var msg = 'Olá! Vi o *Kit ' + nome.textContent.trim() + '* no site e gostaria de fazer um orçamento.';
       window.open(WA + encodeURIComponent(msg), '_blank');
     });
   });
 
-  // Personalizados — clique no item
+  // Personalizados — clique no item (exceto no botão Ver Preço)
   document.querySelectorAll('#tab-personalizados .pers-item').forEach(function(el) {
     var nome = el.querySelector('.pers-name');
-    var preco = el.querySelector('.pers-price');
     if (!nome) return;
     el.style.cursor = 'pointer';
     el.title = 'Clique para pedir orçamento';
-    el.addEventListener('click', function() {
-      var msg = 'Olá! Tenho interesse em *' + nome.textContent.trim() + '*' +
-        (preco ? ' (' + preco.textContent.trim() + ')' : '') + '. Gostaria de um orçamento.';
+    el.addEventListener('click', function(e) {
+      if (e.target.tagName === 'BUTTON') return;
+      var msg = 'Olá! Tenho interesse em *' + nome.textContent.trim() + '*. Gostaria de um orçamento.';
       window.open(WA + encodeURIComponent(msg), '_blank');
     });
   });
 }
+function revelarPreco(btn, e) {
+  if (e) e.stopPropagation();
+  var preco = btn.previousElementSibling;
+  if (preco) preco.classList.add('revelado');
+  btn.style.display = 'none';
+}
+
 document.addEventListener('DOMContentLoaded', function(){ atualizarCardapio2026(); aplicarCliquesCardapio(); });
 if (document.readyState !== 'loading') { atualizarCardapio2026(); aplicarCliquesCardapio(); }
 
