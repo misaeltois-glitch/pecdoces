@@ -2302,16 +2302,15 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     flex-shrink: 0;
 }
 .carousel-foto {
-    aspect-ratio: 4 / 3;
     border-radius: 10px;
     overflow: hidden;
     background: #1a1209;
     border: 1px solid rgba(153,110,95,0.15);
+    min-height: 200px;
 }
 .carousel-foto img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: auto;
     display: block;
 }
 .carousel-foto-placeholder {
@@ -2321,6 +2320,7 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     color: rgba(153,110,95,0.25);
     font-size: 2.5rem;
     border-style: dashed;
+    min-height: 200px;
 }
 .produto-nome {
     font-family: 'Cormorant Garamond', serif;
