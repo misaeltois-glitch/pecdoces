@@ -2303,14 +2303,16 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     aspect-ratio: 4 / 3;
     border-radius: 10px;
     overflow: hidden;
-    background: rgba(153,110,95,0.08);
+    background: #1a1209;
     border: 1px solid rgba(153,110,95,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .carousel-foto img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center center;
+    object-fit: contain;
     display: block;
 }
 .carousel-foto-placeholder {
