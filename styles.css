@@ -2302,7 +2302,7 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     flex-shrink: 0;
 }
 .carousel-foto {
-    height: 280px;
+    height: 360px;
     border-radius: 10px;
     overflow: hidden;
     background: #ede4d8;
@@ -2315,7 +2315,7 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     display: block;
 }
 .carousel-foto-placeholder {
-    height: 280px;
+    height: 360px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2323,9 +2323,10 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     font-size: 2.5rem;
     border-style: dashed;
 }
+.produto-nome { display: none; }
 @media (max-width: 500px) {
     .carousel-foto,
-    .carousel-foto-placeholder { height: 230px; }
+    .carousel-foto-placeholder { height: 270px; }
 }
 .produto-nome {
     font-family: 'Cormorant Garamond', serif;
@@ -2405,6 +2406,27 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     align-items: center;
     gap: 8px;
 }
+.btn-ver-mais {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #25D366;
+    border: 1px solid #25D366;
+    background: transparent;
+    padding: 4px 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+    transition: background 0.2s, color 0.2s;
+}
+.btn-ver-mais:hover { background: #25D366; color: #fff; }
 
 /* Kit price row alinha blur + botão lado a lado */
 .kit-price {

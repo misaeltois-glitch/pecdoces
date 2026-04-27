@@ -267,7 +267,7 @@ function atualizarCardapio2026() {
         '<div class="kit-people">' + people + '</div></div>' +
         '<div class="kit-price"' + (priceStyle ? ' style="' + priceStyle + '"' : '') + '>' +
           '<span class="preco-oculto">R$ ' + price + '</span>' +
-          '<button class="btn-ver-preco" onclick="revelarPreco(this,event)">Ver Preço</button>' +
+          '<a class="btn-ver-preco" href="https://wa.me/5511961739148?text=' + encodeURIComponent('Olá! Vi o *Kit ' + name + '* no site e gostaria de saber o preço.') + '" target="_blank" onclick="event.stopPropagation()">Ver Preço</a>' +
         '</div>' +
         '<ul class="kit-includes">' + items.map(function(i){ return '<li>' + i + '</li>'; }).join('') + '</ul></div>';
     }
@@ -299,12 +299,14 @@ function atualizarCardapio2026() {
   var tabPers = document.getElementById('tab-personalizados');
   if (tabPers) {
     function pi(name, price) {
+      var waUrl = 'https://wa.me/5511961739148?text=' + encodeURIComponent('Olá! Gostaria de ver fotos de *' + name + '*.');
       return '<div class="pers-item">' +
         '<span class="pers-name">' + name + '</span>' +
         '<span class="preco-wrapper">' +
           '<span class="pers-price preco-oculto">R$ ' + price + '</span>' +
           '<button class="btn-ver-preco" onclick="revelarPreco(this,event)">Ver Preço</button>' +
         '</span>' +
+        '<a class="btn-ver-mais" href="' + waUrl + '" target="_blank" onclick="event.stopPropagation()"><i class="fa-brands fa-whatsapp"></i> Ver mais</a>' +
         '</div>';
     }
     tabPers.innerHTML =
