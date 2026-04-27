@@ -198,6 +198,23 @@ function showTab(id, btn) {
   }
 }
 
+// ===== CARROSSEL DE PRODUTOS =====
+var _carPos = {};
+function moveCarousel(id, dir) {
+  var track = document.querySelector('#carousel-' + id + ' .carousel-track');
+  if (!track) return;
+  var cards = track.querySelectorAll('.carousel-card');
+  var visible = window.innerWidth >= 500 ? 2 : 1;
+  var max = Math.max(0, cards.length - visible);
+  _carPos[id] = Math.max(0, Math.min(max, (_carPos[id] || 0) + dir));
+  var gap = 14;
+  var cardW = cards[0].offsetWidth + gap;
+  track.style.transform = 'translateX(-' + (_carPos[id] * cardW) + 'px)';
+  var wrap = document.getElementById('carousel-' + id);
+  wrap.querySelector('.carousel-prev').disabled = _carPos[id] <= 0;
+  wrap.querySelector('.carousel-next').disabled = _carPos[id] >= max;
+}
+
 // ===== NAV ATIVO NO SCROLL =====
 window.addEventListener('scroll', () => {
   const sections = ['missao', 'cardapio', 'momentos', 'orcamento'];

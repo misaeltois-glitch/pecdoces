@@ -2269,12 +2269,93 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     line-height: 1.6;
 }
 
-@media (min-width: 640px) {
-    .produtos-gallery { grid-template-columns: repeat(3, 1fr); }
+/* ===== CAROUSEL DE PRODUTOS ===== */
+.produtos-section {
+    margin-bottom: 2.5rem;
 }
-@media (min-width: 1024px) {
-    .produtos-gallery { grid-template-columns: repeat(5, 1fr); gap: 1rem; }
-    .produto-card { padding: 0.85rem; }
+.produtos-section-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--cream);
+    letter-spacing: 0.5px;
+    margin-bottom: 0.3rem;
+}
+.produtos-section-label i {
+    color: var(--gold);
+    margin-right: 8px;
+}
+.carousel {
+    position: relative;
+    overflow: hidden;
+    padding: 0 4px;
+}
+.carousel-track {
+    display: flex;
+    gap: 14px;
+    transition: transform 0.4s cubic-bezier(.25,.8,.25,1);
+}
+.carousel-card {
+    min-width: calc(50% - 7px);
+    flex-shrink: 0;
+}
+.carousel-foto {
+    aspect-ratio: 3 / 4;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(153,110,95,0.08);
+    border: 1px solid rgba(153,110,95,0.15);
+}
+.carousel-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.carousel-foto-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(153,110,95,0.25);
+    font-size: 2.5rem;
+    border-style: dashed;
+}
+.produto-nome {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: center;
+    letter-spacing: 0.3px;
+    margin-top: 0.55rem;
+}
+.carousel-btn {
+    position: absolute;
+    top: 42%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: var(--cream);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s, opacity 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.carousel-btn:hover { background: rgba(201,153,58,0.35); }
+.carousel-btn:disabled { opacity: 0.25; cursor: default; }
+.carousel-prev { left: 6px; }
+.carousel-next { right: 6px; }
+@media (max-width: 500px) {
+    .carousel-card { min-width: calc(75% - 7px); }
 }
 
 /* ===== PREÇO OCULTO — blur + revelar ===== */

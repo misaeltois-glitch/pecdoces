@@ -254,101 +254,55 @@
                 <div class="section-divider"></div>
             </div>
 
-            <div class="tabs">
-                <button type="button" class="tab active" onclick="showTab('bolos', this)"><i class="fa-solid fa-cake-candles"></i> Bolos</button>
-                <button type="button" class="tab" onclick="showTab('doces', this)"><i class="fa-solid fa-candy-cane"></i> Doces</button>
-                <button type="button" class="tab" onclick="showTab('kits', this)"><i class="fa-solid fa-gift"></i> Kits Festa</button>
-                <button type="button" class="tab" onclick="showTab('personalizados', this)"><i class="fa-solid fa-wand-sparkles"></i> Personalizados</button>
-            </div>
-
-            <!-- BOLOS -->
-            <div id="tab-bolos" class="tab-content active">
+            <!-- BOLOS CAROUSEL -->
+            <div class="produtos-section">
+                <div class="produtos-section-label"><i class="fa-solid fa-cake-candles"></i> Bolos</div>
                 <p class="produtos-subtitulo">Os <strong>sabores mais pedidos</strong> pelos nossos clientes</p>
-                <div class="produtos-info">
-                    <span><i class="fa-solid fa-circle-info"></i> Recomendamos <strong>100g por pessoa</strong> para eventos · Vendidos por kg</span>
-                </div>
-                <div class="produtos-gallery">
-
-                    <div class="produto-card">
-                        <div class="produto-fotos">
-                            <div class="produto-foto-wrap"><div class="produto-foto"><img src="imagens/drive-google7.jpg" alt="Bolo Morango"></div></div>
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="bolo-morango-fatia"><i class="fa-solid fa-camera"></i><span>bolo-morango-fatia</span></div></div>
+                <div class="carousel" id="carousel-bolos">
+                    <div class="carousel-track">
+                        <div class="carousel-card">
+                            <div class="carousel-foto"><img src="imagens/drive-google7.jpg" alt="Bolo Morango"></div>
+                            <div class="produto-nome">Morango</div>
                         </div>
-                        <div class="produto-nome">Morango</div>
-                    </div>
-
-                    <div class="produto-card">
-                        <div class="produto-fotos">
-                            <div class="produto-foto-wrap"><div class="produto-foto"><img src="imagens/drive-google5.jpg" alt="Bolo Brigadeiro"></div></div>
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="bolo-brigadeiro-fatia"><i class="fa-solid fa-camera"></i><span>bolo-brigadeiro-fatia</span></div></div>
+                        <div class="carousel-card">
+                            <div class="carousel-foto"><img src="imagens/drive-google5.jpg" alt="Bolo Brigadeiro"></div>
+                            <div class="produto-nome">Brigadeiro</div>
                         </div>
-                        <div class="produto-nome">Brigadeiro</div>
-                    </div>
-
-                    <div class="produto-card">
-                        <div class="produto-fotos">
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="bolo-mousse-chocolate-completo"><i class="fa-solid fa-camera"></i><span>bolo-mousse-completo</span></div></div>
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="bolo-mousse-chocolate-fatia"><i class="fa-solid fa-camera"></i><span>bolo-mousse-fatia</span></div></div>
+                        <div class="carousel-card">
+                            <div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div>
+                            <div class="produto-nome">Mousse de Chocolate</div>
                         </div>
-                        <div class="produto-nome">Mousse de Chocolate</div>
-                    </div>
-
-                    <div class="produto-card">
-                        <div class="produto-fotos">
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="bolo-nozes-completo"><i class="fa-solid fa-camera"></i><span>bolo-nozes-completo</span></div></div>
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="bolo-nozes-fatia"><i class="fa-solid fa-camera"></i><span>bolo-nozes-fatia</span></div></div>
+                        <div class="carousel-card">
+                            <div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div>
+                            <div class="produto-nome">Nozes</div>
                         </div>
-                        <div class="produto-nome">Nozes</div>
-                    </div>
-
-                    <div class="produto-card">
-                        <div class="produto-fotos">
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="bolo-guibela-completo"><i class="fa-solid fa-camera"></i><span>bolo-guibela-completo</span></div></div>
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="bolo-guibela-fatia"><i class="fa-solid fa-camera"></i><span>bolo-guibela-fatia</span></div></div>
+                        <div class="carousel-card">
+                            <div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div>
+                            <div class="produto-nome">Guibela</div>
                         </div>
-                        <div class="produto-nome">Guibela</div>
-                    </div>
-
-                    <div class="produto-card">
-                        <div class="produto-fotos">
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="bolo-ninho-nutella-completo"><i class="fa-solid fa-camera"></i><span>bolo-ninho-completo</span></div></div>
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="bolo-ninho-nutella-fatia"><i class="fa-solid fa-camera"></i><span>bolo-ninho-fatia</span></div></div>
+                        <div class="carousel-card">
+                            <div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div>
+                            <div class="produto-nome">Ninho com Nutella</div>
                         </div>
-                        <div class="produto-nome">Ninho com Nutella</div>
-                    </div>
-
-                    <div class="produto-card">
-                        <div class="produto-fotos">
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="bolo-floresta-negra-completo"><i class="fa-solid fa-camera"></i><span>bolo-floresta-completo</span></div></div>
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="bolo-floresta-negra-fatia"><i class="fa-solid fa-camera"></i><span>bolo-floresta-fatia</span></div></div>
+                        <div class="carousel-card">
+                            <div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div>
+                            <div class="produto-nome">Floresta Negra</div>
                         </div>
-                        <div class="produto-nome">Floresta Negra</div>
-                    </div>
-
-                    <div class="produto-card">
-                        <div class="produto-fotos">
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="bolo-espatulado-topper-completo"><i class="fa-solid fa-camera"></i><span>espatulado-topper</span></div></div>
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="bolo-espatulado-topper-fatia"><i class="fa-solid fa-camera"></i><span>espatulado-topper-fatia</span></div></div>
+                        <div class="carousel-card">
+                            <div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div>
+                            <div class="produto-nome">Espatulado com Topper</div>
                         </div>
-                        <div class="produto-nome">Espatulado com Topper</div>
-                    </div>
-
-                    <div class="produto-card">
-                        <div class="produto-fotos">
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="bolo-espatulado-tradicional-completo"><i class="fa-solid fa-camera"></i><span>espatulado-tradicional</span></div></div>
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="bolo-espatulado-tradicional-fatia"><i class="fa-solid fa-camera"></i><span>espatulado-fatia</span></div></div>
+                        <div class="carousel-card">
+                            <div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div>
+                            <div class="produto-nome">Espatulado Tradicional</div>
                         </div>
-                        <div class="produto-nome">Espatulado Tradicional</div>
-                    </div>
-
-                    <div class="produto-card">
-                        <div class="produto-fotos">
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="bolo-vintage-cake-completo"><i class="fa-solid fa-camera"></i><span>vintage-cake-completo</span></div></div>
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="bolo-vintage-cake-fatia"><i class="fa-solid fa-camera"></i><span>vintage-cake-fatia</span></div></div>
+                        <div class="carousel-card">
+                            <div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div>
+                            <div class="produto-nome">Vintage Cake</div>
                         </div>
-                        <div class="produto-nome">Vintage Cake</div>
                     </div>
-
+                    <button class="carousel-btn carousel-prev" onclick="moveCarousel('bolos',-1)" disabled>&#8249;</button>
+                    <button class="carousel-btn carousel-next" onclick="moveCarousel('bolos',1)">&#8250;</button>
                 </div>
                 <div class="produtos-cta">
                     <p>Ficou com água na boca? <strong>Solicite seu orçamento agora!</strong></p>
@@ -356,91 +310,55 @@
                 </div>
             </div>
 
-            <!-- DOCES -->
-            <div id="tab-doces" class="tab-content">
+            <!-- DOCES CAROUSEL -->
+            <div class="produtos-section">
+                <div class="produtos-section-label"><i class="fa-solid fa-candy-cane"></i> Doces</div>
                 <p class="produtos-subtitulo">Os sabores que mais <strong>encantam nas mesas</strong> dos nossos eventos</p>
-                <div class="produtos-gallery">
-
-                    <div class="produto-card">
-                        <div class="produto-fotos">
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="doce-brigadeiro-mesa"><i class="fa-solid fa-camera"></i><span>doce-brigadeiro-mesa</span></div></div>
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="doce-brigadeiro-zoom"><i class="fa-solid fa-camera"></i><span>doce-brigadeiro-zoom</span></div></div>
+                <div class="carousel" id="carousel-doces">
+                    <div class="carousel-track">
+                        <div class="carousel-card">
+                            <div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div>
+                            <div class="produto-nome">Brigadeiro</div>
                         </div>
-                        <div class="produto-nome">Brigadeiro</div>
-                    </div>
-
-                    <div class="produto-card">
-                        <div class="produto-fotos">
-                            <div class="produto-foto-wrap"><div class="produto-foto"><img src="imagens/wa-11241.jpg" alt="Surpresa de Uva"></div></div>
-                            <div class="produto-foto-wrap"><div class="produto-foto"><img src="imagens/wa1.jpg" alt="Surpresa de Uva"></div></div>
+                        <div class="carousel-card">
+                            <div class="carousel-foto"><img src="imagens/wa-11241.jpg" alt="Surpresa de Uva"></div>
+                            <div class="produto-nome">Surpresa de Uva</div>
                         </div>
-                        <div class="produto-nome">Surpresa de Uva</div>
-                    </div>
-
-                    <div class="produto-card">
-                        <div class="produto-fotos">
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="doce-bicho-pe-mesa"><i class="fa-solid fa-camera"></i><span>doce-bicho-pe-mesa</span></div></div>
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="doce-bicho-pe-zoom"><i class="fa-solid fa-camera"></i><span>doce-bicho-pe-zoom</span></div></div>
+                        <div class="carousel-card">
+                            <div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div>
+                            <div class="produto-nome">Bicho do Pé</div>
                         </div>
-                        <div class="produto-nome">Bicho do Pé</div>
-                    </div>
-
-                    <div class="produto-card">
-                        <div class="produto-fotos">
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="doce-beijinho-mesa"><i class="fa-solid fa-camera"></i><span>doce-beijinho-mesa</span></div></div>
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="doce-beijinho-zoom"><i class="fa-solid fa-camera"></i><span>doce-beijinho-zoom</span></div></div>
+                        <div class="carousel-card">
+                            <div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div>
+                            <div class="produto-nome">Beijinho</div>
                         </div>
-                        <div class="produto-nome">Beijinho</div>
-                    </div>
-
-                    <div class="produto-card">
-                        <div class="produto-fotos">
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="doce-coco-queimado-mesa"><i class="fa-solid fa-camera"></i><span>doce-coco-queimado-mesa</span></div></div>
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="doce-coco-queimado-zoom"><i class="fa-solid fa-camera"></i><span>doce-coco-queimado-zoom</span></div></div>
+                        <div class="carousel-card">
+                            <div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div>
+                            <div class="produto-nome">Coco Queimado</div>
                         </div>
-                        <div class="produto-nome">Coco Queimado</div>
-                    </div>
-
-                    <div class="produto-card">
-                        <div class="produto-fotos">
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="doce-granule-mesa"><i class="fa-solid fa-camera"></i><span>doce-granule-mesa</span></div></div>
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="doce-granule-zoom"><i class="fa-solid fa-camera"></i><span>doce-granule-zoom</span></div></div>
+                        <div class="carousel-card">
+                            <div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div>
+                            <div class="produto-nome">Granulê</div>
                         </div>
-                        <div class="produto-nome">Granulê</div>
-                    </div>
-
-                    <div class="produto-card">
-                        <div class="produto-fotos">
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="doce-brulée-mesa"><i class="fa-solid fa-camera"></i><span>doce-brulée-mesa</span></div></div>
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="doce-brulée-zoom"><i class="fa-solid fa-camera"></i><span>doce-brulée-zoom</span></div></div>
+                        <div class="carousel-card">
+                            <div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div>
+                            <div class="produto-nome">Brigadeiro Brûlée</div>
                         </div>
-                        <div class="produto-nome">Brigadeiro Brûlée</div>
-                    </div>
-
-                    <div class="produto-card">
-                        <div class="produto-fotos">
-                            <div class="produto-foto-wrap"><div class="produto-foto"><img src="imagens/wa-11241-2.jpg" alt="Morango no Chocolate"></div></div>
-                            <div class="produto-foto-wrap"><div class="produto-foto"><img src="imagens/wa-11241-5.jpg" alt="Morango no Chocolate"></div></div>
+                        <div class="carousel-card">
+                            <div class="carousel-foto"><img src="imagens/wa-11241-2.jpg" alt="Morango no Chocolate"></div>
+                            <div class="produto-nome">Morango no Chocolate</div>
                         </div>
-                        <div class="produto-nome">Morango no Chocolate</div>
-                    </div>
-
-                    <div class="produto-card">
-                        <div class="produto-fotos">
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="doce-pistache-mesa"><i class="fa-solid fa-camera"></i><span>doce-pistache-mesa</span></div></div>
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="doce-pistache-zoom"><i class="fa-solid fa-camera"></i><span>doce-pistache-zoom</span></div></div>
+                        <div class="carousel-card">
+                            <div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div>
+                            <div class="produto-nome">Doce de Pistache</div>
                         </div>
-                        <div class="produto-nome">Doce de Pistache</div>
-                    </div>
-
-                    <div class="produto-card">
-                        <div class="produto-fotos">
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="doce-cacau-mesa"><i class="fa-solid fa-camera"></i><span>doce-cacau-mesa</span></div></div>
-                            <div class="produto-foto-wrap"><div class="produto-foto" data-file="doce-cacau-zoom"><i class="fa-solid fa-camera"></i><span>doce-cacau-zoom</span></div></div>
+                        <div class="carousel-card">
+                            <div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div>
+                            <div class="produto-nome">Cacau</div>
                         </div>
-                        <div class="produto-nome">Cacau</div>
                     </div>
-
+                    <button class="carousel-btn carousel-prev" onclick="moveCarousel('doces',-1)" disabled>&#8249;</button>
+                    <button class="carousel-btn carousel-next" onclick="moveCarousel('doces',1)">&#8250;</button>
                 </div>
                 <div class="produtos-cta">
                     <p>Quer uma mesa de doces inesquecível? <strong>Solicite seu orçamento!</strong></p>
@@ -448,8 +366,14 @@
                 </div>
             </div>
 
+            <!-- TABS: KITS / PERSONALIZADOS -->
+            <div class="tabs">
+                <button type="button" class="tab active" onclick="showTab('kits', this)"><i class="fa-solid fa-gift"></i> Kits Festa</button>
+                <button type="button" class="tab" onclick="showTab('personalizados', this)"><i class="fa-solid fa-wand-sparkles"></i> Personalizados</button>
+            </div>
+
             <!-- KITS -->
-            <div id="tab-kits" class="tab-content">
+            <div id="tab-kits" class="tab-content active">
                 <div class="kits-grid">
                     <div class="kit-card">
                         <div class="kit-card-header">
