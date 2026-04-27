@@ -2285,8 +2285,10 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     color: var(--gold);
     margin-right: 8px;
 }
-.carousel {
+.carousel-outer {
     position: relative;
+}
+.carousel {
     overflow: hidden;
     padding: 0 4px;
 }
@@ -2305,9 +2307,6 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     overflow: hidden;
     background: #1a1209;
     border: 1px solid rgba(153,110,95,0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .carousel-foto img {
     width: 100%;
@@ -2336,15 +2335,15 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     position: absolute;
     top: 42%;
     transform: translateY(-50%);
-    background: rgba(255,255,255,0.12);
+    background: rgba(20,12,5,0.65);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    border: 1px solid rgba(255,255,255,0.25);
-    color: var(--cream);
-    width: 42px;
-    height: 42px;
+    border: 1px solid rgba(201,153,58,0.5);
+    color: var(--gold-light);
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     line-height: 1;
     cursor: pointer;
     transition: background 0.2s, opacity 0.2s;
@@ -2353,10 +2352,10 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     justify-content: center;
     z-index: 10;
 }
-.carousel-btn:hover { background: rgba(201,153,58,0.35); }
-.carousel-btn:disabled { opacity: 0.25; cursor: default; }
-.carousel-prev { left: 6px; }
-.carousel-next { right: 6px; }
+.carousel-btn:hover { background: rgba(201,153,58,0.45); color: var(--cream); }
+.carousel-btn:disabled { opacity: 0.2; cursor: default; }
+.carousel-prev { left: -4px; }
+.carousel-next { right: -4px; }
 @media (max-width: 500px) {
     .carousel-card { min-width: calc(75% - 7px); }
 }
