@@ -216,8 +216,8 @@ function initCarousels() {
       var img = foto && foto.querySelector('img');
       if (img && img.src) {
         foto.style.backgroundImage = 'url("' + img.src + '")';
-        foto.style.backgroundSize = 'cover';
-        foto.style.backgroundPosition = 'center top';
+        foto.style.backgroundSize = 'contain';
+        foto.style.backgroundPosition = 'center center';
         img.style.display = 'none';
       }
     });
