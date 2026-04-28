@@ -199,6 +199,33 @@ function showTab(id, btn) {
 }
 
 // ===== CARROSSEL DE PRODUTOS =====
+function initCarousels() {
+  var rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+  var sectionPad = window.innerWidth <= 768 ? 2 * rem : 8 * rem;
+  var pageW = Math.min(window.innerWidth - sectionPad, 1200);
+  var carW = pageW - 2 * (40 + 8) - 8;
+  var visible = window.innerWidth >= 500 ? 2 : 1;
+  var cardW = Math.floor((carW - (visible - 1) * 14) / visible);
+  ['bolos', 'doces'].forEach(function(id) {
+    var outer = document.getElementById('carousel-' + id);
+    if (!outer) return;
+    var cards = outer.querySelectorAll('.carousel-card');
+    cards.forEach(function(card) {
+      card.style.width = cardW + 'px';
+      var foto = card.querySelector('.carousel-foto');
+      var img = foto && foto.querySelector('img');
+      if (img && img.src) {
+        foto.style.backgroundImage = 'url("' + img.src + '")';
+        foto.style.backgroundSize = 'cover';
+        foto.style.backgroundPosition = 'center top';
+        img.style.display = 'none';
+      }
+    });
+  });
+}
+window.addEventListener('load', function() { setTimeout(initCarousels, 50); });
+window.addEventListener('resize', initCarousels);
+
 var _carPos = {};
 function moveCarousel(id, dir) {
   var track = document.querySelector('#carousel-' + id + ' .carousel-track');
