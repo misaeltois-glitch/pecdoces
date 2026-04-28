@@ -302,10 +302,7 @@ function atualizarCardapio2026() {
       var waUrl = 'https://wa.me/5511961739148?text=' + encodeURIComponent('Olá! Gostaria de ver fotos de *' + name + '*.');
       return '<div class="pers-item">' +
         '<span class="pers-name">' + name + '</span>' +
-        '<span class="preco-wrapper">' +
-          '<span class="pers-price preco-oculto">R$ ' + price + '</span>' +
-          '<button class="btn-ver-preco" onclick="revelarPreco(this,event)">Ver Preço</button>' +
-        '</span>' +
+        '<span class="pers-price">R$ ' + price + '</span>' +
         '<a class="btn-ver-mais" href="' + waUrl + '" target="_blank" onclick="event.stopPropagation()"><i class="fa-brands fa-whatsapp"></i> Ver mais</a>' +
         '</div>';
     }
@@ -314,10 +311,7 @@ function atualizarCardapio2026() {
       '<div class="preco-label">' +
       '<div class="preco-badge">Bolo Personalizado c/ Pasta</div>' +
       '<div class="preco-line"></div>' +
-      '<span style="font-size:18px;font-family:\'Cormorant Garamond\',serif;color:var(--gold);display:inline-flex;align-items:center;gap:10px;">' +
-        '<span class="preco-oculto">R$ 275,60 / kg</span>' +
-        '<button class="btn-ver-preco" onclick="revelarPreco(this,event)">Ver Preço</button>' +
-      '</span>' +
+      '<span style="font-size:18px;font-family:\'Cormorant Garamond\',serif;color:var(--gold);">R$ 275,60 / kg</span>' +
       '</div>' +
       '<div style="margin-top:1rem;font-size:12px;color:rgba(62,68,96,0.65);line-height:2;">' +
       '<strong style="color:#7A4E45;letter-spacing:1px;font-size:11px;">SABORES:</strong> ' +

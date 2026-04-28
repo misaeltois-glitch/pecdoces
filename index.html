@@ -254,7 +254,16 @@
                 <div class="section-divider"></div>
             </div>
 
-            <!-- BOLOS CAROUSEL -->
+            <!-- TABS: BOLOS / DOCES / KITS / PERSONALIZADOS -->
+            <div class="tabs">
+                <button type="button" class="tab active" onclick="showTab('bolos', this)"><i class="fa-solid fa-cake-candles"></i> Bolos</button>
+                <button type="button" class="tab" onclick="showTab('doces', this)"><i class="fa-solid fa-candy-cane"></i> Doces</button>
+                <button type="button" class="tab" onclick="showTab('kits', this)"><i class="fa-solid fa-gift"></i> Kits Festa</button>
+                <button type="button" class="tab" onclick="showTab('personalizados', this)"><i class="fa-solid fa-wand-sparkles"></i> Personalizados</button>
+            </div>
+
+            <!-- BOLOS -->
+            <div id="tab-bolos" class="tab-content active">
             <div class="produtos-section">
                 <div class="produtos-section-label"><i class="fa-solid fa-cake-candles"></i> Bolos</div>
                 <p class="produtos-subtitulo">Os <strong>sabores mais pedidos</strong> pelos nossos clientes</p>
@@ -311,8 +320,10 @@
                     <a href="https://wa.me/5511961739148?text=Ol%C3%A1!%20Vi%20os%20bolos%20no%20site%20e%20quero%20fazer%20um%20or%C3%A7amento." class="btn-primary" target="_blank" onclick="gtag('event','click_cta',{event_category:'produtos',event_label:'bolos'})"><i class="fa-brands fa-whatsapp"></i> Quero encomendar</a>
                 </div>
             </div>
+            </div><!-- /tab-bolos -->
 
-            <!-- DOCES CAROUSEL -->
+            <!-- DOCES -->
+            <div id="tab-doces" class="tab-content">
             <div class="produtos-section">
                 <div class="produtos-section-label"><i class="fa-solid fa-candy-cane"></i> Doces</div>
                 <p class="produtos-subtitulo">Os sabores que mais <strong>encantam nas mesas</strong> dos nossos eventos</p>
@@ -369,15 +380,10 @@
                     <a href="https://wa.me/5511961739148?text=Ol%C3%A1!%20Vi%20os%20doces%20no%20site%20e%20quero%20fazer%20um%20or%C3%A7amento." class="btn-primary" target="_blank" onclick="gtag('event','click_cta',{event_category:'produtos',event_label:'doces'})"><i class="fa-brands fa-whatsapp"></i> Quero encomendar</a>
                 </div>
             </div>
-
-            <!-- TABS: KITS / PERSONALIZADOS -->
-            <div class="tabs">
-                <button type="button" class="tab active" onclick="showTab('kits', this)"><i class="fa-solid fa-gift"></i> Kits Festa</button>
-                <button type="button" class="tab" onclick="showTab('personalizados', this)"><i class="fa-solid fa-wand-sparkles"></i> Personalizados</button>
-            </div>
+            </div><!-- /tab-doces -->
 
             <!-- KITS -->
-            <div id="tab-kits" class="tab-content active">
+            <div id="tab-kits" class="tab-content">
                 <div class="kits-grid">
                     <div class="kit-card">
                         <div class="kit-card-header">
