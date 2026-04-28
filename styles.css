@@ -2407,6 +2407,7 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     gap: 8px;
 }
 .btn-ver-mais {
+    margin-left: 14px;
     font-family: 'Jost', sans-serif;
     font-size: 10px;
     font-weight: 700;
