@@ -222,6 +222,7 @@ nav {
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
 }
 
@@ -993,9 +994,9 @@ section {
 .momentos-quote {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.3rem;
-    font-weight: 300;
+    font-weight: 500;
     font-style: italic;
-    color: var(--choco-mid);
+    color: var(--text-dark);
     line-height: 1.8;
     border-left: 3px solid var(--gold);
     padding-left: 24px;
@@ -1876,7 +1877,7 @@ footer {
 .doce-col-header .price { color: #FDF6EE !important; }
 .doce-col-header .cat   { color: rgba(253,246,238,0.75) !important; }
 /* Subtítulos que usam --choco-mid/warm (agora creme) */
-.momentos-quote { color: var(--text-mid); }
+.momentos-quote { color: var(--text-dark); }
 .depo-author    { color: var(--text-mid); }
 
 
