@@ -279,8 +279,7 @@ function lbNavigate(dir) {
   _lbRender();
 }
 
-function closeLightbox(e) {
-  if (e && (e.target.tagName === 'IMG' || e.target.id === 'lb-prev' || e.target.id === 'lb-next')) return;
+function closeLightbox() {
   document.getElementById('lightbox').classList.remove('open');
   document.body.style.overflow = '';
   setTimeout(function() {
@@ -288,6 +287,18 @@ function closeLightbox(e) {
     if (img) img.src = '';
   }, 300);
 }
+
+// Eventos do lightbox — sem inline onclick para evitar problemas de propagação
+document.addEventListener('DOMContentLoaded', function() {
+  var lb = document.getElementById('lightbox');
+  // fecha só ao clicar no fundo escuro (não em filhos)
+  lb.addEventListener('click', function(e) {
+    if (e.target === lb) closeLightbox();
+  });
+  document.getElementById('lb-close').addEventListener('click', closeLightbox);
+  document.getElementById('lb-prev').addEventListener('click', function() { lbNavigate(-1); });
+  document.getElementById('lb-next').addEventListener('click', function() { lbNavigate(1); });
+});
 
 document.addEventListener('keydown', function(e) {
   if (!document.getElementById('lightbox').classList.contains('open')) return;
