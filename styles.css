@@ -1123,7 +1123,7 @@ section {
 
 .depo-text {
     font-size: var(--text-md);
-    color: var(--text-mid);
+    color: var(--text-dark);
     line-height: var(--leading-body);
     font-style: italic;
     margin-bottom: 1.5rem;
@@ -1138,7 +1138,7 @@ section {
 
 .depo-author {
     font-size: var(--text-sm);
-    color: var(--choco-warm);
+    color: var(--text-dark);
     font-weight: 600;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -1146,7 +1146,7 @@ section {
 
 .depo-author span {
     display: block;
-    color: rgba(78, 88, 120, 0.55);
+    color: var(--text-mid);
     font-weight: 400;
     text-transform: none;
     letter-spacing: 0;
@@ -1878,7 +1878,7 @@ footer {
 .doce-col-header .cat   { color: rgba(253,246,238,0.75) !important; }
 /* Subtítulos que usam --choco-mid/warm (agora creme) */
 .momentos-quote { color: var(--text-dark); }
-.depo-author    { color: var(--text-mid); }
+.depo-author    { color: var(--text-dark); }
 
 
 /* Nav CTA e kit-badge: texto claro no fundo terracota */
@@ -2312,7 +2312,6 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     border-radius: 10px;
     overflow: hidden;
     background: #ede4d8;
-    border: 1px solid rgba(153,110,95,0.15);
 }
 .carousel-foto img {
     display: block;

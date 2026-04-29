@@ -203,7 +203,7 @@
                         <h3 class="noivas-banner-title">Degustação a partir de <strong>R$ 79,90</strong></h3>
                         <p class="noivas-banner-desc">Encontros e valores disponíveis — venha experimentar antes de decidir e garanta a mesa dos seus sonhos.</p>
                     </div>
-                    <a href="https://wa.me/5511961739148?text=Ol%C3%A1!%20Quero%20agendar%20uma%20degusta%C3%A7%C3%A3o%20para%20o%20meu%20casamento." class="btn-primary noivas-banner-cta" target="_blank" onclick="gtag('event','click_cta',{event_category:'noivas',event_label:'degustacao'})">Vamos experimentar</a>
+                    <a href="https://wa.me/5511961739148?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20degusta%C3%A7%C3%A3o." class="btn-primary noivas-banner-cta" target="_blank" onclick="gtag('event','click_cta',{event_category:'noivas',event_label:'degustacao'})">Vamos experimentar</a>
                 </div>
             </div>
 
@@ -259,14 +259,12 @@
                 <button type="button" class="tab active" onclick="showTab('bolos', this)"><i class="fa-solid fa-cake-candles"></i> Bolos</button>
                 <button type="button" class="tab" onclick="showTab('doces', this)"><i class="fa-solid fa-candy-cane"></i> Doces</button>
                 <button type="button" class="tab" onclick="showTab('kits', this)"><i class="fa-solid fa-gift"></i> Kits Festa</button>
-                <button type="button" class="tab" onclick="showTab('personalizados', this)"><i class="fa-solid fa-wand-sparkles"></i> Personalizados</button>
             </div>
 
             <!-- BOLOS -->
             <div id="tab-bolos" class="tab-content active">
             <div class="produtos-section">
                 <div class="produtos-section-label"><i class="fa-solid fa-cake-candles"></i> Bolos</div>
-                <p class="produtos-subtitulo">Os <strong>sabores mais pedidos</strong> pelos nossos clientes</p>
                 <div class="carousel-outer" id="carousel-bolos">
                     <button class="carousel-btn carousel-prev" onclick="moveCarousel('bolos',-1)" disabled>&#8249;</button>
                     <div class="carousel">
@@ -326,11 +324,14 @@
             <div id="tab-doces" class="tab-content">
             <div class="produtos-section">
                 <div class="produtos-section-label"><i class="fa-solid fa-candy-cane"></i> Doces</div>
-                <p class="produtos-subtitulo">Os sabores que mais <strong>encantam nas mesas</strong> dos nossos eventos</p>
                 <div class="carousel-outer" id="carousel-doces">
                     <button class="carousel-btn carousel-prev" onclick="moveCarousel('doces',-1)" disabled>&#8249;</button>
                     <div class="carousel">
                         <div class="carousel-track">
+                            <div class="carousel-card">
+                                <div class="carousel-foto"><img src="imagens/doce-morango-chocolate.jpg" alt="Morango no Chocolate"></div>
+                                <div class="produto-nome">Morango no Chocolate</div>
+                            </div>
                             <div class="carousel-card">
                                 <div class="carousel-foto"><img src="imagens/doce-brigadeiro.jpg" alt="Brigadeiro"></div>
                                 <div class="produto-nome">Brigadeiro</div>
@@ -358,10 +359,6 @@
                             <div class="carousel-card">
                                 <div class="carousel-foto"><img src="imagens/doce-ninho-nutella.jpg" alt="Ninho com Nutella"></div>
                                 <div class="produto-nome">Ninho com Nutella</div>
-                            </div>
-                            <div class="carousel-card">
-                                <div class="carousel-foto"><img src="imagens/doce-morango-chocolate.jpg" alt="Morango no Chocolate"></div>
-                                <div class="produto-nome">Morango no Chocolate</div>
                             </div>
                             <div class="carousel-card">
                                 <div class="carousel-foto"><img src="imagens/doce-surpresa-uva-branco.jpg" alt="Surpresa de Uva Branco"></div>
@@ -464,49 +461,6 @@
                 </div>
             </div>
 
-            <!-- PERSONALIZADOS -->
-            <div id="tab-personalizados" class="tab-content">
-                <div style="margin-bottom: 2rem;">
-                    <div class="preco-label">
-                        <div class="preco-badge">Bolo Personalizado c/ Pasta</div>
-                        <div class="preco-line"></div>
-                        <span style="font-size: 18px; font-family: 'Cormorant Garamond', serif; color: var(--gold);">R$ 250,50 / kg</span>
-                    </div>
-                </div>
-                <p style="font-size: 12.5px; color: rgba(62,68,96,0.6); margin-bottom: 2rem; line-height: 1.7; max-width: 600px;">
-                    Cupcakes: massas de baunilha ou chocolate. Recheios: brigadeiro, doce de leite, coco, limão, maracujá ou morango.
-                </p>
-                <div class="pers-grid">
-                    <div class="pers-item"><span class="pers-name">Mini Cupcake Tradicional</span><span class="pers-price">R$ 7,90</span></div>
-                    <div class="pers-item"><span class="pers-name">Mini Cupcake Decorado Básico</span><span class="pers-price">R$ 19,25</span></div>
-                    <div class="pers-item"><span class="pers-name">Cupcake Tradicional</span><span class="pers-price">R$ 11,40</span></div>
-                    <div class="pers-item"><span class="pers-name">Cupcake Decorado Básico</span><span class="pers-price">R$ 27,50</span></div>
-                    <div class="pers-item"><span class="pers-name">Cupcake Personalizado Especial</span><span class="pers-price">R$ 37,50</span></div>
-                    <div class="pers-item"><span class="pers-name">Cupcake Personalizado 3D</span><span class="pers-price">R$ 49,50</span></div>
-                    <div class="pers-item"><span class="pers-name">Doce Personalizado Básico</span><span class="pers-price">R$ 6,49</span></div>
-                    <div class="pers-item"><span class="pers-name">Bombom Personalizado Chapado</span><span class="pers-price">R$ 11,55</span></div>
-                    <div class="pers-item"><span class="pers-name">Bombom Personalizado 3D</span><span class="pers-price">R$ 23,00</span></div>
-                    <div class="pers-item"><span class="pers-name">Pop Cake Personalizado</span><span class="pers-price">R$ 20,30</span></div>
-                    <div class="pers-item"><span class="pers-name">Popsicle Personalizado</span><span class="pers-price">R$ 27,50</span></div>
-                    <div class="pers-item"><span class="pers-name">Pão de Mel Tradicional</span><span class="pers-price">R$ 11,30</span></div>
-                    <div class="pers-item"><span class="pers-name">Pão de Mel Decorado Básico</span><span class="pers-price">R$ 19,50</span></div>
-                    <div class="pers-item"><span class="pers-name">Pão de Mel Personalizado Especial</span><span class="pers-price">R$ 29,70</span></div>
-                    <div class="pers-item"><span class="pers-name">Pão de Mel Personalizado 3D</span><span class="pers-price">R$ 49,50</span></div>
-                    <div class="pers-item"><span class="pers-name">Bolo Embrulhado Tradicional 6x6x3 100g</span><span class="pers-price">R$ 19,80</span></div>
-                    <div class="pers-item"><span class="pers-name">Porta Retrato Personalizado</span><span class="pers-price">R$ 16,30</span></div>
-                    <div class="pers-item"><span class="pers-name">Maçã Personalizada</span><span class="pers-price">R$ 21,70</span></div>
-                    <div class="pers-item"><span class="pers-name">Maçã Personalizada (grande)</span><span class="pers-price">R$ 37,50</span></div>
-                    <div class="pers-item"><span class="pers-name">Pirulito Decorado Básico</span><span class="pers-price">R$ 13,75</span></div>
-                    <div class="pers-item"><span class="pers-name">Pirulito Personalizado Especial</span><span class="pers-price">R$ 18,30</span></div>
-                    <div class="pers-item"><span class="pers-name">Brigalito Tradicional</span><span class="pers-price">R$ 15,90</span></div>
-                    <div class="pers-item"><span class="pers-name">Brigalito Decorado Básico</span><span class="pers-price">R$ 20,80</span></div>
-                    <div class="pers-item"><span class="pers-name">Brigalito Personalizado Especial</span><span class="pers-price">R$ 29,70</span></div>
-                    <div class="pers-item"><span class="pers-name">Biscoito Personalizado</span><span class="pers-price">R$ 24,75</span></div>
-                    <div class="pers-item"><span class="pers-name">Biscoito Personalizado no Palito</span><span class="pers-price">R$ 31,50</span></div>
-                    <div class="pers-item"><span class="pers-name">Donuts Tradicional</span><span class="pers-price">R$ 6,90</span></div>
-                    <div class="pers-item"><span class="pers-name">Donuts Decorado</span><span class="pers-price">R$ 13,80</span></div>
-                </div>
-            </div>
         </div>
     </section>
 
