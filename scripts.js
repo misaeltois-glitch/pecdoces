@@ -206,7 +206,7 @@ function initCarousels() {
   var carW = pageW - 2 * (40 + 8) - 8;
   var visible = window.innerWidth >= 500 ? 2 : 1;
   var cardW = Math.floor((carW - (visible - 1) * 14) / visible);
-  ['bolos', 'doces'].forEach(function(id) {
+  ['bolos', 'doces', 'personalizados'].forEach(function(id) {
     var outer = document.getElementById('carousel-' + id);
     if (!outer) return;
     var cards = outer.querySelectorAll('.carousel-card');

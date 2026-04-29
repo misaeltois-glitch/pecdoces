@@ -259,6 +259,7 @@
                 <button type="button" class="tab active" onclick="showTab('bolos', this)"><i class="fa-solid fa-cake-candles"></i> Bolos</button>
                 <button type="button" class="tab" onclick="showTab('doces', this)"><i class="fa-solid fa-candy-cane"></i> Doces</button>
                 <button type="button" class="tab" onclick="showTab('kits', this)"><i class="fa-solid fa-gift"></i> Kits Festa</button>
+                <button type="button" class="tab" onclick="showTab('personalizados', this)"><i class="fa-solid fa-wand-sparkles"></i> Personalizados</button>
             </div>
 
             <!-- BOLOS -->
@@ -460,6 +461,31 @@
                     </div>
                 </div>
             </div>
+
+            <!-- PERSONALIZADOS -->
+            <div id="tab-personalizados" class="tab-content">
+            <div class="produtos-section">
+                <div class="produtos-section-label"><i class="fa-solid fa-wand-sparkles"></i> Personalizados</div>
+                <div class="carousel-outer" id="carousel-personalizados">
+                    <button class="carousel-btn carousel-prev" onclick="moveCarousel('personalizados',-1)" disabled>&#8249;</button>
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <div class="carousel-card"><div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div></div>
+                            <div class="carousel-card"><div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div></div>
+                            <div class="carousel-card"><div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div></div>
+                            <div class="carousel-card"><div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div></div>
+                            <div class="carousel-card"><div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div></div>
+                            <div class="carousel-card"><div class="carousel-foto carousel-foto-placeholder"><i class="fa-solid fa-camera"></i></div></div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-next" onclick="moveCarousel('personalizados',1)">&#8250;</button>
+                </div>
+                <div class="produtos-cta">
+                    <p>Gostou? <strong>Solicite seu orçamento agora!</strong></p>
+                    <a href="https://wa.me/5511961739148?text=Ol%C3%A1!%20Vi%20os%20personalizados%20no%20site%20e%20quero%20fazer%20um%20or%C3%A7amento." class="btn-primary" target="_blank"><i class="fa-brands fa-whatsapp"></i> Quero encomendar</a>
+                </div>
+            </div>
+            </div><!-- /tab-personalizados -->
 
         </div>
     </section>
