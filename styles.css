@@ -2443,3 +2443,52 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     gap: 10px;
     flex-wrap: wrap;
 }
+
+/* ===== LIGHTBOX ===== */
+.carousel-foto { cursor: zoom-in; }
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+}
+.lightbox-overlay.open { display: flex; }
+.lightbox-img {
+    max-width: 92vw;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 4px 48px rgba(0,0,0,0.7);
+    display: block;
+}
+.lightbox-close {
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 1;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.25); }
+.lightbox-label {
+    color: rgba(255,255,255,0.75);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}

@@ -220,12 +220,40 @@ function initCarousels() {
         foto.style.backgroundPosition = foto.dataset.position || 'center center';
         foto.style.backgroundRepeat = 'no-repeat';
         img.style.display = 'none';
+        if (!foto.dataset.lbBound) {
+          foto.dataset.lbBound = '1';
+          var src = img.src;
+          var nome = (card.querySelector('.produto-nome') || {}).textContent || '';
+          foto.addEventListener('click', function() { openLightbox(src, nome.trim()); });
+        }
       }
     });
   });
 }
 window.addEventListener('load', function() { setTimeout(initCarousels, 50); });
 window.addEventListener('resize', initCarousels);
+
+// ===== LIGHTBOX =====
+function openLightbox(src, name) {
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightbox-img');
+  var lbLabel = document.getElementById('lightbox-label');
+  lbImg.src = src;
+  lbImg.alt = name;
+  lbLabel.textContent = name;
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(e) {
+  if (e && e.target.tagName === 'IMG') return;
+  var lb = document.getElementById('lightbox');
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
+  setTimeout(function() { document.getElementById('lightbox-img').src = ''; }, 300);
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
 
 var _carPos = {};
 function moveCarousel(id, dir) {
