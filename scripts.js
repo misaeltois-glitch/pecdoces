@@ -214,6 +214,7 @@ function initCarousels() {
     var cards = outer.querySelectorAll('.carousel-card');
     cards.forEach(function(card) {
       card.style.width = cardW + 'px';
+      card.style.minWidth = cardW + 'px';
       var foto = card.querySelector('.carousel-foto');
       var img = foto && foto.querySelector('img');
       if (img && img.src) {
@@ -314,17 +315,19 @@ function moveCarousel(id, dir) {
   var track = outer && outer.querySelector('.carousel-track');
   if (!track) return;
   var cards = track.querySelectorAll('.carousel-card');
-  if (!cards.length || !cards[0].offsetWidth) return;
+  if (!cards.length) return;
+  // usa a largura definida pelo JS (style.width), nunca offsetWidth que pode ser inflado pelo CSS min-width
+  var cardW = parseInt(cards[0].style.width);
+  if (!cardW) return;
   var visible = window.innerWidth < 500 ? 1
     : (window.innerWidth >= 768 && outer.dataset.visible ? parseInt(outer.dataset.visible) : 2);
   var max = Math.max(0, cards.length - visible);
   _carPos[id] = Math.max(0, Math.min(max, (_carPos[id] || 0) + dir));
-  var cardW = cards[0].offsetWidth + 14;
-  track.style.transform = 'translateX(-' + (_carPos[id] * cardW) + 'px)';
+  track.style.transform = 'translateX(-' + (_carPos[id] * (cardW + 14)) + 'px)';
   outer.querySelector('.carousel-prev').disabled = _carPos[id] <= 0;
   outer.querySelector('.carousel-next').disabled = _carPos[id] >= max;
   _carBusy[id] = true;
-  setTimeout(function() { _carBusy[id] = false; }, 300);
+  setTimeout(function() { _carBusy[id] = false; }, 290);
 }
 
 // ===== NAV ATIVO NO SCROLL =====
