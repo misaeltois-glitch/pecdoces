@@ -202,7 +202,7 @@ function showTab(id, btn) {
 function initCarousels() {
   var rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
   var sectionPad = window.innerWidth <= 768 ? 2 * rem : 8 * rem;
-  var pageW = Math.min(window.innerWidth - sectionPad, 1200);
+  var pageW = window.innerWidth - sectionPad;
   var carW = pageW;
   var visible = window.innerWidth >= 500 ? 2 : 1;
   var cardW = Math.floor((carW - (visible - 1) * 14) / visible);

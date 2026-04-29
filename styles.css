@@ -627,8 +627,11 @@ section {
 }
 
 .cardapio-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: none;
+}
+
+.cardapio-header {
+    max-width: 900px;
 }
 
 .cardapio-header .section-title {
