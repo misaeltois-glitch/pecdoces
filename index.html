@@ -166,7 +166,7 @@
             <div id="tab-bolos" class="tab-content active">
             <div class="produtos-section">
                 <div class="produtos-section-label"><i class="fa-solid fa-cake-candles"></i> Bolos</div>
-                <div class="carousel-outer" id="carousel-bolos">
+                <div class="carousel-outer" id="carousel-bolos" data-bg-size="contain">
                     <button class="carousel-btn carousel-prev" onclick="moveCarousel('bolos',-1)" disabled>&#8249;</button>
                     <div class="carousel">
                         <div class="carousel-track">
@@ -753,7 +753,9 @@
     <!-- LIGHTBOX -->
     <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
         <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-nav lb-prev" id="lb-prev" onclick="lbNavigate(-1);event.stopPropagation()">&#8249;</button>
         <img class="lightbox-img" id="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
+        <button class="lightbox-nav lb-next" id="lb-next" onclick="lbNavigate(1);event.stopPropagation()">&#8250;</button>
         <div class="lightbox-label" id="lightbox-label"></div>
     </div>
 
