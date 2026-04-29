@@ -217,7 +217,7 @@ function initCarousels() {
       if (img && img.src) {
         foto.style.backgroundImage = 'url("' + img.src + '")';
         foto.style.backgroundSize = 'cover';
-        foto.style.backgroundPosition = 'center top';
+        foto.style.backgroundPosition = 'center 15%';
         foto.style.backgroundRepeat = 'no-repeat';
         img.style.display = 'none';
       }
