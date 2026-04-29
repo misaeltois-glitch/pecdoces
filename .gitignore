@@ -1,1 +1,8 @@
 .claude/
+node_modules/
+package.json
+package-lock.json
+convert-images.js
+convert-heic.js
+imagens _10_melhores/
+imagens novas/
