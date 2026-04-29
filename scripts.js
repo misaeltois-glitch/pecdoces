@@ -296,22 +296,24 @@ document.addEventListener('keydown', function(e) {
   if (e.key === 'ArrowRight') lbNavigate(1);
 });
 
-var _carPos = {};
+var _carPos = {}, _carBusy = {};
 function moveCarousel(id, dir) {
-  var track = document.querySelector('#carousel-' + id + ' .carousel-track');
-  if (!track) return;
+  if (_carBusy[id]) return;
   var outer = document.getElementById('carousel-' + id);
+  var track = outer && outer.querySelector('.carousel-track');
+  if (!track) return;
   var cards = track.querySelectorAll('.carousel-card');
+  if (!cards.length || !cards[0].offsetWidth) return;
   var visible = window.innerWidth < 500 ? 1
-    : (window.innerWidth >= 768 && outer && outer.dataset.visible ? parseInt(outer.dataset.visible) : 2);
+    : (window.innerWidth >= 768 && outer.dataset.visible ? parseInt(outer.dataset.visible) : 2);
   var max = Math.max(0, cards.length - visible);
   _carPos[id] = Math.max(0, Math.min(max, (_carPos[id] || 0) + dir));
-  var gap = 14;
-  var cardW = cards[0].offsetWidth + gap;
+  var cardW = cards[0].offsetWidth + 14;
   track.style.transform = 'translateX(-' + (_carPos[id] * cardW) + 'px)';
-  var wrap = document.getElementById('carousel-' + id);
-  wrap.querySelector('.carousel-prev').disabled = _carPos[id] <= 0;
-  wrap.querySelector('.carousel-next').disabled = _carPos[id] >= max;
+  outer.querySelector('.carousel-prev').disabled = _carPos[id] <= 0;
+  outer.querySelector('.carousel-next').disabled = _carPos[id] >= max;
+  _carBusy[id] = true;
+  setTimeout(function() { _carBusy[id] = false; }, 300);
 }
 
 // ===== NAV ATIVO NO SCROLL =====
