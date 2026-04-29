@@ -286,13 +286,13 @@ function _lbRender() {
     var show = _lbImages.length > 1;
     prev.style.display = show ? 'flex' : 'none';
     next.style.display = show ? 'flex' : 'none';
-    prev.disabled = _lbIdx <= 0;
-    next.disabled = _lbIdx >= _lbImages.length - 1;
+    prev.disabled = false;
+    next.disabled = false;
   }
 }
 
 function lbNavigate(dir) {
-  _lbIdx = Math.max(0, Math.min(_lbImages.length - 1, _lbIdx + dir));
+  _lbIdx = (_lbIdx + dir + _lbImages.length) % _lbImages.length;
   _lbRender();
 }
 
