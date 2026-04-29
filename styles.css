@@ -2330,11 +2330,17 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     font-size: 2.5rem;
     border-style: dashed;
 }
+/* Bolos são portrait 3:4 — card se adapta ao aspect-ratio da foto */
+#carousel-bolos .carousel-foto {
+    height: auto;
+    aspect-ratio: 3 / 4;
+}
 .produto-nome { display: none; }
 @media (max-width: 500px) {
     .carousel-foto,
     .carousel-foto-placeholder { height: 320px; }
     .carousel-foto img { height: 320px; }
+    #carousel-bolos .carousel-foto { height: auto; aspect-ratio: 3 / 4; }
 }
 .produto-nome {
     font-family: 'Cormorant Garamond', serif;

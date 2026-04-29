@@ -204,11 +204,13 @@ function initCarousels() {
   var sectionPad = window.innerWidth <= 768 ? 2 * rem : 8 * rem;
   var pageW = window.innerWidth - sectionPad;
   var carW = pageW;
-  var visible = window.innerWidth >= 500 ? 2 : 1;
-  var cardW = Math.floor((carW - (visible - 1) * 14) / visible);
+  var defaultVisible = window.innerWidth >= 500 ? 2 : 1;
   ['bolos', 'doces', 'personalizados'].forEach(function(id) {
     var outer = document.getElementById('carousel-' + id);
     if (!outer) return;
+    var visibleCount = (window.innerWidth >= 768 && outer.dataset.visible)
+      ? parseInt(outer.dataset.visible) : defaultVisible;
+    var cardW = Math.floor((carW - (visibleCount - 1) * 14) / visibleCount);
     var cards = outer.querySelectorAll('.carousel-card');
     cards.forEach(function(card) {
       card.style.width = cardW + 'px';
@@ -298,8 +300,10 @@ var _carPos = {};
 function moveCarousel(id, dir) {
   var track = document.querySelector('#carousel-' + id + ' .carousel-track');
   if (!track) return;
+  var outer = document.getElementById('carousel-' + id);
   var cards = track.querySelectorAll('.carousel-card');
-  var visible = window.innerWidth >= 500 ? 2 : 1;
+  var visible = window.innerWidth < 500 ? 1
+    : (window.innerWidth >= 768 && outer && outer.dataset.visible ? parseInt(outer.dataset.visible) : 2);
   var max = Math.max(0, cards.length - visible);
   _carPos[id] = Math.max(0, Math.min(max, (_carPos[id] || 0) + dir));
   var gap = 14;
