@@ -230,21 +230,6 @@ function initCarousels() {
         foto.style.backgroundPosition = foto.dataset.position || 'center center';
         foto.style.backgroundRepeat = 'no-repeat';
         img.style.display = 'none';
-        if (!foto.dataset.lbBound) {
-          foto.dataset.lbBound = '1';
-          (function(cardEl, outerEl) {
-            foto.addEventListener('click', function() {
-              var allCards = Array.from(outerEl.querySelectorAll('.carousel-card'));
-              var images = allCards.map(function(c) {
-                var f = c.querySelector('.carousel-foto');
-                var im = f && f.querySelector('img');
-                var n = (c.querySelector('.produto-nome') || {}).textContent || '';
-                return im && im.src ? { src: im.src, name: n.trim() } : null;
-              }).filter(Boolean);
-              openLightbox(images, Math.max(0, allCards.indexOf(cardEl)));
-            });
-          })(card, outer);
-        }
       }
     });
 
@@ -260,82 +245,27 @@ function initCarousels() {
     }
   });
 }
-window.addEventListener('load', function() { setTimeout(initCarousels, 50); });
+initCarousels();
 window.addEventListener('resize', initCarousels);
 
-// ===== LIGHTBOX =====
-var _lbImages = [], _lbIdx = 0;
-
-function openLightbox(images, idx) {
-  _lbImages = images;
-  _lbIdx = idx || 0;
-  _lbRender();
-  document.getElementById('lightbox').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function _lbRender() {
-  var item = _lbImages[_lbIdx];
-  if (!item) return;
-  document.getElementById('lightbox-img').src = item.src;
-  document.getElementById('lightbox-img').alt = item.name;
-  document.getElementById('lightbox-label').textContent = item.name;
-  var prev = document.getElementById('lb-prev');
-  var next = document.getElementById('lb-next');
-  if (prev && next) {
-    var show = _lbImages.length > 1;
-    prev.style.display = show ? 'flex' : 'none';
-    next.style.display = show ? 'flex' : 'none';
-    prev.disabled = false;
-    next.disabled = false;
-  }
-}
-
-function lbNavigate(dir) {
-  _lbIdx = (_lbIdx + dir + _lbImages.length) % _lbImages.length;
-  _lbRender();
-}
-
-function closeLightbox() {
-  document.getElementById('lightbox').classList.remove('open');
-  document.body.style.overflow = '';
-  setTimeout(function() {
-    var img = document.getElementById('lightbox-img');
-    if (img) img.src = '';
-  }, 300);
-}
-
-// Eventos do lightbox — script está no final do <body>, DOM já pronto
-(function() {
-  var lb = document.getElementById('lightbox');
-  if (!lb) return;
-  lb.addEventListener('click', function(e) { if (e.target === lb) closeLightbox(); });
-  document.getElementById('lb-close').addEventListener('click', closeLightbox);
-  document.getElementById('lb-prev').addEventListener('click', function() { lbNavigate(-1); });
-  document.getElementById('lb-next').addEventListener('click', function() { lbNavigate(1); });
-})();
-
-document.addEventListener('keydown', function(e) {
-  if (!document.getElementById('lightbox').classList.contains('open')) return;
-  if (e.key === 'Escape') closeLightbox();
-  if (e.key === 'ArrowLeft') lbNavigate(-1);
-  if (e.key === 'ArrowRight') lbNavigate(1);
-});
 
 function moveCarousel(id, dir) {
-  var cardW = _carWidths[id];
-  if (!cardW) return;
   var outer = document.getElementById('carousel-' + id);
-  var track = outer && outer.querySelector('.carousel-track');
-  if (!track) return;
+  if (!outer) return;
+  var track = outer.querySelector('.carousel-track');
   var cards = outer.querySelectorAll('.carousel-card');
+  if (!track || !cards.length) return;
+  var cardW = cards[0].offsetWidth || _carWidths[id];
+  if (!cardW) return;
   var visible = window.innerWidth < 500 ? 1
     : (window.innerWidth >= 768 && outer.dataset.visible ? parseInt(outer.dataset.visible) : 2);
   var max = Math.max(0, cards.length - visible);
   _carPos[id] = Math.max(0, Math.min(max, (_carPos[id] || 0) + dir));
   track.style.transform = 'translateX(-' + (_carPos[id] * (cardW + 14)) + 'px)';
-  outer.querySelector('.carousel-prev').disabled = _carPos[id] <= 0;
-  outer.querySelector('.carousel-next').disabled = _carPos[id] >= max;
+  var prevBtn = outer.querySelector('.carousel-prev');
+  var nextBtn = outer.querySelector('.carousel-next');
+  if (prevBtn) prevBtn.disabled = _carPos[id] <= 0;
+  if (nextBtn) nextBtn.disabled = _carPos[id] >= max;
 }
 
 // ===== NAV ATIVO NO SCROLL =====
