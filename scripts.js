@@ -503,15 +503,18 @@ var _galeriaEventos = {
 function initLightboxEventos() {
   if (document.getElementById('lb-modal')) return; // evita double init
   // Criar modal
+  var svgL='<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+  var svgR='<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+  var svgX='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
   var modal = document.createElement('div');
   modal.id = 'lb-modal';
   modal.innerHTML =
     '<div id="lb-overlay"></div>'+
     '<div id="lb-box">'+
-      '<button id="lb-close" aria-label="Fechar">&#10005;</button>'+
-      '<button id="lb-prev" aria-label="Anterior">&#8249;</button>'+
+      '<button id="lb-close" aria-label="Fechar">'+svgX+'</button>'+
+      '<button id="lb-prev" aria-label="Anterior">'+svgL+'</button>'+
       '<img id="lb-img" src="" alt="">'+
-      '<button id="lb-next" aria-label="Próxima">&#8250;</button>'+
+      '<button id="lb-next" aria-label="Próxima">'+svgR+'</button>'+
       '<div id="lb-counter"></div>'+
     '</div>';
   document.body.appendChild(modal);
