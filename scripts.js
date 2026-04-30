@@ -466,7 +466,7 @@ function injetarFotosEventos() {
     { img: 'imagens/casamentos.jpg',    alt: 'Casamentos' },
     { img: 'imagens/aniversarios-3.jpg', alt: 'Aniversários' },
     { img: 'imagens/formaturas-3.jpg',  alt: 'Formaturas' },
-    { img: 'imagens/cha-bebe-2.jpg',    alt: 'Chá de Bebê' },
+    { img: 'imagens/cha-bebe-5.jpg',    alt: 'Chá de Bebê' },
     { img: 'imagens/corporativo-3.jpg', alt: 'Eventos Corporativos' },
     { img: 'imagens/festas-5.jpg',      alt: 'Festas Temáticas' }
   ];
