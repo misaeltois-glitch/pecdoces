@@ -463,12 +463,12 @@ document.querySelectorAll('.mvv-card, .kit-card, .depo-card, .evento-card, .stat
 // ===== FOTOS EVENTOS =====
 function injetarFotosEventos() {
   var dados = [
-    { img: 'imagens/2.jpg',           alt: 'Casamentos' },
-    { img: 'imagens/17.jpg',          alt: 'Aniversários' },
-    { img: 'imagens/10.jpg',          alt: 'Formaturas' },
-    { img: 'imagens/11.jpg',          alt: 'Chá de Bebê' },
-    { img: 'imagens/12.jpg',          alt: 'Eventos Corporativos' },
-    { img: 'imagens/18.jpg',          alt: 'Festas Temáticas' }
+    { img: 'imagens/casamentos.jpg',    alt: 'Casamentos' },
+    { img: 'imagens/aniversarios-3.jpg', alt: 'Aniversários' },
+    { img: 'imagens/formaturas-3.jpg',  alt: 'Formaturas' },
+    { img: 'imagens/cha-bebe-2.jpg',    alt: 'Chá de Bebê' },
+    { img: 'imagens/corporativo-3.jpg', alt: 'Eventos Corporativos' },
+    { img: 'imagens/festas-5.jpg',      alt: 'Festas Temáticas' }
   ];
   var cards = document.querySelectorAll('.evento-card');
   cards.forEach(function(card, i) {
