@@ -568,7 +568,10 @@ function initLightboxEventos() {
       img.style.cursor='zoom-in';
       img.addEventListener('click',function(e){
         e.stopPropagation();
-        abrir(_galeriaEventos[chaves[i]], 0);
+        var lista = _galeriaEventos[chaves[i]];
+        var src = img.getAttribute('src');
+        var idx = lista.indexOf(src);
+        abrir(lista, idx === -1 ? 0 : idx);
       });
     }
   });
