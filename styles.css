@@ -2524,58 +2524,72 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
 }
 #carousel-doces .carousel-foto img {
     height: 100%;
-    object-position: center 40%;
+    object-position: center 45%;
     transform-origin: center 45%;
 }
-/* 1 — Morango no Chocolate: referência, bem enquadrado */
+/* 1 — Bombom de Cereja */
 #carousel-doces .carousel-card:nth-child(1) .carousel-foto img {
-    transform: scale(1.05);
-    object-position: center 38%;
-}
-/* 2 — Ninho com Nutella: bem enquadrado */
-#carousel-doces .carousel-card:nth-child(2) .carousel-foto img {
-    transform: scale(1.08);
-    object-position: center 36%;
-}
-/* 3 — Brigadeiro */
-#carousel-doces .carousel-card:nth-child(3) .carousel-foto img {
-    transform: scale(2.1);
-    object-position: center 48%;
-}
-/* 4 — Beijinho */
-#carousel-doces .carousel-card:nth-child(4) .carousel-foto img {
-    transform: scale(2.5);
+    transform: scale(1.1);
     object-position: center 42%;
 }
-/* 5 — Surpresa de Uva: pequeno, mais abaixo no frame */
-#carousel-doces .carousel-card:nth-child(5) .carousel-foto img {
-    transform: scale(1.55);
-    object-position: center 52%;
-}
-/* 6 — Raspas Belga: médio */
-#carousel-doces .carousel-card:nth-child(6) .carousel-foto img {
-    transform: scale(1.18);
-    object-position: center 43%;
-}
-/* 7 — Bombom de Cereja: bem enquadrado */
-#carousel-doces .carousel-card:nth-child(7) .carousel-foto img {
+/* 2 — Raspas de Chocolate */
+#carousel-doces .carousel-card:nth-child(2) .carousel-foto img {
     transform: scale(1.05);
-    object-position: center 36%;
-}
-/* 8 — Tortinha de Limão */
-#carousel-doces .carousel-card:nth-child(8) .carousel-foto img {
-    transform: scale(1.9);
-    object-position: center 48%;
-}
-/* 9 — Merengue de Ninho: médio */
-#carousel-doces .carousel-card:nth-child(9) .carousel-foto img {
-    transform: scale(1.18);
     object-position: center 40%;
 }
-/* 10 — Coco Queimado */
-#carousel-doces .carousel-card:nth-child(10) .carousel-foto img {
-    transform: scale(2.0);
+/* 3 — Tortinha de Limão */
+#carousel-doces .carousel-card:nth-child(3) .carousel-foto img {
+    transform: scale(1.15);
     object-position: center 44%;
+}
+/* 4 — Coco Queimado */
+#carousel-doces .carousel-card:nth-child(4) .carousel-foto img {
+    transform: scale(1.2);
+    object-position: center 42%;
+}
+/* 5 — Beijinho */
+#carousel-doces .carousel-card:nth-child(5) .carousel-foto img {
+    transform: scale(1.15);
+    object-position: center 44%;
+}
+/* 6 — Morango no Chocolate */
+#carousel-doces .carousel-card:nth-child(6) .carousel-foto img {
+    transform: scale(1.1);
+    object-position: center 46%;
+}
+/* 7 — Ninho com Nutella */
+#carousel-doces .carousel-card:nth-child(7) .carousel-foto img {
+    transform: scale(1.05);
+    object-position: center 42%;
+}
+/* 8 — Merengue de Ninho */
+#carousel-doces .carousel-card:nth-child(8) .carousel-foto img {
+    transform: scale(1.1);
+    object-position: center 40%;
+}
+/* 9 — Caixa Sortida (foto de grupo) */
+#carousel-doces .carousel-card:nth-child(9) .carousel-foto img {
+    object-position: center 30%;
+}
+/* 10 — Caixa Premium (foto de grupo) */
+#carousel-doces .carousel-card:nth-child(10) .carousel-foto img {
+    object-position: center 50%;
+}
+/* 11 — Mesa de Doces */
+#carousel-doces .carousel-card:nth-child(11) .carousel-foto img {
+    object-position: center 40%;
+}
+/* 12 — Brigadeiro de Nozes */
+#carousel-doces .carousel-card:nth-child(12) .carousel-foto img {
+    object-position: center 35%;
+}
+/* 13 — Doces Personalizados */
+#carousel-doces .carousel-card:nth-child(13) .carousel-foto img {
+    object-position: center 50%;
+}
+/* 14 — Sortidos Clássicos */
+#carousel-doces .carousel-card:nth-child(14) .carousel-foto img {
+    object-position: center 40%;
 }
 .produto-nome { display: none; }
 @media (max-width: 500px) {
