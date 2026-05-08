@@ -758,19 +758,3 @@ function initProtecaoConteudo() {
 document.addEventListener('DOMContentLoaded', initProtecaoConteudo);
 if (document.readyState !== 'loading') initProtecaoConteudo();
 
-// ===== NAV TRANSPARENTE SOBRE O HERO =====
-(function() {
-  var nav = document.querySelector('nav');
-  var hero = document.querySelector('.hero');
-  if (!nav || !hero) return;
-  function atualizarNav() {
-    var heroBottom = hero.getBoundingClientRect().bottom;
-    if (heroBottom > nav.offsetHeight) {
-      nav.classList.add('nav--at-hero');
-    } else {
-      nav.classList.remove('nav--at-hero');
-    }
-  }
-  window.addEventListener('scroll', atualizarNav, { passive: true });
-  atualizarNav();
-})();

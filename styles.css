@@ -66,27 +66,6 @@ nav {
     height: 80px;
     border-bottom: 1px solid rgba(153, 110, 95, 0.3);
     overflow: hidden;
-    transition: background 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
-}
-
-nav.nav--at-hero {
-    background: transparent;
-    backdrop-filter: none;
-    border-bottom-color: rgba(253, 246, 238, 0.12);
-}
-
-nav.nav--at-hero .nav-links a {
-    color: rgba(253, 246, 238, 0.80);
-}
-
-nav.nav--at-hero .nav-links a:hover,
-nav.nav--at-hero .nav-links a.active {
-    color: #FDF6EE;
-    border-bottom-color: rgba(218, 184, 139, 0.7);
-}
-
-nav.nav--at-hero .nav-logo-text {
-    color: #FDF6EE;
 }
 
 .nav-logo {
@@ -179,7 +158,7 @@ nav.nav--at-hero .nav-logo-text {
 
 .hero {
     min-height: 100vh;
-    background: url('imagens/drive-headline.jpg') center center / cover no-repeat;
+    background: var(--choco-deep);
     display: flex;
     align-items: center;
     position: relative;
@@ -190,7 +169,7 @@ nav.nav--at-hero .nav-logo-text {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(10,7,5,0.88) 0%, rgba(10,7,5,0.72) 55%, rgba(10,7,5,0.50) 100%);
+    background: linear-gradient(135deg, rgba(245,237,226,0) 0%, rgba(218,184,139,0.08) 100%);
 }
 
 .hero-pattern {
@@ -259,7 +238,7 @@ nav.nav--at-hero .nav-logo-text {
     font-size: clamp(3rem, 5vw, 5.5rem);
     font-weight: 300;
     line-height: 1.0;
-    color: #FDF6EE;
+    color: var(--text-dark);
     margin-bottom: 1.5rem;
 }
 
@@ -271,7 +250,7 @@ nav.nav--at-hero .nav-logo-text {
 
 .hero-desc {
     font-size: var(--text-body);
-    color: rgba(253, 246, 238, 0.80);
+    color: rgba(62, 68, 96, 0.75);
     line-height: var(--leading-body);
     font-weight: 400;
     margin-bottom: 2.5rem;
@@ -282,10 +261,6 @@ nav.nav--at-hero .nav-logo-text {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
-}
-
-.hero-btns .btn-primary {
-    color: #FDF6EE;
 }
 
 .btn-primary {
@@ -311,14 +286,14 @@ nav.nav--at-hero .nav-logo-text {
 
 .btn-outline {
     background: transparent;
-    color: rgba(253, 246, 238, 0.88);
+    color: var(--text-mid);
     padding: 14px 36px;
     font-size: 11px;
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
     text-decoration: none;
-    border: 1px solid rgba(253, 246, 238, 0.40);
+    border: 1px solid rgba(62, 68, 96, 0.30);
     transition: all 0.3s;
     display: inline-block;
 }
@@ -335,9 +310,9 @@ nav.nav--at-hero .nav-logo-text {
 }
 
 .stat-card {
-    border: 1px solid rgba(253, 246, 238, 0.18);
+    border: 1px solid rgba(153, 110, 95, 0.20);
     padding: 28px 24px;
-    background: rgba(10, 7, 5, 0.45);
+    background: rgba(245, 237, 226, 0.6);
     transition: all 0.4s;
     position: relative;
     overflow: hidden;
@@ -375,7 +350,7 @@ nav.nav--at-hero .nav-logo-text {
     font-size: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: rgba(253, 246, 238, 0.65);
+    color: rgba(62, 68, 96, 0.60);
     font-weight: 400;
 }
 
@@ -388,7 +363,7 @@ nav.nav--at-hero .nav-logo-text {
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    color: rgba(253, 246, 238, 0.45);
+    color: rgba(62, 68, 96, 0.40);
     font-size: var(--text-label);
     letter-spacing: var(--tracking-label);
     text-transform: uppercase;
@@ -2041,7 +2016,7 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
 .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
 
 /* Hero scroll indicator */
-.hero-scroll-text { color: rgba(253, 246, 238, 0.4); }
+.hero-scroll-text { color: rgba(62, 68, 96, 0.4); }
 
 /* MVV cards: degradê terracota sutil dentro da paleta */
 .mvv-card:nth-child(1) { background: linear-gradient(135deg, #F5E8D5 0%, #E8CCA8 100%); }
