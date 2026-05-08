@@ -247,7 +247,7 @@ nav {
     width: 100%;
     height: 220px;
     object-fit: cover;
-    object-position: center 35%;
+    object-position: center 55%;
     display: block;
 }
 
@@ -257,9 +257,9 @@ nav {
     inset: 0;
     background: linear-gradient(
         to bottom,
-        rgba(245, 237, 226, 0) 30%,
-        rgba(245, 237, 226, 0.55) 75%,
-        rgba(245, 237, 226, 0.92) 100%
+        rgba(245, 237, 226, 0) 50%,
+        rgba(245, 237, 226, 0.45) 80%,
+        rgba(245, 237, 226, 0.72) 100%
     );
     pointer-events: none;
 }
@@ -269,12 +269,14 @@ nav {
     bottom: 16px;
     left: 20px;
     margin-bottom: 0;
-    color: rgba(62, 40, 20, 0.75);
+    color: rgba(42, 26, 12, 0.85);
+    text-shadow: none;
+    font-weight: 700;
     z-index: 2;
 }
 
 .hero-banner-img .hero-label::before {
-    background: rgba(153, 110, 95, 0.55);
+    background: rgba(42, 26, 12, 0.55);
 }
 
 .hero-title {
@@ -2119,7 +2121,7 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
 }
 
 .frase-destaque-banner {
-    background: url('imagens/frase-destaque-doces.jpg') center center / cover no-repeat;
+    background: url('imagens/drive-background-v2.png') center center / cover no-repeat;
     max-width: 1200px;
     margin: 0 auto;
     border-radius: 8px;
@@ -2507,10 +2509,73 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     font-size: 2.5rem;
     border-style: dashed;
 }
-/* Bolos são portrait 3:4 — card se adapta ao aspect-ratio da foto */
 #carousel-bolos .carousel-foto {
     height: auto;
     aspect-ratio: 3 / 4;
+}
+#carousel-bolos .carousel-foto img {
+    height: 100%;
+}
+
+/* ===== DOCES — padronização de enquadramento e zoom ===== */
+#carousel-doces .carousel-foto {
+    height: auto;
+    aspect-ratio: 3 / 4;
+}
+#carousel-doces .carousel-foto img {
+    height: 100%;
+    object-position: center 40%;
+    transform-origin: center 45%;
+}
+/* 1 — Morango no Chocolate: referência, bem enquadrado */
+#carousel-doces .carousel-card:nth-child(1) .carousel-foto img {
+    transform: scale(1.05);
+    object-position: center 38%;
+}
+/* 2 — Ninho com Nutella: bem enquadrado */
+#carousel-doces .carousel-card:nth-child(2) .carousel-foto img {
+    transform: scale(1.08);
+    object-position: center 36%;
+}
+/* 3 — Brigadeiro */
+#carousel-doces .carousel-card:nth-child(3) .carousel-foto img {
+    transform: scale(2.1);
+    object-position: center 48%;
+}
+/* 4 — Beijinho */
+#carousel-doces .carousel-card:nth-child(4) .carousel-foto img {
+    transform: scale(2.5);
+    object-position: center 42%;
+}
+/* 5 — Surpresa de Uva: pequeno, mais abaixo no frame */
+#carousel-doces .carousel-card:nth-child(5) .carousel-foto img {
+    transform: scale(1.55);
+    object-position: center 52%;
+}
+/* 6 — Raspas Belga: médio */
+#carousel-doces .carousel-card:nth-child(6) .carousel-foto img {
+    transform: scale(1.18);
+    object-position: center 43%;
+}
+/* 7 — Bombom de Cereja: bem enquadrado */
+#carousel-doces .carousel-card:nth-child(7) .carousel-foto img {
+    transform: scale(1.05);
+    object-position: center 36%;
+}
+/* 8 — Tortinha de Limão */
+#carousel-doces .carousel-card:nth-child(8) .carousel-foto img {
+    transform: scale(1.9);
+    object-position: center 48%;
+}
+/* 9 — Merengue de Ninho: médio */
+#carousel-doces .carousel-card:nth-child(9) .carousel-foto img {
+    transform: scale(1.18);
+    object-position: center 40%;
+}
+/* 10 — Coco Queimado */
+#carousel-doces .carousel-card:nth-child(10) .carousel-foto img {
+    transform: scale(2.0);
+    object-position: center 44%;
 }
 .produto-nome { display: none; }
 @media (max-width: 500px) {
@@ -2518,6 +2583,8 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     .carousel-foto-placeholder { height: 320px; }
     .carousel-foto img { height: 320px; }
     #carousel-bolos .carousel-foto { height: auto; aspect-ratio: 3 / 4; }
+    #carousel-doces .carousel-foto { height: auto; aspect-ratio: 3 / 4; }
+    #carousel-doces .carousel-foto img { height: 100%; }
 }
 .produto-nome {
     font-family: 'Cormorant Garamond', serif;
