@@ -179,7 +179,7 @@ nav.nav--at-hero .nav-logo-text {
 
 .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, #1a0f08 0%, #2e1a0d 50%, #1a0f08 100%);
+    background: url('imagens/drive-headline.jpg') center center / cover no-repeat;
     display: flex;
     align-items: center;
     position: relative;
@@ -190,7 +190,7 @@ nav.nav--at-hero .nav-logo-text {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(10,7,5,0.35) 0%, rgba(10,7,5,0.10) 100%);
+    background: linear-gradient(to right, rgba(10,7,5,0.88) 0%, rgba(10,7,5,0.72) 55%, rgba(10,7,5,0.50) 100%);
 }
 
 .hero-pattern {
