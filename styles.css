@@ -158,7 +158,7 @@ nav {
 
 .hero {
     min-height: 100vh;
-    background: url('imagens/drive-background.png') center center / cover no-repeat;
+    background: url('imagens/drive-background-v2.png') center center / cover no-repeat;
     display: flex;
     align-items: center;
     position: relative;
@@ -2049,13 +2049,20 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
 /* ===== FRASE DESTAQUE 25 ANOS ===== */
 
 .frase-destaque-banner {
-    background: var(--choco-dark);
+    background: url('imagens/drive-background.png') center center / cover no-repeat;
     border-top: 1px solid rgba(201, 153, 58, 0.2);
     border-bottom: 1px solid rgba(201, 153, 58, 0.2);
     padding: 60px 4rem;
     text-align: center;
     overflow: hidden;
     position: relative;
+}
+
+.frase-destaque-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 7, 5, 0.75);
 }
 
 .frase-destaque-inner {
@@ -2065,6 +2072,8 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    position: relative;
+    z-index: 1;
 }
 
 .frase-destaque-deco {
@@ -2084,7 +2093,7 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
     font-size: clamp(1.7rem, 4vw, 2.8rem);
     font-weight: 600;
     font-style: italic;
-    color: var(--cream);
+    color: #FDF6EE;
     line-height: 1.3;
     letter-spacing: 0.5px;
     margin: 0;
