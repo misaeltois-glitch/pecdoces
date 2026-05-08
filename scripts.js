@@ -465,7 +465,7 @@ function injetarFotosEventos() {
   var dados = [
     { img: 'imagens/drive-casamentos-capa.jpg',  alt: 'Casamentos' },
     { img: 'imagens/drive-aniversarios-capa.jpg', alt: 'Aniversários' },
-    { img: 'imagens/cha-bebe-5.jpg',             alt: 'Chá de Bebê' },
+    { img: 'imagens/cha-bebe-new-img_1840.jpg',  alt: 'Chá de Bebê' },
     { img: 'imagens/drive-corporativo-capa.jpg', alt: 'Eventos Corporativos' },
     { img: 'imagens/festas-5.jpg',               alt: 'Festas Temáticas' }
   ];
@@ -493,7 +493,7 @@ if (document.readyState !== 'loading') injetarFotosEventos();
 var _galeriaEventos = {
   casamentos:   ['imagens/drive-casamentos-capa.jpg','imagens/2.jpg','imagens/13.jpg','imagens/14.jpg','imagens/casamentos.jpg','imagens/casamentos-2.jpg','imagens/casamentos-3.jpg','imagens/casamentos-4.jpg'],
   aniversarios: ['imagens/drive-aniversarios-capa.jpg','imagens/17.jpg','imagens/aniversarios.jpg','imagens/aniversario-2.jpg','imagens/aniversarios-3.jpg','imagens/aniversarios-4.jpg','imagens/aniversarios-5.jpg','imagens/aniversarios-6.jpg'],
-  chabebe:      ['imagens/11.jpg','imagens/cha-bebe.jpg','imagens/cha-bebe-2.jpg','imagens/cha-bebe-3.jpg','imagens/cha-bebe-4.jpg','imagens/cha-bebe-5.jpg'],
+  chabebe:      ['imagens/cha-bebe-new-img_1840.jpg','imagens/cha-bebe-new-img_6863.jpg','imagens/cha-bebe-new-img_7073.jpg','imagens/11.jpg','imagens/cha-bebe.jpg','imagens/cha-bebe-2.jpg','imagens/cha-bebe-3.jpg','imagens/cha-bebe-4.jpg','imagens/cha-bebe-5.jpg'],
   corporativo:  ['imagens/drive-corporativo-capa.jpg','imagens/12.jpg','imagens/8.jpg','imagens/9.jpg','imagens/7.jpg','imagens/1.jpg','imagens/3.jpg','imagens/4.jpg','imagens/5.jpg','imagens/6.jpg','imagens/corporativo.jpg','imagens/corporativo-2.jpg','imagens/corporativo-3.jpg','imagens/corporativo-4.jpg'],
   festas:       ['imagens/18.jpg','imagens/15.jpg','imagens/16.jpg','imagens/festas.jpg','imagens/festas-2.jpg','imagens/festas-3.jpg','imagens/festas-4.jpg','imagens/festas-5.jpg','imagens/festas-6.jpg','imagens/festas-7.jpg','imagens/festas-8.jpg']
 };
