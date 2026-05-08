@@ -169,7 +169,7 @@ nav {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(10,7,5,0.93) 0%, rgba(10,7,5,0.82) 55%, rgba(10,7,5,0.68) 100%);
+    background: linear-gradient(to right, rgba(10,7,5,0.88) 0%, rgba(10,7,5,0.72) 55%, rgba(10,7,5,0.50) 100%);
 }
 
 .hero-pattern {
@@ -238,7 +238,7 @@ nav {
     font-size: clamp(3rem, 5vw, 5.5rem);
     font-weight: 300;
     line-height: 1.0;
-    color: var(--cream);
+    color: #FDF6EE;
     margin-bottom: 1.5rem;
 }
 
@@ -261,6 +261,10 @@ nav {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
+}
+
+.hero-btns .btn-primary {
+    color: #FDF6EE;
 }
 
 .btn-primary {
@@ -286,7 +290,7 @@ nav {
 
 .btn-outline {
     background: transparent;
-    color: var(--cream);
+    color: rgba(253, 246, 238, 0.88);
     padding: 14px 36px;
     font-size: 11px;
     font-weight: 500;
@@ -363,7 +367,7 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    color: rgba(62, 68, 96, 0.4);
+    color: rgba(253, 246, 238, 0.45);
     font-size: var(--text-label);
     letter-spacing: var(--tracking-label);
     text-transform: uppercase;
@@ -1995,7 +1999,7 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
 .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
 
 /* Hero scroll indicator */
-.hero-scroll-text { color: rgba(62, 68, 96, 0.4); }
+.hero-scroll-text { color: rgba(253, 246, 238, 0.4); }
 
 /* MVV cards: degradê terracota sutil dentro da paleta */
 .mvv-card:nth-child(1) { background: linear-gradient(135deg, #F5E8D5 0%, #E8CCA8 100%); }
