@@ -158,7 +158,7 @@ nav {
 
 .hero {
     min-height: 100vh;
-    background: url('imagens/doces-destaque.jpg') center center / cover no-repeat;
+    background: url('imagens/drive-background.png') center center / cover no-repeat;
     display: flex;
     align-items: center;
     position: relative;
