@@ -1231,8 +1231,8 @@ section {
 
 .depo-author {
     font-size: var(--text-sm);
-    color: var(--text-dark);
-    font-weight: 600;
+    color: #111111;
+    font-weight: 700;
     letter-spacing: 1.5px;
     text-transform: uppercase;
 }
