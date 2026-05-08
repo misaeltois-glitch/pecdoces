@@ -158,7 +158,7 @@ nav {
 
 .hero {
     min-height: 100vh;
-    background: url('imagens/drive-background-v2.png') center center / cover no-repeat;
+    background: url('imagens/drive-background-v2.png') right top / cover no-repeat;
     display: flex;
     align-items: center;
     position: relative;
@@ -1086,6 +1086,27 @@ section {
     grid-template-columns: 1fr 1fr;
     align-items: end;
     gap: 2rem;
+}
+
+.momentos-headline-img {
+    width: 100%;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    border-radius: 2px;
+    max-height: 420px;
+}
+
+.momentos-headline-img img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    transition: transform 0.7s ease;
+}
+
+.momentos-headline-img img:hover {
+    transform: scale(1.03);
 }
 
 .momentos-quote {
