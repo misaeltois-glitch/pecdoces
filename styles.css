@@ -63,7 +63,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0 2.5rem;
-    height: 80px;
+    height: 96px;
     border-bottom: 1px solid rgba(153, 110, 95, 0.3);
     overflow: hidden;
 }
@@ -163,7 +163,7 @@ nav {
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding-top: 80px;
+    padding-top: 96px;
 }
 
 .hero-bg {
@@ -1991,8 +1991,12 @@ footer {
     #orcamento {
         padding: 40px 1.5rem 60px;
     }
+    .frase-destaque-outer {
+        padding: 0 1rem;
+    }
     .frase-destaque-banner {
         padding: 40px 1.5rem;
+        border-radius: 6px;
     }
     .noivas-banner {
         padding: 24px 20px;
@@ -2109,10 +2113,16 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
 
 /* ===== FRASE DESTAQUE 25 ANOS ===== */
 
+.frase-destaque-outer {
+    background: var(--cream-light);
+    padding: 0 2rem;
+}
+
 .frase-destaque-banner {
     background: url('imagens/frase-destaque-doces.jpg') center center / cover no-repeat;
-    border-top: 1px solid rgba(201, 153, 58, 0.2);
-    border-bottom: 1px solid rgba(201, 153, 58, 0.2);
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 8px;
     padding: 60px 4rem;
     text-align: center;
     overflow: hidden;
