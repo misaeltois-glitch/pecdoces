@@ -206,11 +206,12 @@ nav {
     z-index: 2;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 4rem;
+    padding: 2rem 4rem 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 4rem;
+    grid-template-rows: auto 1fr;
+    align-items: start;
+    gap: 0 4rem;
     width: 100%;
 }
 
@@ -234,18 +235,46 @@ nav {
 }
 
 .hero-banner-img {
-    width: 100%;
-    margin-bottom: 1.5rem;
+    grid-column: 1 / -1;
+    position: relative;
     overflow: hidden;
-    border-radius: 2px;
+    border-radius: 4px;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 8px 32px rgba(62, 40, 20, 0.10);
 }
 
 .hero-banner-img img {
     width: 100%;
-    height: 180px;
+    height: 220px;
     object-fit: cover;
-    object-position: center 30%;
+    object-position: center 35%;
     display: block;
+}
+
+.hero-banner-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(245, 237, 226, 0) 30%,
+        rgba(245, 237, 226, 0.55) 75%,
+        rgba(245, 237, 226, 0.92) 100%
+    );
+    pointer-events: none;
+}
+
+.hero-banner-img .hero-label {
+    position: absolute;
+    bottom: 16px;
+    left: 20px;
+    margin-bottom: 0;
+    color: rgba(62, 40, 20, 0.75);
+    z-index: 2;
+}
+
+.hero-banner-img .hero-label::before {
+    background: rgba(153, 110, 95, 0.55);
 }
 
 .hero-title {
@@ -2081,7 +2110,7 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
 /* ===== FRASE DESTAQUE 25 ANOS ===== */
 
 .frase-destaque-banner {
-    background: url('imagens/drive-background-v2.png') center center / cover no-repeat;
+    background: url('imagens/frase-destaque-doces.jpg') center center / cover no-repeat;
     border-top: 1px solid rgba(201, 153, 58, 0.2);
     border-bottom: 1px solid rgba(201, 153, 58, 0.2);
     padding: 60px 4rem;

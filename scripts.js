@@ -348,60 +348,6 @@ function atualizarCardapio2026() {
       '</div></div>';
   }
 
-  // ── PERSONALIZADOS ──
-  var tabPers = document.getElementById('tab-personalizados');
-  if (tabPers) {
-    function pi(name, price) {
-      var waUrl = 'https://wa.me/5511961739148?text=' + encodeURIComponent('Olá! Gostaria de ver fotos de *' + name + '*.');
-      return '<div class="pers-item">' +
-        '<span class="pers-name">' + name + '</span>' +
-        '<span class="pers-price">R$ ' + price + '</span>' +
-        '<a class="btn-ver-mais" href="' + waUrl + '" target="_blank" onclick="event.stopPropagation()"><i class="fa-brands fa-whatsapp"></i> Ver mais</a>' +
-        '</div>';
-    }
-    tabPers.innerHTML =
-      '<div style="margin-bottom:2rem;">' +
-      '<div class="preco-label">' +
-      '<div class="preco-badge">Bolo Personalizado c/ Pasta</div>' +
-      '<div class="preco-line"></div>' +
-      '<span style="font-size:18px;font-family:\'Cormorant Garamond\',serif;color:var(--gold);">R$ 275,60 / kg</span>' +
-      '</div>' +
-      '<div style="margin-top:1rem;font-size:12px;color:rgba(62,68,96,0.65);line-height:2;">' +
-      '<strong style="color:#7A4E45;letter-spacing:1px;font-size:11px;">SABORES:</strong> ' +
-      'Brigadeiro de Nozes · Ganache Chocolate Meio Amargo · Doce de Leite · Prestígio · Nozes · Damasco · Leite Ninho · Brigadeiro' +
-      '</div></div>' +
-      '<p style="font-size:12.5px;color:rgba(62,68,96,0.6);margin-bottom:2rem;line-height:1.7;max-width:600px;">' +
-      'Cupcakes: massas de baunilha ou chocolate. Recheios: brigadeiro, doce de leite, coco, limão, maracujá ou morango.</p>' +
-      '<div class="pers-grid">' +
-      pi('Mini Cupcake Tradicional','6,70') +
-      pi('Mini Cupcake Decorado Básico','21,00') +
-      pi('Cupcake Tradicional','12,60') +
-      pi('Cupcake Decorado Básico','30,25') +
-      pi('Cupcake Personalizado Especial','41,00') +
-      pi('Cupcake Personalizado 3D','56,00') +
-      pi('Bolo Embrulhado Tradicional 6x6x3 100g','21,70') +
-      pi('Doce Personalizado Básico','7,20') +
-      pi('Bombom Personalizado Chapado','12,70') +
-      pi('Bombom Personalizado 3D','25,30') +
-      pi('Pop Cake Personalizado','23,00') +
-      pi('Popsicle Personalizado','30,50') +
-      pi('Pão de Mel Tradicional','12,50') +
-      pi('Pão de Mel Decorado Básico','22,50') +
-      pi('Pão de Mel Personalizado Especial','32,50') +
-      pi('Pão de Mel Personalizado 3D','56,00') +
-      pi('Porta Retrato Personalizado','16,30') +
-      pi('Maçã Personalizada','21,70') +
-      pi('Pirulito Decorado Básico','13,75') +
-      pi('Pirulito Personalizado Especial','18,30') +
-      pi('Brigalito Tradicional','15,90') +
-      pi('Brigalito Decorado Básico','20,80') +
-      pi('Brigalito Personalizado Especial','29,70') +
-      pi('Biscoito Personalizado','24,75') +
-      pi('Biscoito Personalizado no Palito','31,50') +
-      pi('Donuts Tradicional','6,90') +
-      pi('Donuts Decorado','13,80') +
-      '</div>';
-  }
 }
 function aplicarCliquesCardapio() {
   var WA = 'https://wa.me/5511961739148?text=';
