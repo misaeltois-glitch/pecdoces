@@ -164,7 +164,7 @@ nav {
     align-items: stretch;
     position: relative;
     overflow: visible;
-    padding-top: 72px;
+    padding: 72px 0 0;
 }
 
 .hero-bg {
