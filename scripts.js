@@ -410,7 +410,7 @@ document.querySelectorAll('.mvv-card, .kit-card, .depo-card, .evento-card, .stat
 function injetarFotosEventos() {
   var dados = [
     { img: 'imagens/capa-casamentos-nova.jpg',   alt: 'Casamentos' },
-    { img: 'imagens/capa-aniversarios-drive.jpg', alt: 'Aniversários' },
+    { img: 'imagens/aniv-capa-nova.jpg',          alt: 'Aniversários' },
     { img: 'imagens/capa-chabebe-nova.jpg',      alt: 'Chá de Bebê' },
     { img: 'imagens/capa-corporativo-drive.jpg', alt: 'Eventos Corporativos' },
     { img: 'imagens/capa-festas-nova.jpg',       alt: 'Festas Temáticas' }
@@ -439,7 +439,29 @@ if (document.readyState !== 'loading') injetarFotosEventos();
 // ===== LIGHTBOX GALERIA EVENTOS =====
 var _galeriaEventos = {
   casamentos:   ['imagens/capa-casamentos-nova.jpg','imagens/capa-casamentos-drive-2.jpg','imagens/evento-casamentos-extra.jpg'],
-  aniversarios: ['imagens/capa-aniversarios-drive.jpg','imagens/aniversario-mesversario.jpg','imagens/aniversario-img-3293.jpg','imagens/aniversario-img-2849.jpg','imagens/aniversario-img-7077.jpg','imagens/aniversario-img-9706.jpg','imagens/aniversario-img-7661.jpg','imagens/aniversario-img-7554.jpg','imagens/aniversario-harry-potter-bday.jpg','imagens/17.jpg','imagens/aniversario-2.jpg','imagens/aniversarios-3.jpg','imagens/aniversarios-4.jpg','imagens/aniversarios-5.jpg'],
+  aniversarios: [
+    'imagens/aniv-capa-nova.jpg',
+    'imagens/aniversario-fundo-do-mar.jpg',
+    'imagens/capa-aniversarios-drive.jpg',
+    'imagens/aniv-doces-padrao.jpg',
+    'imagens/aniv-img-a.jpg',
+    'imagens/aniv-img-b.jpg',
+    'imagens/aniversario-img-2849.jpg',
+    'imagens/aniv-img-9829.jpg',
+    'imagens/aniv-mario-bros.jpg',
+    'imagens/aniv-img-c.jpg',
+    'imagens/aniv-img-8928.jpg',
+    'imagens/aniversario-img-7661.jpg',
+    'imagens/aniversario-img-7554.jpg',
+    'imagens/aniv-whatsapp.jpg',
+    'imagens/aniversario-harry-potter-bday.jpg',
+    'imagens/aniv-img-0382.jpg',
+    'imagens/aniv-img-9181.jpg',
+    'imagens/aniv-img-6875.jpg',
+    'imagens/aniv-img-7107.jpg',
+    'imagens/aniv-img-7073.jpg',
+    'imagens/aniv-img-6863.jpg',
+  ],
   chabebe:      ['imagens/capa-chabebe-nova.jpg','imagens/cha-bebe-new-img_1840.jpg','imagens/cha-bebe-new-img_1835.jpg','imagens/cha-bebe-new-img_1831.jpg','imagens/cha-bebe-new-img_1453.jpg','imagens/cha-bebe-new-img_6863.jpg','imagens/cha-bebe-new-img_6875.jpg','imagens/cha-bebe-new-img_7073.jpg','imagens/cha-bebe-new-img_7107.jpg','imagens/cha-bebe-new-img_9181.jpg','imagens/cha-bebe-new-img_0382.jpg','imagens/cha-bebe-harry-potter.jpg','imagens/cha-bebe-harry-potter-2.jpg','imagens/cha-bebe.jpg','imagens/cha-bebe-3.jpg','imagens/cha-bebe-4.jpg'],
   corporativo:  ['imagens/capa-corporativo-drive.jpg','imagens/corporativo-empresa.jpg','imagens/12.jpg','imagens/8.jpg','imagens/9.jpg','imagens/7.jpg','imagens/1.jpg','imagens/3.jpg','imagens/4.jpg','imagens/5.jpg','imagens/6.jpg','imagens/corporativo-3.jpg','imagens/corporativo-4.jpg'],
   festas:       ['imagens/capa-festas-nova.jpg','imagens/18.jpg','imagens/15.jpg','imagens/16.jpg','imagens/festas.jpg','imagens/festas-2.jpg','imagens/festas-3.jpg','imagens/festas-4.jpg','imagens/festas-5.jpg','imagens/festas-6.jpg','imagens/festas-7.jpg']
