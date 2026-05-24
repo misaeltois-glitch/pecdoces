@@ -462,7 +462,7 @@ var _galeriaEventos = {
     'imagens/aniv-img-7073.jpg',
     'imagens/aniv-img-6863.jpg',
   ],
-  chabebe:      ['imagens/capa-chabebe-nova.jpg','imagens/cha-bebe-new-img_1840.jpg','imagens/cha-bebe-new-img_1835.jpg','imagens/cha-bebe-new-img_1831.jpg','imagens/cha-bebe-new-img_1453.jpg','imagens/cha-bebe-new-img_6863.jpg','imagens/cha-bebe-new-img_6875.jpg','imagens/cha-bebe-new-img_7073.jpg','imagens/cha-bebe-new-img_7107.jpg','imagens/cha-bebe-new-img_9181.jpg','imagens/cha-bebe-new-img_0382.jpg','imagens/cha-bebe-harry-potter.jpg','imagens/cha-bebe-harry-potter-2.jpg','imagens/cha-bebe.jpg','imagens/cha-bebe-3.jpg','imagens/cha-bebe-4.jpg'],
+  chabebe:      ['imagens/capa-chabebe-nova.jpg','imagens/cha-bebe-new-img_4014.jpg','imagens/cha-bebe-new-img_1840.jpg','imagens/cha-bebe-new-img_1835.jpg','imagens/cha-bebe-new-img_1831.jpg','imagens/cha-bebe-new-img_1453.jpg','imagens/cha-bebe-new-img_0382.jpg','imagens/cha-bebe-new-img_6875.jpg','imagens/cha-bebe-new-img_6863.jpg','imagens/cha-bebe-new-img_7073.jpg','imagens/cha-bebe-new-img_7107.jpg','imagens/cha-bebe-new-img_9181.jpg','imagens/cha-bebe-harry-potter.jpg','imagens/cha-bebe-harry-potter-2.jpg'],
   corporativo:  ['imagens/capa-corporativo-drive.jpg','imagens/corporativo-empresa.jpg','imagens/12.jpg','imagens/8.jpg','imagens/9.jpg','imagens/7.jpg','imagens/1.jpg','imagens/3.jpg','imagens/4.jpg','imagens/5.jpg','imagens/6.jpg','imagens/corporativo-3.jpg','imagens/corporativo-4.jpg'],
   festas:       ['imagens/capa-festas-nova.jpg','imagens/18.jpg','imagens/15.jpg','imagens/16.jpg','imagens/festas.jpg','imagens/festas-2.jpg','imagens/festas-3.jpg','imagens/festas-4.jpg','imagens/festas-5.jpg','imagens/festas-6.jpg','imagens/festas-7.jpg']
 };
