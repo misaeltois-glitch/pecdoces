@@ -476,11 +476,31 @@ function initLightboxEventos() {
     modal.classList.remove('ativo');
     document.body.style.overflow='';
   }
+  var _preloadCache = {};
+  function preload(url) {
+    if (!url || _preloadCache[url]) return;
+    _preloadCache[url] = new Image();
+    _preloadCache[url].src = url;
+  }
   function mostrar() {
-    document.getElementById('lb-img').src=imgs[cur];
+    var lbImg = document.getElementById('lb-img');
+    var lbBox = document.getElementById('lb-box');
+    var src = imgs[cur];
     document.getElementById('lb-counter').textContent=(cur+1)+' / '+imgs.length;
     document.getElementById('lb-prev').style.display=imgs.length>1?'flex':'none';
     document.getElementById('lb-next').style.display=imgs.length>1?'flex':'none';
+    // Mostra spinner enquanto carrega
+    lbBox.classList.add('lb-loading');
+    var tmp = new Image();
+    tmp.onload = function() {
+      lbImg.src = src;
+      lbBox.classList.remove('lb-loading');
+      // Pré-carrega adjacentes
+      preload(imgs[(cur+1)%imgs.length]);
+      preload(imgs[(cur-1+imgs.length)%imgs.length]);
+    };
+    tmp.onerror = function() { lbImg.src = src; lbBox.classList.remove('lb-loading'); };
+    tmp.src = src;
   }
   function prev() { cur=(cur-1+imgs.length)%imgs.length; mostrar(); }
   function next() { cur=(cur+1)%imgs.length; mostrar(); }

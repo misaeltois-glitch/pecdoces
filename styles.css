@@ -1041,7 +1041,20 @@ section {
     justify-content: center;
     max-width: 92vw;
     max-height: 92vh;
+    position: relative;
 }
+#lb-box.lb-loading::after {
+    content: '';
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border: 3px solid rgba(255,255,255,0.2);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: lb-spin 0.75s linear infinite;
+    z-index: 20;
+}
+@keyframes lb-spin { to { transform: rotate(360deg); } }
 #lb-img {
     max-width: 88vw;
     max-height: 88vh;
@@ -1051,6 +1064,10 @@ section {
     display: block;
     position: relative;
     z-index: 1;
+    transition: opacity 0.2s;
+}
+#lb-box.lb-loading #lb-img {
+    opacity: 0.15;
 }
 #lb-close {
     position: absolute;
@@ -2123,7 +2140,7 @@ nav { border-bottom-color: rgba(153, 110, 95, 0.2); }
 }
 
 .frase-destaque-banner {
-    background: url('imagens/drive-background-v2.png') center center / cover no-repeat;
+    background: url('imagens/drive-background-v2.jpg') center center / cover no-repeat;
     max-width: 1200px;
     margin: 0 auto;
     border-radius: 0;
