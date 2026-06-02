@@ -1190,11 +1190,10 @@ section {
     display: block;
     background: var(--choco-mid);
 }
-.eventos-types .evento-card:nth-child(2) .evento-img {
-    object-position: center top;
-}
+.eventos-types .evento-card:nth-child(2) .evento-img,
 .eventos-types .evento-card:nth-child(3) .evento-img {
-    object-position: center 60%;
+    height: unset;
+    aspect-ratio: 3/4;
 }
 .evento-card-body {
     padding: 24px 28px 28px;
