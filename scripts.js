@@ -413,7 +413,7 @@ function injetarFotosEventos() {
     { img: 'imagens/aniv-capa.jpg',  alt: 'Aniversários' },
     { img: 'imagens/chabe-capa.jpg', alt: 'Chá de Bebê' },
     { img: 'imagens/corp-capa.jpg',  alt: 'Eventos Corporativos' },
-    { img: 'imagens/tem-capa.jpg',   alt: 'Festas Temáticas' }
+    { img: 'imagens/tem-img-001.jpg', alt: 'Festas Temáticas' }
   ];
   var cards = document.querySelectorAll('.evento-card');
   cards.forEach(function(card, i) {

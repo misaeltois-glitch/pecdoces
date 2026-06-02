@@ -1191,10 +1191,6 @@ section {
     display: block;
     background: var(--choco-mid);
 }
-.eventos-types .evento-card:nth-child(5) .evento-img {
-    object-fit: contain;
-    background: var(--choco-deep);
-}
 .evento-card-body {
     padding: 24px 28px 28px;
 }
