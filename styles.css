@@ -1185,15 +1185,11 @@ section {
 /* ===== FOTOS EVENTOS ===== */
 .evento-img {
     width: 100%;
-    height: 180px;
+    aspect-ratio: 3/4;
     object-fit: cover;
+    object-position: center top;
     display: block;
     background: var(--choco-mid);
-}
-.eventos-types .evento-card:nth-child(2) .evento-img,
-.eventos-types .evento-card:nth-child(3) .evento-img {
-    height: unset;
-    aspect-ratio: 3/4;
 }
 .evento-card-body {
     padding: 24px 28px 28px;
