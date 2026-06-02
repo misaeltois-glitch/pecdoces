@@ -1185,10 +1185,8 @@ section {
 /* ===== FOTOS EVENTOS ===== */
 .evento-img {
     width: 100%;
-    aspect-ratio: 4/3;
-    object-fit: contain;
+    height: auto;
     display: block;
-    background: #1a1008;
 }
 .evento-card-body {
     padding: 24px 28px 28px;
