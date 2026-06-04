@@ -1190,6 +1190,14 @@ section {
     display: block;
     background: var(--choco-mid);
 }
+/* Aniversários — mostra centro do bolo */
+.eventos-types .evento-card:nth-child(2) .evento-img {
+    object-position: center 30%;
+}
+/* Chá de Bebê — mostra os doces abaixo dos balões */
+.eventos-types .evento-card:nth-child(3) .evento-img {
+    object-position: center 70%;
+}
 .evento-card-body {
     padding: 24px 28px 28px;
 }
