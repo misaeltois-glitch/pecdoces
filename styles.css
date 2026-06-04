@@ -1185,9 +1185,8 @@ section {
 /* ===== FOTOS EVENTOS ===== */
 .evento-img {
     width: 100%;
-    aspect-ratio: 3/4;
+    height: 180px;
     object-fit: cover;
-    object-position: center top;
     display: block;
     background: var(--choco-mid);
 }
